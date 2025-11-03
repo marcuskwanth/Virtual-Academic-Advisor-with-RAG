@@ -1,5 +1,8 @@
 Virtual Academic Advisor Chatbot
 ===PROGRESS HISTORY===
+2025-11-03 (1):
+- Switched using single Chroma collection
+- Implemented a simple LLM-RAG program
 
 2025-10-31 (1):
 - Implemented text-splitting and doc-embedding, with modified metadata
