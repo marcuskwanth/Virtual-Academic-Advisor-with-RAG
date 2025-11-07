@@ -1,8 +1,11 @@
 # Virtual Academic Advisor Chatbot
 Author: Marcus Kwan
-Type: FYP, Private repository
+Type: FYP, private repository
 
 ## PROGRESS HISTORY
+2025-11-07 (1):
+- Fixed the Chroma operation that overrides documents (by adding extra ID digits for now).
+
 2025-11-04 (1):
 - Added a flag for enabling reasoning in the DeepSeek-R1 model.
 - Fixed the output not including the reasoning content (in the invoking procedure).
