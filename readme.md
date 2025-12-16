@@ -1,8 +1,17 @@
 # Virtual Academic Advisor Chatbot
 Author: Marcus Kwan
 Type: FYP, private repository
+Number of retrieve docs in each process = 3
 
 ## PROGRESS HISTORY
+2025-12-15 (1):
+- Added Sub-query Implementation. (But it takeas too long to execute!)
+
+2025-12-10 (1):
+- Updated LLM Prompt (more specific on not saying 'context')
+- Added RAG-Fusion Implementation.
+- Added Step-back Implementation.
+
 2025-11-07 (1):
 - Fixed the Chroma operation that overrides documents (by adding extra ID digits for now).
 
