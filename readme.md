@@ -4,6 +4,11 @@ Type: FYP, private repository
 Number of retrieve docs in each process = 3
 
 ## PROGRESS HISTORY
+(current progress: evaluation (BERT/ROUGE))
+
+2025-12-16 (1):
+- Amended prompt with correct grammar and formatting.
+
 2025-12-15 (1):
 - Added Sub-query Implementation. (But it takeas too long to execute!)
 
