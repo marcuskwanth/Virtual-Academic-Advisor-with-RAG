@@ -4,7 +4,13 @@ Type: FYP, private repository
 Number of retrieve docs in each process = 3
 
 ## PROGRESS HISTORY
-(current progress: evaluation (BERT/ROUGE))
+2028-12-17 (2):
+- Added evaluations (Faithfulness, context relevancy, completeness), to be tested.
+
+2025-12-17 (1):
+- Re-organized folder structure.
+- Modified chroma_db path to always points to that folder from the root directory!
+- Added source and programme title for the PDF chunks.
 
 2025-12-16 (1):
 - Amended prompt with correct grammar and formatting.
