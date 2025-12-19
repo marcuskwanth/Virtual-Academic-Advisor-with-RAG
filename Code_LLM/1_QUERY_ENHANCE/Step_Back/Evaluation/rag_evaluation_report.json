@@ -1,0 +1,202 @@
+{
+  "evaluation_date": "2025-12-19 17:09:11",
+  "dataset_info": {
+    "total_queries": 5,
+    "evaluated_queries": 5,
+    "categories": [
+      "career",
+      "university",
+      "curriculum",
+      "academic",
+      "internship"
+    ]
+  },
+  "overall_metrics": {
+    "faithfulness": {
+      "mean": 0.7,
+      "std": 0.4472135954999579,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "relevance": {
+      "mean": 0.5799999999999998,
+      "std": 0.42071367935925263,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "completeness": {
+      "mean": 0.74,
+      "std": 0.3209361307176243,
+      "min": 0.3,
+      "max": 1.0
+    },
+    "keyword_coverage": {
+      "mean": 0.55,
+      "std": 0.11180339887498947,
+      "min": 0.5,
+      "max": 0.75
+    },
+    "retrieval_avg_similarity": {
+      "mean": 0.5803263354833191,
+      "std": 0.03265127920069244,
+      "min": 0.5431718868633094,
+      "max": 0.6219792757434562
+    },
+    "retrieval_diversity": {
+      "mean": 0.2590721891122111,
+      "std": 0.056847229537097844,
+      "min": 0.18849380385245762,
+      "max": 0.3385827819558631
+    },
+    "context_utilization": {
+      "mean": 0.13936799114793513,
+      "std": 0.0774233220353524,
+      "min": 0.054878048780487805,
+      "max": 0.23893805309734514
+    }
+  },
+  "category_performance": {
+    "career": {
+      "faithfulness": 0.5,
+      "relevance": 0.9,
+      "completeness": 0.5,
+      "keyword_coverage": 0.75
+    },
+    "university": {
+      "faithfulness": 0.0,
+      "relevance": 1.0,
+      "completeness": 1.0,
+      "keyword_coverage": 0.5
+    },
+    "curriculum": {
+      "faithfulness": 1.0,
+      "relevance": 0.0,
+      "completeness": 1.0,
+      "keyword_coverage": 0.5
+    },
+    "academic": {
+      "faithfulness": 1.0,
+      "relevance": 0.3,
+      "completeness": 0.3,
+      "keyword_coverage": 0.5
+    },
+    "internship": {
+      "faithfulness": 1.0,
+      "relevance": 0.7,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5
+    }
+  },
+  "detailed_results": [
+    {
+      "question": "What is the potential career path after studying in BEng Scheme in EE?",
+      "category": "career",
+      "answer": "<think>\nHmm, the user is asking about potential career paths after studying in the BEng Scheme in Electrical Engineering. This is a straightforward question about career prospects, so they're likely a prospective student or someone considering this program.\n\nLet me recall the program details from the context. The BEng in Electrical Engineering at PolyU prepares students for careers in power systems, energy utilisation, and related fields. The curriculum includes foundational subjects like mathematics, physics, and engineering courses, plus practical components like industrial placements.\n\nThe student might be exploring career options to see if this aligns with their aspirations. They could be weighing this program against others or deciding if engineering is the right path for them. Beyond just listing careers, I should highlight the unique aspects of this program, like the work-integrated education, to show how it prepares students for the workforce.\n\nI'll structure the response to cover diverse career options across industries, emphasize the program's strengths, and end with advice to consult further. This approach is helpful and affirmative, as required.\n</think>\n\nAfter completing the Bachelor of Engineering (Honours) in Electrical Engineering (BEng in EE) at The Hong Kong Polytechnic University, graduates have a wide range of career opportunities in various sectors. The program prepares students for roles in power systems, energy utilisation, transportation systems, smart grids, and related engineering disciplines.\n\n### Potential Career Paths:\n1. **Power Systems Engineer**: Design, develop, and maintain electrical power systems, including generation, transmission, and distribution networks.\n2. **Energy Systems Engineer**: Focus on energy efficiency, renewable energy integration, and sustainable energy solutions.\n3. **Electronics Engineer**: Work on designing and developing electronic circuits, devices, and systems for various applications.\n4. **Smart Grid Engineer**: Involved in the development and management of smart grid technologies for modern power systems.\n5. **Transportation Systems Engineer**: Leverage skills in transportation systems analysis and planning for roles in logistics and urban transport.\n6. **Industrial Engineer**: Optimise industrial processes, supply chains, and manufacturing systems.\n7. **Research and Development Engineer**: Conduct research and develop new technologies in electrical engineering.\n8. **Project Manager**: Oversee engineering projects from conception to completion, ensuring timely and cost-effective delivery.\n9. **Policy Analyst**: Advise governments and organisations on electrical engineering policies and regulations.\n10. **Entrepreneur**: Start and manage businesses in engineering-related fields, focusing on innovation and entrepreneurship.\n\n### Advice:\nThe BEng in Electrical Engineering at The Hong Kong Polytechnic University provides a strong foundation for a successful career. I recommend exploring internships and industrial placements to gain practical experience and build your professional network. If you have any more questions or need further guidance, feel free to ask!",
+      "retrieval_avg_similarity": 0.6219792757434562,
+      "retrieval_max_similarity": 0.6622229012674946,
+      "retrieval_min_similarity": 0.5813641118883632,
+      "retrieval_std_similarity": 0.030977302960704216,
+      "retrieval_num_docs": 6,
+      "retrieval_diversity": 0.18849380385245762,
+      "faithfulness": 0.5,
+      "relevance": 0.9,
+      "completeness": 0.5,
+      "keyword_coverage": 0.75,
+      "length_word_count": 429,
+      "length_char_count": 3175,
+      "length_sentence_count": 36,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 2,
+      "context_utilization": 0.14444444444444443
+    },
+    {
+      "question": "How can I apply for residential hall in the PolyU?",
+      "category": "university",
+      "answer": "<think>\nHmm, the user is asking about how to apply for a residential hall at PolyU. Let me think about how to respond.\n\nI don't see any information in the provided context about the residential hall application process. The context contains details about Minor study enrolment, credit validity periods, and other academic regulations, but nothing specifically about housing.\n\nThis means I should say no, as I cannot answer the question without fabricating information. I need to be clear and affirmative that I don't know the answer rather than providing false details about the application process.\n\nThe student might be feeling anxious about securing accommodation, so I should be empathetic while being honest about my limitations. I'll politely decline to answer and offer to help with other academic-related questions.\n\nI'll make sure my response is concise and doesn't leave the student guessing about the correct procedure. I'll also remind them that they can ask about other academic matters where I can provide accurate information.\n</think>\n\nI'm sorry, but I cannot answer your question about how to apply for a residential hall at PolyU, as the information you provided does not contain details regarding the residential hall application process.",
+      "retrieval_avg_similarity": 0.5535997655091114,
+      "retrieval_max_similarity": 0.5732036779679642,
+      "retrieval_min_similarity": 0.5117025548939498,
+      "retrieval_std_similarity": 0.024532078750077946,
+      "retrieval_num_docs": 4,
+      "retrieval_diversity": 0.2693469274018896,
+      "faithfulness": 0.0,
+      "relevance": 1,
+      "completeness": 1,
+      "keyword_coverage": 0.5,
+      "length_word_count": 197,
+      "length_char_count": 1257,
+      "length_sentence_count": 12,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.07142857142857142
+    },
+    {
+      "question": "What courses are offered in the first year in Master of Science in EIE?",
+      "category": "curriculum",
+      "answer": "<think>\nOkay, let me tackle this query step by step. The user is asking about the first-year courses for the Master of Science in Electronic and Information Engineering (MSc EIE) program. \n\nFirst, I need to recall the provided context. There's a document titled MSc_EE_46010_2526.pdf that details the Master of Science in Electrical Engineering. Wait, the user asked about MSc in Electronic and Information Engineering (EIE), but the document mentioned is for Electrical Engineering (EE). Hmm, that's a discrepancy. \n\nI should check if there's any source in the context that specifically covers MSc EIE. Looking through the provided materials, I see a document for MSc EIE (Dissertation) but not a curriculum breakdown. The EE curriculum is listed, but not EIE. Since the user specified EIE, and the EE curriculum is different, I can't provide accurate information. \n\nI need to adhere to the rules strictly. Rule 4 says to say no if I can't answer. Since there's no context for MSc EIE courses, I must decline to answer. \n\nBut wait, maybe the user confused EIE with EE? The context has both programs, but EIE's curriculum isn't provided. The EE curriculum is detailed, but that's a different program. I should clarify that I can't answer because the required information isn't available, not because the user might have misspoken. \n\nAlso, the student might be transitioning from an undergraduate to a master's program. They might need guidance on course selection. Since I can't provide the EIE courses, I should politely decline and offer to help with other aspects, like the EE program or general advice. \n\nI need to ensure my response is clear and adheres to the rules. No speculation, no fabricated answers. Just a straightforward \"no\" because the data isn't present. Then, ask if they need anything else. \n\nYes, that approach aligns with the rules. The user's deeper need might be to understand the master's program structure, but since EIE isn't covered, I can't assist further. Redirecting them to EE or other programs might be helpful, but without context, it's risky. Better to stick to the rules and decline politely.\n</think>\n\nI'm sorry, I cannot answer that question as the provided context does not contain any information about the courses offered in the first year for the Master of Science in Electronic and Information Engineering (MSc EIE) program.",
+      "retrieval_avg_similarity": 0.6011267148621101,
+      "retrieval_max_similarity": 0.627225301229809,
+      "retrieval_min_similarity": 0.569621226514005,
+      "retrieval_std_similarity": 0.019753313687445113,
+      "retrieval_num_docs": 6,
+      "retrieval_diversity": 0.2236504711524343,
+      "faithfulness": 1,
+      "relevance": 0.0,
+      "completeness": 1.0,
+      "keyword_coverage": 0.5,
+      "length_word_count": 384,
+      "length_char_count": 2366,
+      "length_sentence_count": 31,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 3,
+      "context_utilization": 0.054878048780487805
+    },
+    {
+      "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
+      "category": "academic",
+      "answer": "<think>\nHmm, the user is asking about what to do if they failed a subject as a Year 3 student in BSc Information Security. Let me think through this carefully.\n\nFirst, I need to recall the specific rules from the provided context. The academic regulations clearly state that students can retake a compulsory subject up to two times. After two failures, they need to go through the Academic Appeals Committee (AAC) for a third chance.\n\nThe user might be feeling anxious about their academic standing, so I should provide clear, step-by-step guidance. They probably need to know the exact process and consequences, but also some reassurance. I should mention the AAC appeal option but emphasize that it's a formal process with specific criteria.\n\nWait, the context also mentions tie-subject arrangements if the original subject is phased out. But since the user didn't specify any subject being phased out, maybe that's not immediately relevant. However, it's good to include it as a possibility in case their failed subject has been discontinued.\n\nThe student's level is important too. Year 3 is a critical stage, so failing a subject could impact their progression. They might be worried about graduating on time. I should highlight the seriousness but also provide a clear path forward.\n\nI should also mention the role of the Academic Advisor since they're assigned till graduation. The student might benefit from reaching out to their advisor for personalized support and guidance.\n\nThe user might have deeper concerns about their academic performance or time management. While I can't provide unsolicited advice, I can subtly encourage them to seek additional resources or discuss their situation with faculty if needed.\n\nThe answer should be direct and affirmative, avoiding any tentative language. I'll structure it by first stating the two retake options, then the AAC appeal process, followed by the tie-subject alternative, and finally emphasizing the importance of consulting advisors. This covers all bases while keeping it concise and helpful.\n</think>\n\nIf you have failed a compulsory subject, you are entitled to retake it up to two times. Should you fail it after two attempts, you should formally appeal to the Academic Appeals Committee (AAC) for a third opportunity. If the AAC does not approve further retakes, and no equivalent subject is available with Faculty approval, you may be de-registered, and this decision will be final.\n\nIf the subject has been phased out or no longer offered, you can request a 'tie-subject' arrangement with Faculty Board approval, allowing you to take an equivalent subject instead.\n\nAs a Year 3 student, it is important to consult your Academic Advisor promptly to understand the specific procedures and deadlines for appeals or tie-subject arrangements. They can guide you through the process and help you plan your academic path.\n\nLet me know if you need further assistance!",
+      "retrieval_avg_similarity": 0.5817540344386086,
+      "retrieval_max_similarity": 0.6865164775964464,
+      "retrieval_min_similarity": 0.4537089238502056,
+      "retrieval_std_similarity": 0.08178375287532623,
+      "retrieval_num_docs": 6,
+      "retrieval_diversity": 0.2752869611984109,
+      "faithfulness": 1.0,
+      "relevance": 0.3,
+      "completeness": 0.3,
+      "keyword_coverage": 0.5,
+      "length_word_count": 468,
+      "length_char_count": 2927,
+      "length_sentence_count": 30,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.1871508379888268
+    },
+    {
+      "question": "Are there any internship opportunities available?",
+      "category": "internship",
+      "answer": "<think>\nOkay, the user is asking about internship opportunities. Let me start by recalling the context provided. The documents mention different programmes: BEng/BSc in Information and AI Engineering, BEng in Electrical Engineering, and MSc in Electrical Engineering. \n\nFirst, the BEng/BSc IAIE programme has a Summer Internship for BSc (Hons) in IS students, which is part of EIE3189. They work in ICT-related organizations during the summer. There's also an Industrial Project for BEng in ESIoT and BSc in AIIE, which is a Capstone Project in a company. Additionally, the IAIE programme allows students to find their own jobs during breaks, but the department checks if it aligns with learning outcomes.\n\nFor the BEng Electrical Engineering programme, the internship starts in the third year, with preparation including skills and planning. They maintain a training journal documenting responsibilities and skills. \n\nThe MSc Electrical Engineering programme doesn't mention internships but has subjects on renewable energy, which might relate to industry projects but not explicitly internships.\n\nNow, the user's question is straightforward: are there internship opportunities? The answer needs to be affirmative and direct. I should list the programmes and their specific internships without using \"based on\" or uncertain terms. \n\nAlso, the response should be in English since the query is in English. Need to make sure each programme's details are clear. The IAIE programme has two main internships and self-found jobs with checks. EE undergrad has a structured third-year internship. MSc EE has coursework but no direct internship mentioned. \n\nWait, the student might be from IAIE or EE. The advisor should answer generally but mention each programme's specifics. Also, the helpful answer provided by the user includes all three programmes, so the thought process should reflect that. \n\nNeed to ensure the answer is confident and decisive, avoiding any hedging. Also, mention that students should consult their academic advisor for details. Keep it friendly and offer further help. \n\nCheck if there's any other programme mentioned in the context. The IAIE programme also has an Industrial Project, which is different from internships. Clarify that distinction if needed. But the user asked about internships, so focus on the internship parts. \n\nMake sure not to fabricate any information. The context provides specific details for each programme, so stick to that. Also, avoid markdown and keep the thought process natural. \n\nFinal answer should list the internships per programme, mention the IAIE's self-found jobs with checks, and note that EE undergrad has a structured internship. MSc EE has relevant courses but no internship. Then invite further questions.\n</think>\n\nYes, there are internship opportunities available, particularly for students in the BEng/BSc in Information and Artificial Intelligence Engineering and BEng in Electrical Engineering programmes. \n\nFor the BEng/BSc in Information and Artificial Intelligence Engineering programme, students in the BSc (Hons) in Information Systems can participate in a Summer Internship (EIE3189) during the summer months. This internship allows students to work in an ICT-related organization and apply their academic knowledge in a real-world context. Additionally, students in the BEng (Hons) in ESIoT and BSc (Hons) in AIIE can undertake an Industrial Project, which is a Capstone Project conducted in collaboration with industry partners. Furthermore, students may find their own jobs or internships during summer breaks or semester breaks, provided they align with the programme's learning outcomes and are approved by the Department.\n\nFor the BEng in Electrical Engineering programme, students typically begin their internship preparation in their third year of study. They are guided through the process of finding local or non-local work-based attachments, and during the internship, they maintain a training journal to document their progress, responsibilities, and the skills and knowledge they acquire. These internships are closely monitored to ensure they meet the programme's requirements.\n\nStudents in the Master of Science in Electrical Engineering programme may not have formal internships, but the programme includes courses on renewable energy, such as wind and solar energy, which may involve industry-related projects or case studies. \n\nIf you are interested in internships, I recommend consulting with your academic advisor or the WIE Coordinator for more specific details based on your programme and academic goals. Let me know if you have any more enquiries!",
+      "retrieval_avg_similarity": 0.5431718868633094,
+      "retrieval_max_similarity": 0.5904666634124064,
+      "retrieval_min_similarity": 0.4349370136436281,
+      "retrieval_std_similarity": 0.05514958078358118,
+      "retrieval_num_docs": 6,
+      "retrieval_diversity": 0.3385827819558631,
+      "faithfulness": 1,
+      "relevance": 0.7,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5,
+      "length_word_count": 687,
+      "length_char_count": 4644,
+      "length_sentence_count": 46,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 2,
+      "context_utilization": 0.23893805309734514
+    }
+  ]
+}

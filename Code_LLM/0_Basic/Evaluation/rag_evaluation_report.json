@@ -1,0 +1,202 @@
+{
+  "evaluation_date": "2025-12-19 16:12:22",
+  "dataset_info": {
+    "total_queries": 5,
+    "evaluated_queries": 5,
+    "categories": [
+      "career",
+      "university",
+      "curriculum",
+      "academic",
+      "internship"
+    ]
+  },
+  "overall_metrics": {
+    "faithfulness": {
+      "mean": 0.4800000000000001,
+      "std": 0.38340579025361626,
+      "min": 0.0,
+      "max": 0.9
+    },
+    "relevance": {
+      "mean": 0.5599999999999999,
+      "std": 0.5176871642217914,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "completeness": {
+      "mean": 0.54,
+      "std": 0.4979959839195493,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "keyword_coverage": {
+      "mean": 0.6,
+      "std": 0.22360679774997896,
+      "min": 0.5,
+      "max": 1.0
+    },
+    "retrieval_avg_similarity": {
+      "mean": 0.6076746139989486,
+      "std": 0.04248038404609469,
+      "min": 0.5519531478873819,
+      "max": 0.6479230694488631
+    },
+    "retrieval_diversity": {
+      "mean": 0.208416631506183,
+      "std": 0.06832014291058452,
+      "min": 0.11555624269555409,
+      "max": 0.2767906680874247
+    },
+    "context_utilization": {
+      "mean": 0.15965393092638597,
+      "std": 0.07801283249949392,
+      "min": 0.06875,
+      "max": 0.2663755458515284
+    }
+  },
+  "category_performance": {
+    "career": {
+      "faithfulness": 0.9,
+      "relevance": 1.0,
+      "completeness": 0.8,
+      "keyword_coverage": 0.5
+    },
+    "university": {
+      "faithfulness": 0.2,
+      "relevance": 0.0,
+      "completeness": 0.0,
+      "keyword_coverage": 0.5
+    },
+    "curriculum": {
+      "faithfulness": 0.0,
+      "relevance": 0.0,
+      "completeness": 0.0,
+      "keyword_coverage": 0.5
+    },
+    "academic": {
+      "faithfulness": 0.8,
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5
+    },
+    "internship": {
+      "faithfulness": 0.5,
+      "relevance": 1.0,
+      "completeness": 1.0,
+      "keyword_coverage": 1.0
+    }
+  },
+  "detailed_results": [
+    {
+      "question": "What is the potential career path after studying in BEng Scheme in EE?",
+      "category": "career",
+      "answer": "<think>\nOkay, the user is asking about potential career paths after studying in the BEng Scheme in Electrical Engineering. Let me start by recalling the provided context. The EE programme focuses on power systems, energy utilisation, and related disciplines. It also mentions work-integrated education and capstone projects, which are good for practical experience.\n\nFirst, I need to list the typical career paths for EE graduates. The core subjects like Circuit Analysis, Electronics, and Power Systems would be relevant. The programme's emphasis on power systems suggests roles in that area. Also, the mention of societal needs in Hong Kong, Mainland China, and neighbouring regions points to opportunities in those regions.\n\nThe student might be a prospective student or someone considering switching to EE. They probably want a clear roadmap of job options. But maybe they\u2019re also interested in how their studies align with these careers. The context includes elective choices like Engineering Materials or Chemistry, which could influence specialisation.\n\nI should categorise careers into core engineering roles, energy sectors, research, and management. Core roles include power systems engineer, electronics design engineer. Energy sectors involve renewable energy and smart grids. Research roles require further studies, and management comes with experience. Also, the programme's work-integrated education might lead to internships turning into jobs.\n\nNeed to ensure the answer is affirmative and confident. Avoid any hedging. Mention specific industries like power utilities, tech companies, and government agencies. Highlight the programme's structure (capstone project, credit transfers) as advantages for career preparation.\n\nCheck if the context mentions any specific companies or industries. The programme addresses needs in Hong Kong and Mainland China, so careers there are implied. Also, the transportation engineering programme is separate, so focus on EE here.\n\nMake sure to cover both immediate entry-level positions and advanced roles. The student might be thinking about long-term career growth, so including management and research is important. Also, mention the global demand for EE skills, even though the context is regional.\n\nAvoid any fabricated details. The context doesn't mention specific salaries or job titles beyond general roles. Stick to what's provided. The elective options might allow specialisations, but the answer should focus on general EE careers unless the student's choice is specified, which isn't here.\n\nFinally, end with a friendly offer for more help. Keep the tone positive and encouraging. Ensure clarity and conciseness, avoiding jargon where possible. The user likely wants a straightforward, actionable answer without fluff.\n</think>\n\nCertainly! Studying the Bachelor of Engineering (Honours) in Electrical Engineering (BEng in EE) at The Hong Kong Polytechnic University prepares you for a diverse range of exciting career paths. Graduates are equipped with strong foundational knowledge and practical skills in areas such as circuit design, power systems, electronics, and energy utilisation.\n\nBased on the programme structure and content, here are the potential career paths for you:\n\n1.  **Power Systems Engineer:** Design, develop, and maintain electrical power generation, transmission, and distribution systems. This is a core area for graduates given the programme's emphasis.\n2.  **Electronics Engineer:** Work on designing, developing, testing, and improving electronic components, devices, and systems across various industries (consumer electronics, telecommunications, automotive).\n3.  **Electrical Engineer (General):** Apply principles of electricity and electromagnetism to solve engineering problems in manufacturing, construction, and other sectors.\n4.  **Energy Systems Engineer/Technician:** Focus on energy efficiency, renewable energy integration (like solar, wind), smart grids, and sustainable energy solutions, addressing the growing societal need mentioned in the programme description.\n5.  **Control Systems Engineer:** Design and implement systems that control the behaviour of other systems or devices, often used in manufacturing, robotics, and automation.\n6.  **Telecommunications Engineer:** Design and maintain the infrastructure for communication systems (mobile networks, fibre optics, satellite).\n7.  **Research and Development Engineer:** Work in industries or research institutions to innovate and develop new electrical technologies, potentially leading to further study (like a Master's or PhD).\n8.  **Technical Sales Engineer/Consultant:** Provide technical expertise to clients, often representing engineering companies and helping them solve their problems.\n9.  **Project Engineer:** Oversee engineering projects from design to completion, managing timelines, budgets, and resources.\n10. **Graduate Engineer/Engineer Trainee:** Many companies offer graduate training schemes where you rotate through different departments before specialising.\n\nThe programme's features, such as work-integrated education and the capstone project, provide valuable real-world experience, enhancing your employability in Hong Kong, Mainland China, and the neighbouring regions. The strong foundation in mathematics, physics, and core electrical engineering subjects prepares you well for entry-level positions and potential advancement into management or specialist roles.\n\nIs there anything more specific you'd like to know about preparing for these careers, such as relevant elective subjects or internship opportunities?",
+      "retrieval_avg_similarity": 0.647027676147865,
+      "retrieval_max_similarity": 0.6622229012674946,
+      "retrieval_min_similarity": 0.6406930947558064,
+      "retrieval_std_similarity": 0.007792142372926802,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.11555624269555409,
+      "faithfulness": 0.9,
+      "relevance": 1.0,
+      "completeness": 0.8,
+      "keyword_coverage": 0.5,
+      "length_word_count": 760,
+      "length_char_count": 5604,
+      "length_sentence_count": 63,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.2663755458515284
+    },
+    {
+      "question": "How can I apply for residential hall in the PolyU?",
+      "category": "university",
+      "answer": "<think>\nHmm, the user is asking about applying for a residential hall at PolyU. Let me think about this carefully.\n\nThe user seems to be a prospective or current student at PolyU who needs accommodation. They're probably looking for clear, step-by-step guidance on the application process. I should provide a straightforward answer without unnecessary details unless they ask for more.\n\nLooking at the context provided, I don't see any specific information about the residential hall application process. The documents mention academic requirements, credit transfer, and other policies, but nothing about accommodation procedures.\n\nI should be honest here and say that I don't have the information they need. It's important to be clear and direct about what I can and cannot answer. I'll explain that I don't have details about the residential hall application process in my knowledge base.\n\nI should also suggest they reach out to the Student Housing Office directly. This is the most helpful thing I can do - point them to the right department that can provide the specific information they need. I'll make sure to be polite and encourage them to ask if they have any more questions.\n\nThe user might be feeling anxious about securing accommodation, so I should respond in a reassuring but honest manner. I'll keep my answer concise but helpful, and end by inviting further questions to show I'm still available to assist.\n</think>\n\nI don't have specific information on the application process for residential halls in my knowledge base. The context provided focuses on academic programmes, credit transfer, GPA requirements, and other academic policies.\n\nFor details on applying for PolyU residential halls, I recommend contacting the Student Housing Office directly or visiting their official website. They can provide the most accurate and up-to-date information regarding deadlines, requirements, and the application procedure.\n\nPlease let me know if you have any other questions I can help with!",
+      "retrieval_avg_similarity": 0.5519531478873819,
+      "retrieval_max_similarity": 0.5732036779679642,
+      "retrieval_min_similarity": 0.5237532660479384,
+      "retrieval_std_similarity": 0.019700784697674598,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.2767906680874247,
+      "faithfulness": 0.2,
+      "relevance": 0.0,
+      "completeness": 0.0,
+      "keyword_coverage": 0.5,
+      "length_word_count": 314,
+      "length_char_count": 2001,
+      "length_sentence_count": 21,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.100418410041841
+    },
+    {
+      "question": "What courses are offered in the first year in Master of Science in EIE?",
+      "category": "curriculum",
+      "answer": "<think>\nHmm, the user is asking about the first-year courses for the Master of Science in Electronic and Information Engineering program. Let me think about what I know from the provided context.\n\nLooking through the information provided, I notice that the context contains details about the BEng/BSc in Information and Artificial Intelligence Engineering program, but there's no information about the Master of Science in Electronic and Information Engineering program specifically. The only mention of a Master's program is in the context, but it only describes conferences and journals, not the curriculum.\n\nThis means I don't have any specific course information for the Master's program in EIE. I need to be honest with the student and let them know that I can't answer their question based on the available information. I should also offer to help with other aspects of their query if possible.\n\nThe student might be planning their studies or trying to understand what courses to expect. Since I can't provide specific course information, I'll need to politely decline while still being helpful about other potential topics.\n</think>\n\nI'm sorry, but I don't have the specific course information for the first year of the Master of Science in Electronic and Information Engineering program in the provided context. If you have more details or a different question, feel free to ask!",
+      "retrieval_avg_similarity": 0.6138966398062138,
+      "retrieval_max_similarity": 0.627225301229809,
+      "retrieval_min_similarity": 0.6041963630653312,
+      "retrieval_std_similarity": 0.008349326456177265,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.1579039154824784,
+      "faithfulness": 0.0,
+      "relevance": 0.0,
+      "completeness": 0.0,
+      "keyword_coverage": 0.5,
+      "length_word_count": 221,
+      "length_char_count": 1387,
+      "length_sentence_count": 12,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.06875
+    },
+    {
+      "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
+      "category": "academic",
+      "answer": "<think>\nHmm, the user is asking about academic support for a failed subject as a year 3 student in BSc Information Security. They're probably feeling anxious or uncertain about their options, so I need to address their immediate concerns first.\n\nBased on the context, they're eligible for three main pathways: third retake with AAC approval, equivalent subject with faculty special approval, or a tie-subject arrangement if the subject is phased out. \n\nThe student might not realize that all these options are formally documented processes, so I should emphasize the importance of acting quickly. They'll need to check their university's academic calendar for deadlines, as delays could affect their eligibility.\n\nSince they're in year 3, failing a compulsory subject could impact their progression, so I should also hint at academic advising as a proactive step. Maybe they're hesitant to approach faculty directly, so I'll suggest starting with the Student Support Office to keep the process confidential.\n\nThe tone should be reassuring but firm - no vague possibilities (\"might be able to\") but clear, actionable advice. I'll structure the response from most accessible options (third retake) to more specialized ones (tie-subject), ending with a prompt for further consultation to show ongoing support.\n</think>\n\nIf you have failed a compulsory subject, here are the steps you should follow:\n\n1. **Third Retake with Academic Appeals Committee (AAC):** You can submit an appeal to the AAC for a third chance to retake the subject. Ensure your appeal is submitted within the specified deadlines.\n\n2. **Equivalent Subject with Special Approval:** If the AAC does not approve a third retake, you can request to take an equivalent subject with special approval from your Faculty. This requires a formal proposal and faculty endorsement.\n\n3. **Tie-Subject Arrangement:** If the subject has been phased out and cannot be retaken, a tie-subject arrangement can be made with Faculty Board approval. You would need to take another appropriate subject that aligns with the failed subject's objectives.\n\n**Important Notes:**\n- Act quickly, as deadlines for appeals and retakes are strict.\n- Consult your Student Support Office or academic advisor for guidance on the application process.\n\nIf you have any more questions or need assistance, feel free to ask!",
+      "retrieval_avg_similarity": 0.6479230694488631,
+      "retrieval_max_similarity": 0.6865164775964464,
+      "retrieval_min_similarity": 0.6309897501854421,
+      "retrieval_std_similarity": 0.019918432048867694,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.24384947488309705,
+      "faithfulness": 0.8,
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5,
+      "length_word_count": 365,
+      "length_char_count": 2349,
+      "length_sentence_count": 22,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.17041800643086816
+    },
+    {
+      "question": "Are there any internship opportunities available?",
+      "category": "internship",
+      "answer": "<think>\nOkay, the user is asking if there are internship opportunities available. Let me check the provided context to see what information is there.\n\nLooking at the sources, there are two programs mentioned: Information and Artificial Intelligence Engineering (IAIE) and Electrical Engineering (EE). For IAIE, the context mentions the Industrial Project and Summer Internship (EIE3189). It also talks about students possibly finding their own jobs during breaks, but the department evaluates if these help with learning outcomes. For EE, there's a Summer Internship with specific guidelines about preparation, a training journal, and responsibilities.\n\nThe key points are that both programs have structured internship components. The IAIE program has industrial projects and a summer internship, plus the possibility of self-found jobs with departmental approval. The EE program has a summer internship with clear guidelines. The context also mentions the department supports students in finding placements and monitors progress.\n\nThe user might be a student in either program. They might be looking for opportunities to gain practical experience, which is common for undergraduates. Their explicit question is about availability, but they might also want to know how to proceed, what requirements are, or how to apply. Since the answer needs to be affirmative and direct, I should confirm the existence of internships in both programs without fabricating details. I should also mention that the department provides support and that students need to follow guidelines, like maintaining a journal. It's important to reassure them that these opportunities are available and encourage them to reach out for more info.\n</think>\n\nYes, there are internship opportunities available for students in both the BEng (Hons) / BSc (Hons) Scheme in Information and Artificial Intelligence Engineering and the BEng (Hons) Scheme in Electrical Engineering. Both programmes incorporate practical training elements, such as the Industrial Project and Summer Internship, designed to provide students with real-world work experience.",
+      "retrieval_avg_similarity": 0.5775725367044195,
+      "retrieval_max_similarity": 0.5904666634124064,
+      "retrieval_min_similarity": 0.571405283871083,
+      "retrieval_std_similarity": 0.006961253560001333,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.24798285638236084,
+      "faithfulness": 0.5,
+      "relevance": 1.0,
+      "completeness": 1,
+      "keyword_coverage": 1.0,
+      "length_word_count": 309,
+      "length_char_count": 2114,
+      "length_sentence_count": 19,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 2,
+      "context_utilization": 0.19230769230769232
+    }
+  ]
+}

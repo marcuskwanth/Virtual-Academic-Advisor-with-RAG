@@ -1,0 +1,202 @@
+{
+  "evaluation_date": "2025-12-19 17:41:52",
+  "dataset_info": {
+    "total_queries": 5,
+    "evaluated_queries": 5,
+    "categories": [
+      "career",
+      "university",
+      "curriculum",
+      "academic",
+      "internship"
+    ]
+  },
+  "overall_metrics": {
+    "faithfulness": {
+      "mean": 0.18,
+      "std": 0.30331501776206204,
+      "min": 0.0,
+      "max": 0.7
+    },
+    "relevance": {
+      "mean": 0.76,
+      "std": 0.3209361307176243,
+      "min": 0.2,
+      "max": 1.0
+    },
+    "completeness": {
+      "mean": 0.72,
+      "std": 0.3033150177620621,
+      "min": 0.2,
+      "max": 0.9
+    },
+    "keyword_coverage": {
+      "mean": 0.6,
+      "std": 0.37914377220257756,
+      "min": 0.0,
+      "max": 1.0
+    },
+    "retrieval_avg_similarity": {
+      "mean": 0.5814236554518823,
+      "std": 0.04140311451403618,
+      "min": 0.5300368103040894,
+      "max": 0.6250919214038689
+    },
+    "retrieval_diversity": {
+      "mean": 0.20597948457839635,
+      "std": 0.09408609736652736,
+      "min": 0.10584102612089896,
+      "max": 0.34200035469051915
+    },
+    "context_utilization": {
+      "mean": 0.09669362432878523,
+      "std": 0.04288932769788797,
+      "min": 0.04716981132075472,
+      "max": 0.13725490196078433
+    }
+  },
+  "category_performance": {
+    "career": {
+      "faithfulness": 0.0,
+      "relevance": 1.0,
+      "completeness": 0.9,
+      "keyword_coverage": 1.0
+    },
+    "university": {
+      "faithfulness": 0.2,
+      "relevance": 0.2,
+      "completeness": 0.2,
+      "keyword_coverage": 0.75
+    },
+    "curriculum": {
+      "faithfulness": 0.0,
+      "relevance": 0.9,
+      "completeness": 0.9,
+      "keyword_coverage": 0.75
+    },
+    "academic": {
+      "faithfulness": 0.0,
+      "relevance": 0.9,
+      "completeness": 0.7,
+      "keyword_coverage": 0.0
+    },
+    "internship": {
+      "faithfulness": 0.7,
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5
+    }
+  },
+  "detailed_results": [
+    {
+      "question": "What is the potential career path after studying in BEng Scheme in EE?",
+      "category": "career",
+      "answer": "Certainly! Based on the BEng in Electrical Engineering programme at The Hong Kong Polytechnic University, here\u2019s a breakdown of the specific skills, qualifications, and research interests that are typically required or beneficial for success in common job roles:\n\n### **Specific Skills and Qualifications for Common Job Roles**:\n1. **Power Systems Engineer**:\n   - **Skills**: Proficiency in power system analysis (e.g., fault analysis, load flow studies), knowledge of transmission and distribution networks, and expertise in software tools like ETAP or PowerFactory.\n   - **Qualifications**: Certifications in power system engineering (e.g., from IEEE or CIGRE) or a Master\u2019s degree in Electrical Engineering with a specialization in power systems can enhance career prospects.\n   - **Research Interests**: Smart grids, renewable energy integration, and energy storage systems are emerging areas that can lead to advanced roles or academic pursuits.\n\n2. **Electronics Engineer**:\n   - **Skills**: Strong understanding of semiconductor devices, circuit design (both analogue and digital), and proficiency in PCB design tools (e.g., Altium Designer or Cadence).\n   - **Qualifications**: Certifications in electronics design (e.g., from IEEE) or experience with embedded systems (e.g., using ARM or Microchip technologies) is highly valued.\n   - **Research Interests**: Internet of Things (IoT), semiconductor technology, and analog-to-digital signal processing are key areas for innovation.\n\n3. **Electrical Design Engineer**:\n   - **Skills**: Expertise in CAD software for electrical design (e.g., AutoCAD Electrical) and knowledge of electrical codes and standards (e.g., IEC or IEEE standards).\n   - **Qualifications**: A professional engineering license (e.g., in Hong Kong or Mainland China) can significantly boost career opportunities, especially in large-scale projects.\n   - **Research Interests**: Building automation, smart grids, and energy-efficient design are relevant for both industry and academic growth.\n\n4. **Control Systems Engineer**:\n   - **Skills**: Proficiency in control theory, programming (e.g., PLC programming using Siemens or Allen-Bradley systems), and simulation tools (e.g., MATLAB/Simulink).\n   - **Qualifications**: Certifications in industrial automation (e.g., from Siemens or Rockwell Automation) or a Master\u2019s in Control Systems can add depth to one\u2019s expertise.\n   - **Research Interests**: Industrial Internet of Things (IIoT), robotics, and AI-driven control systems are cutting-edge areas for research.\n\n5. **Energy Systems Engineer**:\n   - **Skills**: Knowledge of renewable energy systems (e.g., solar, wind), energy management systems (EMS), and HVAC systems for energy optimization.\n   - **Qualifications**: Certifications in energy management (e.g., LEED AP or IES BEMP) or a Master\u2019s in Energy Systems can strengthen one\u2019s profile.\n   - **Research Interests**: Sustainable energy, battery storage technology, and smart energy grid management are critical for future developments.\n\n6. **Signal Processing Engineer**:\n   - **Skills**: Expertise in DSP algorithms, programming (e.g., Python, MATLAB), and familiarity with communication protocols (e.g., 5G, IoT protocols).\n   - **Qualifications**: Certifications in signal processing (e.g., from IEEE) or experience with real-time systems (e.g., using DSP processors) is advantageous.\n   - **Research Interests**: Advances in telecommunications, audio processing, and biomedical signal analysis offer exciting research avenues.\n\n### **Further Academic Pursuits**:\n- **PhD Opportunities**: Students interested in research can pursue advanced degrees in areas like renewable energy, signal processing, or power systems, focusing on emerging technologies such as smart grids, AI in engineering, or sustainable energy solutions.\n- **Postgraduate Studies**: A Master\u2019s degree in a specialized discipline (e.g., Power Systems, Control Engineering) can open doors to academia or R&D roles in industries.\n\n### **Additional Advice**:\n- **Practical Experience**: Gain hands-on experience through internships, industrial placements, or capstone projects, as these are highly valued by employers.\n- **Certifications**: Pursue industry-recognized certifications to complement your degree and enhance your competitiveness.\n- **Networking**: Engage with professional organizations (e.g., IEEE, Institution of Engineers Hong Kong) to stay updated on industry trends and opportunities.\n\nIf you have any more specific questions or need guidance on aligning your studies with your career goals, feel free to ask!",
+      "retrieval_avg_similarity": 0.6250919214038689,
+      "retrieval_max_similarity": 0.6622229012674946,
+      "retrieval_min_similarity": 0.5836560289462254,
+      "retrieval_std_similarity": 0.03221891329553969,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.10584102612089896,
+      "faithfulness": 0.0,
+      "relevance": 1.0,
+      "completeness": 0.9,
+      "keyword_coverage": 1.0,
+      "length_word_count": 601,
+      "length_char_count": 4589,
+      "length_sentence_count": 70,
+      "hallucination_has_uncertainty": false,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 0,
+      "context_utilization": 0.1348314606741573
+    },
+    {
+      "question": "How can I apply for residential hall in the PolyU?",
+      "category": "university",
+      "answer": "I cannot answer that question based on the provided context. The information available does not detail the specific process for submitting the application or the notification procedure. I recommend contacting the Student Housing Office directly for accurate and detailed guidance on these matters. If you have any other questions, please let me know.",
+      "retrieval_avg_similarity": 0.5300368103040894,
+      "retrieval_max_similarity": 0.567837234772224,
+      "retrieval_min_similarity": 0.5059772664515767,
+      "retrieval_std_similarity": 0.027058858934151293,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.34200035469051915,
+      "faithfulness": 0.2,
+      "relevance": 0.2,
+      "completeness": 0.2,
+      "keyword_coverage": 0.75,
+      "length_word_count": 53,
+      "length_char_count": 350,
+      "length_sentence_count": 5,
+      "hallucination_has_uncertainty": false,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 0,
+      "context_utilization": 0.04716981132075472
+    },
+    {
+      "question": "What courses are offered in the first year in Master of Science in EIE?",
+      "category": "curriculum",
+      "answer": "Certainly! Based on the provided context, the **Master of Science in Electronic and Information Engineering (EIE)** program includes foundational and core subjects in its curriculum. The first year typically covers courses such as:\n\n1. **Mathematics for Engineering**  \n2. **Digital Logic Design**  \n3. **Signals and Systems**  \n4. **Communication Systems**  \n5. **Control Systems**  \n6. **Electronic Circuits**  \n\nThese courses are designed to provide students with a strong academic base. However, the exact list of courses may vary, and students should refer to the official programme page or contact the department for the most accurate and up-to-date information.  \n\nIf you need further details or assistance, feel free to ask!",
+      "retrieval_avg_similarity": 0.5757705094583458,
+      "retrieval_max_similarity": 0.5821452389911937,
+      "retrieval_min_similarity": 0.569767906265462,
+      "retrieval_std_similarity": 0.005059871530683931,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.2274764509651943,
+      "faithfulness": 0.0,
+      "relevance": 0.9,
+      "completeness": 0.9,
+      "keyword_coverage": 0.75,
+      "length_word_count": 105,
+      "length_char_count": 732,
+      "length_sentence_count": 12,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.05583756345177665
+    },
+    {
+      "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
+      "category": "academic",
+      "answer": "Certainly! Here\u2019s a detailed breakdown of the academic support resources and strategies available to help you succeed in your subject or replacement subject:\n\n### **Academic Support Resources**\n1. **Academic Advising**  \n   - Schedule regular appointments with your academic advisor to discuss your academic progress, course selection, and study strategies.  \n   - Your advisor can provide guidance on time management, goal-setting, and avoiding common pitfalls in challenging subjects.\n\n2. **Tutoring and Workshops**  \n   - Utilize the university\u2019s academic support services, such as the Writing Centre, Maths Centre, and subject-specific tutoring.  \n   - Attend workshops on study skills, exam preparation, and critical thinking offered by the Student Development and Academic Support Division.\n\n3. **Library Resources**  \n   - Access the PolyU Library\u2019s academic databases, e-books, and research guides for subject-specific resources.  \n   - Use the library\u2019s research consultations to learn effective search strategies and citation management.\n\n4. **Online Learning Tools**  \n   - Explore platforms like Moodle, which offer learning materials, discussion forums, and virtual office hours for additional support.  \n   - Utilize the university\u2019s Learning Management System (LMS) for recorded lectures and supplementary materials.\n\n5. **Peer Support Networks**  \n   - Join study groups or academic clubs to collaborate with peers and share resources.  \n   - Participate in peer mentoring programs to gain insights from upper-year students.\n\n### **Strategies for Success**\n1. **Time Management**  \n   - Create a study schedule that allocates specific time slots for each subject.  \n   - Use tools like digital calendars or apps to track deadlines and assignments.\n\n2. **Active Learning Techniques**  \n   - Employ strategies such as summarizing notes, teaching concepts to peers, and creating flashcards to reinforce understanding.  \n   - Break down complex topics into smaller, manageable chunks and tackle them one at a time.\n\n3. **Engagement with Lecturers**  \n   - Attend all lectures and participate actively in class discussions.  \n   - Don\u2019t hesitate to ask questions during or after lectures, or schedule one-on-one meetings with lecturers for clarification.\n\n4. **Exam Preparation**  \n   - Review past papers and practice questions to identify areas for improvement.  \n   - Formulate a study plan that includes regular quizzes and mock exams to build confidence.\n\n5. **Mental Well-being**  \n   - Maintain a balanced lifestyle by incorporating breaks, exercise, and hobbies into your routine.  \n   - Seek support from the university\u2019s Counselling and Psychological Services (CAPS) if you\u2019re feeling overwhelmed.\n\n### **Summary**\n- **Academic Support Resources**: Leverage tutoring, library services, and academic advising for structured help.  \n- **Strategies for Success**: Focus on active learning, time management, and mental well-being to build resilience and improve performance.\n\nI hope this information is helpful! If you have any more questions or need further clarification, feel free to ask.",
+      "retrieval_avg_similarity": 0.6211850882113975,
+      "retrieval_max_similarity": 0.6865164775964464,
+      "retrieval_min_similarity": 0.5559094527713164,
+      "retrieval_std_similarity": 0.05332010918215137,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.128447852382242,
+      "faithfulness": 0.0,
+      "relevance": 0.9,
+      "completeness": 0.7,
+      "keyword_coverage": 0.0,
+      "length_word_count": 422,
+      "length_char_count": 3108,
+      "length_sentence_count": 36,
+      "hallucination_has_uncertainty": false,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 0,
+      "context_utilization": 0.13725490196078433
+    },
+    {
+      "question": "Are there any internship opportunities available?",
+      "category": "internship",
+      "answer": "Yes, there are specific industries that frequently offer internships, as mentioned in the provided context. However, the context does not list specific company names. Instead, it highlights the main source of placement opportunities as the **Job Board arranged by the Student Affairs Office (SAO)** of the University.\n\nTo find specific companies, I recommend checking:\n\n1. The **Job Board** managed by the SAO.\n2. University career websites.\n3. Professional industry associations.\n4. Company career pages directly.\n\nThese resources will provide up-to-date information on companies seeking interns. Let me know if you'd like help finding any of these resources!",
+      "retrieval_avg_similarity": 0.55503394788171,
+      "retrieval_max_similarity": 0.571405283871083,
+      "retrieval_min_similarity": 0.5294103179153633,
+      "retrieval_std_similarity": 0.0183502588407316,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.2261317387331273,
+      "faithfulness": 0.7,
+      "relevance": 0.8,
+      "completeness": 0.9,
+      "keyword_coverage": 0.5,
+      "length_word_count": 97,
+      "length_char_count": 660,
+      "length_sentence_count": 14,
+      "hallucination_has_uncertainty": false,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 0,
+      "context_utilization": 0.10837438423645321
+    }
+  ]
+}

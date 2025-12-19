@@ -1,10 +1,14 @@
 # Virtual Academic Advisor Chatbot
 Author: Marcus Kwan
 Type: FYP, private repository
-Number of retrieve docs in each process = 3
 
 ## PROGRESS HISTORY
-2028-12-17 (2):
+(Todo: Routing logics)
+
+2025-12-19 (1):
+- Tested evaluations in 3 different query enhancement techniques.
+
+2025-12-17 (2):
 - Added evaluations (Faithfulness, context relevancy, completeness), to be tested.
 
 2025-12-17 (1):
