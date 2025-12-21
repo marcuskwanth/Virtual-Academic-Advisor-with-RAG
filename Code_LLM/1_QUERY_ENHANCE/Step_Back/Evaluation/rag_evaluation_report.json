@@ -1,202 +1,193 @@
 {
-  "evaluation_date": "2025-12-19 17:09:11",
+  "evaluation_date": "2025-12-21 19:36:18",
   "dataset_info": {
     "total_queries": 5,
     "evaluated_queries": 5,
     "categories": [
       "career",
-      "university",
+      "facility",
       "curriculum",
       "academic",
       "internship"
     ]
   },
   "overall_metrics": {
-    "faithfulness": {
-      "mean": 0.7,
-      "std": 0.4472135954999579,
-      "min": 0.0,
-      "max": 1.0
-    },
-    "relevance": {
-      "mean": 0.5799999999999998,
-      "std": 0.42071367935925263,
-      "min": 0.0,
-      "max": 1.0
-    },
-    "completeness": {
-      "mean": 0.74,
-      "std": 0.3209361307176243,
-      "min": 0.3,
-      "max": 1.0
-    },
     "keyword_coverage": {
-      "mean": 0.55,
-      "std": 0.11180339887498947,
-      "min": 0.5,
-      "max": 0.75
+      "mean": 0.65,
+      "std": 0.2850438562747845,
+      "min": 0.25,
+      "max": 1.0
     },
     "retrieval_avg_similarity": {
-      "mean": 0.5803263354833191,
-      "std": 0.03265127920069244,
-      "min": 0.5431718868633094,
-      "max": 0.6219792757434562
+      "mean": 0.6258745968225298,
+      "std": 0.060027377174895154,
+      "min": 0.5703375554168743,
+      "max": 0.7150238564488174
+    },
+    "retrieval_max_similarity": {
+      "mean": 0.6704414461842654,
+      "std": 0.04337489219855829,
+      "min": 0.6186989175225789,
+      "max": 0.7353852370249004
+    },
+    "retrieval_min_similarity": {
+      "mean": 0.5730280007332683,
+      "std": 0.09983204034703617,
+      "min": 0.4634046402778011,
+      "max": 0.7043059752096046
     },
     "retrieval_diversity": {
-      "mean": 0.2590721891122111,
-      "std": 0.056847229537097844,
-      "min": 0.18849380385245762,
-      "max": 0.3385827819558631
+      "mean": 0.19358718613077713,
+      "std": 0.12599273374252384,
+      "min": 0.026261257791540427,
+      "max": 0.36405720970904076
     },
     "context_utilization": {
-      "mean": 0.13936799114793513,
-      "std": 0.0774233220353524,
-      "min": 0.054878048780487805,
-      "max": 0.23893805309734514
+      "mean": 0.24069750280741084,
+      "std": 0.10642126543289986,
+      "min": 0.08083832335329341,
+      "max": 0.3415841584158416
+    },
+    "length_word_count": {
+      "mean": 489.4,
+      "std": 181.66810396984937,
+      "min": 329.0,
+      "max": 719.0
+    },
+    "hallucination_uncertainty_count": {
+      "mean": 3.2,
+      "std": 1.3038404810405297,
+      "min": 1.0,
+      "max": 4.0
     }
   },
   "category_performance": {
     "career": {
-      "faithfulness": 0.5,
-      "relevance": 0.9,
-      "completeness": 0.5,
-      "keyword_coverage": 0.75
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.6229486356462964,
+      "retrieval_diversity": 0.18627380448080022,
+      "context_utilization": 0.23837209302325582
     },
-    "university": {
-      "faithfulness": 0.0,
-      "relevance": 1.0,
-      "completeness": 1.0,
-      "keyword_coverage": 0.5
+    "facility": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.7150238564488174,
+      "retrieval_diversity": 0.13920722287986032,
+      "context_utilization": 0.3415841584158416
     },
     "curriculum": {
-      "faithfulness": 1.0,
-      "relevance": 0.0,
-      "completeness": 1.0,
-      "keyword_coverage": 0.5
+      "keyword_coverage": 1.0,
+      "retrieval_avg_similarity": 0.572440746677621,
+      "retrieval_diversity": 0.252136435792644,
+      "context_utilization": 0.08083832335329341
     },
     "academic": {
-      "faithfulness": 1.0,
-      "relevance": 0.3,
-      "completeness": 0.3,
-      "keyword_coverage": 0.5
+      "keyword_coverage": 0.25,
+      "retrieval_avg_similarity": 0.5703375554168743,
+      "retrieval_diversity": 0.36405720970904076,
+      "context_utilization": 0.20935960591133004
     },
     "internship": {
-      "faithfulness": 1.0,
-      "relevance": 0.7,
-      "completeness": 0.9,
-      "keyword_coverage": 0.5
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.6486221899230399,
+      "retrieval_diversity": 0.026261257791540427,
+      "context_utilization": 0.3333333333333333
     }
   },
   "detailed_results": [
     {
       "question": "What is the potential career path after studying in BEng Scheme in EE?",
       "category": "career",
-      "answer": "<think>\nHmm, the user is asking about potential career paths after studying in the BEng Scheme in Electrical Engineering. This is a straightforward question about career prospects, so they're likely a prospective student or someone considering this program.\n\nLet me recall the program details from the context. The BEng in Electrical Engineering at PolyU prepares students for careers in power systems, energy utilisation, and related fields. The curriculum includes foundational subjects like mathematics, physics, and engineering courses, plus practical components like industrial placements.\n\nThe student might be exploring career options to see if this aligns with their aspirations. They could be weighing this program against others or deciding if engineering is the right path for them. Beyond just listing careers, I should highlight the unique aspects of this program, like the work-integrated education, to show how it prepares students for the workforce.\n\nI'll structure the response to cover diverse career options across industries, emphasize the program's strengths, and end with advice to consult further. This approach is helpful and affirmative, as required.\n</think>\n\nAfter completing the Bachelor of Engineering (Honours) in Electrical Engineering (BEng in EE) at The Hong Kong Polytechnic University, graduates have a wide range of career opportunities in various sectors. The program prepares students for roles in power systems, energy utilisation, transportation systems, smart grids, and related engineering disciplines.\n\n### Potential Career Paths:\n1. **Power Systems Engineer**: Design, develop, and maintain electrical power systems, including generation, transmission, and distribution networks.\n2. **Energy Systems Engineer**: Focus on energy efficiency, renewable energy integration, and sustainable energy solutions.\n3. **Electronics Engineer**: Work on designing and developing electronic circuits, devices, and systems for various applications.\n4. **Smart Grid Engineer**: Involved in the development and management of smart grid technologies for modern power systems.\n5. **Transportation Systems Engineer**: Leverage skills in transportation systems analysis and planning for roles in logistics and urban transport.\n6. **Industrial Engineer**: Optimise industrial processes, supply chains, and manufacturing systems.\n7. **Research and Development Engineer**: Conduct research and develop new technologies in electrical engineering.\n8. **Project Manager**: Oversee engineering projects from conception to completion, ensuring timely and cost-effective delivery.\n9. **Policy Analyst**: Advise governments and organisations on electrical engineering policies and regulations.\n10. **Entrepreneur**: Start and manage businesses in engineering-related fields, focusing on innovation and entrepreneurship.\n\n### Advice:\nThe BEng in Electrical Engineering at The Hong Kong Polytechnic University provides a strong foundation for a successful career. I recommend exploring internships and industrial placements to gain practical experience and build your professional network. If you have any more questions or need further guidance, feel free to ask!",
-      "retrieval_avg_similarity": 0.6219792757434562,
-      "retrieval_max_similarity": 0.6622229012674946,
-      "retrieval_min_similarity": 0.5813641118883632,
-      "retrieval_std_similarity": 0.030977302960704216,
+      "answer": "<think>\nHmm, the user is asking about the potential career paths for students graduating from the BEng Scheme in Electrical Engineering at PolyU. Let me start by recalling the provided context. The programme documents mention that the curriculum includes a broad-based approach, work-integrated education, and focuses on power systems, energy utilisation, and multidisciplinary studies. They also highlight skills like critical thinking, lifelong learning, and collaboration.\n\nFirst, I need to outline the core areas of electrical engineering that graduates can enter. From the context, EE covers power systems, electronics, renewable energy, etc. Then, considering the emphasis on work-integrated education, placements and industry connections are important. The advanced electives at Level 5 might allow specialisation, so roles like power systems engineer or electronics designer come to mind.\n\nThe student might also be interested in emerging fields like AI and sustainable tech, which are touched upon in the programme's societal needs. Including emerging roles like IoT or green tech could show forward-thinking. Also, the mention of global outlook and national pride suggests careers in Mainland China or international roles. \n\nI should structure the answer into core areas, emerging fields, and industry connections. Need to be specific with examples like power grid companies, renewable energy firms, and tech giants. Mentioning specific Level 5 subjects like EE502 or EE512 adds credibility. \n\nWait, the context also talks about the BEng TSE programme, but the user is asking about EE. Maybe I should note that graduates can collaborate or have opportunities in related fields, but focus on EE. \n\nAlso, the capstone project and WIE (Work-Integrated Education) are key for practical experience. Including that graduates are prepared for industry roles through these experiences is important. \n\nI should avoid vague statements and be affirmative as per the rules. Make sure to list concrete career paths and companies. Maybe add a note about further studies if they choose that path. \n\nCheck if the provided URLs are still valid. The syllabus link is given, so I can include that for more details. Also, the programme documents link for further info. \n\nNeed to ensure the answer is concise but comprehensive, highlighting the programme's strengths and how they translate to career opportunities. Make sure to address both traditional and emerging sectors to show versatility. \n\nOkay, I think that covers it. Let me put this all together in a structured way, ensuring each section flows logically and addresses the student's potential concerns about career prospects.\n</think>\n\nCertainly! Studying the Bachelor of Engineering (Honours) in Electrical Engineering (BEng(Hons)) at The Hong Kong Polytechnic University (PolyU) opens up a wide range of dynamic career paths. Here's a structured overview:\n\n### \ud83d\ude80 Core Career Paths\n1. **Power Systems Engineer**  \n   - Designs, develops, and maintains electrical power generation, transmission, and distribution systems.  \n   - Employers: Power Grid Companies (e.g., CLP Power Hong Kong), Mainland China Utilities, and international energy firms.  \n\n2. **Electronics & Communication Engineer**  \n   - Works on designing circuits, communication systems, and signal processing technologies.  \n   - Employers: Tech Giants (e.g., Huawei, Xiaomi), Research Labs, and telecom companies.  \n\n3. **Renewable Energy Specialist**  \n   - Focuses on solar, wind, and smart grid technologies to address sustainable energy needs.  \n   - Employers: Green Energy Companies (e.g., Sunways, Goldwind), Government Agencies (e.g., CEA in Mainland China).  \n\n4. **Industrial Automation & Control Engineer**  \n   - Develops systems for manufacturing automation, robotics, and industrial IoT.  \n   - Employers: Manufacturing Firms (e.g., Foxconn, Midea), Robotics Companies.  \n\n### \ud83c\udf31 Emerging Fields\n- **AI & Machine Learning Engineer**: Leverages EE knowledge to develop intelligent systems (e.g., EE520: Intelligent Motion Systems).  \n- **Electric Vehicle (EV) Engineer**: Designs battery systems, motors, and charging infrastructure (e.g., EE512: Electric Vehicles).  \n- **Smart City Technologist**: Works on IoT, sensor networks, and urban infrastructure optimization.  \n\n### \ud83d\udcbc Industry Collaboration\n- **Work-Integrated Education (WIE)**: PolyU\u2019s partnerships with industries (e.g., Siemens, Microsoft) provide hands-on experience.  \n- **Capstone Projects**: Collaborate with companies to solve real-world engineering challenges.  \n\n### \ud83d\udd25 Global Opportunities\n- Graduates are equipped for roles in Hong Kong, Mainland China, and Southeast Asia, supported by the programme\u2019s focus on global outlook and multidisciplinary skills.  \n\n### \ud83d\udd0d Advanced Study Options\n- Pursue Master\u2019s or PhD in specializations like Power Systems, Renewable Energy, or AI (e.g., MSc in Electrical Engineering at PolyU).  \n\nFor detailed syllabus and Level 5 electives, visit:  \n\ud83d\udd17 [Subject Syllabi](https://www.polyu.edu.hk/eee/study/information-for-current-students/subject-syllabi/)  \n\ud83d\udd17 [Programme Documents](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)  \n\nWould you like guidance on preparing for specific roles or further study plans?",
+      "retrieval_avg_similarity": 0.6229486356462964,
+      "retrieval_max_similarity": 0.6619743957342731,
+      "retrieval_min_similarity": 0.5069643425620889,
+      "retrieval_std_similarity": 0.05444163079217455,
       "retrieval_num_docs": 6,
-      "retrieval_diversity": 0.18849380385245762,
-      "faithfulness": 0.5,
-      "relevance": 0.9,
-      "completeness": 0.5,
-      "keyword_coverage": 0.75,
-      "length_word_count": 429,
-      "length_char_count": 3175,
-      "length_sentence_count": 36,
+      "retrieval_diversity": 0.18627380448080022,
+      "keyword_coverage": 0.5,
+      "length_word_count": 719,
+      "length_char_count": 5288,
+      "length_sentence_count": 75,
       "hallucination_has_uncertainty": true,
       "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 2,
-      "context_utilization": 0.14444444444444443
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.23837209302325582
     },
     {
       "question": "How can I apply for residential hall in the PolyU?",
-      "category": "university",
-      "answer": "<think>\nHmm, the user is asking about how to apply for a residential hall at PolyU. Let me think about how to respond.\n\nI don't see any information in the provided context about the residential hall application process. The context contains details about Minor study enrolment, credit validity periods, and other academic regulations, but nothing specifically about housing.\n\nThis means I should say no, as I cannot answer the question without fabricating information. I need to be clear and affirmative that I don't know the answer rather than providing false details about the application process.\n\nThe student might be feeling anxious about securing accommodation, so I should be empathetic while being honest about my limitations. I'll politely decline to answer and offer to help with other academic-related questions.\n\nI'll make sure my response is concise and doesn't leave the student guessing about the correct procedure. I'll also remind them that they can ask about other academic matters where I can provide accurate information.\n</think>\n\nI'm sorry, but I cannot answer your question about how to apply for a residential hall at PolyU, as the information you provided does not contain details regarding the residential hall application process.",
-      "retrieval_avg_similarity": 0.5535997655091114,
-      "retrieval_max_similarity": 0.5732036779679642,
-      "retrieval_min_similarity": 0.5117025548939498,
-      "retrieval_std_similarity": 0.024532078750077946,
+      "category": "facility",
+      "answer": "<think>\nHmm, the user is asking about how to apply for a residential hall at PolyU. Let me think about the information I have in the context.\n\nFrom the context, I can see that there are two main application periods - one for current students and one for non-local new students. The current students can apply from May 2 to May 19, 2025, while non-local new students have two phases: June 11 to July 25 and then July 26 to August 29, 2025.\n\nI should also mention the special consideration for applicants with exceptional needs. These students need to send documentary proof to student.halls@polyu.edu.hk by the deadline for the following residential year.\n\nThe context mentions that eligibility is determined according to UGC guidelines, and different policies apply for undergraduates and postgraduates. For postgraduates, only full-time research students within their normal study period are eligible.\n\nI'll provide the user with the specific application periods, the email address for special needs documentation, and the different policies for various student groups. I should also mention that they can find more detailed information on the PolyU SAO website.\n\nI'll make sure to be clear and direct in my response, following the rules about being affirmative and decisive. I'll include the URL to the website so they can access more information if needed. And I'll end by offering further assistance to be helpful and friendly.\n</think>\n\nTo apply for a residential hall at The Hong Kong Polytechnic University (PolyU), please follow these steps based on your student category:\n\n1. **Current Students (including SRS and RSCRC applicants):**  \n   - **Application Period:** 2 May 2025 (10:00 AM) to 19 May 2025 (11:59 PM).  \n   - **Eligibility:** All current students are eligible for hall residence, subject to availability.  \n\n2. **Non-local New Students:**  \n   - **Phase 1:** 11 June 2025 (10:00 AM) to 25 July 2025 (11:59 PM).  \n   - **Phase 2:** 26 July 2025 (10:00 AM) to 29 August 2025 (11:59 PM).  \n\n### Additional Information:\n- **Special Needs:** If you have exceptional needs (e.g., physical disability or personal hardships), submit documentary proof to student.halls@polyu.edu.hk by 30 June 2025 for the following academic year.  \n- **Eligibility:**  \n  - **Undergraduates:** Eligibility is based on UGC guidelines and PolyU policies.  \n  - **Postgraduates:** Only full-time research students within their normal study period are eligible for one year of hall residence.  \n\nFor detailed policies and further guidance, visit the [PolyU SAO Hall Admission page](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/).  \n\nIf you have any more questions, feel free to ask!",
+      "retrieval_avg_similarity": 0.7150238564488174,
+      "retrieval_max_similarity": 0.7353852370249004,
+      "retrieval_min_similarity": 0.7043059752096046,
+      "retrieval_std_similarity": 0.012089871041451969,
       "retrieval_num_docs": 4,
-      "retrieval_diversity": 0.2693469274018896,
-      "faithfulness": 0.0,
-      "relevance": 1,
-      "completeness": 1,
-      "keyword_coverage": 0.5,
-      "length_word_count": 197,
-      "length_char_count": 1257,
-      "length_sentence_count": 12,
+      "retrieval_diversity": 0.13920722287986032,
+      "keyword_coverage": 0.75,
+      "length_word_count": 406,
+      "length_char_count": 2747,
+      "length_sentence_count": 36,
       "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
+      "hallucination_has_hedging": true,
       "hallucination_uncertainty_count": 1,
-      "context_utilization": 0.07142857142857142
+      "context_utilization": 0.3415841584158416
     },
     {
       "question": "What courses are offered in the first year in Master of Science in EIE?",
       "category": "curriculum",
-      "answer": "<think>\nOkay, let me tackle this query step by step. The user is asking about the first-year courses for the Master of Science in Electronic and Information Engineering (MSc EIE) program. \n\nFirst, I need to recall the provided context. There's a document titled MSc_EE_46010_2526.pdf that details the Master of Science in Electrical Engineering. Wait, the user asked about MSc in Electronic and Information Engineering (EIE), but the document mentioned is for Electrical Engineering (EE). Hmm, that's a discrepancy. \n\nI should check if there's any source in the context that specifically covers MSc EIE. Looking through the provided materials, I see a document for MSc EIE (Dissertation) but not a curriculum breakdown. The EE curriculum is listed, but not EIE. Since the user specified EIE, and the EE curriculum is different, I can't provide accurate information. \n\nI need to adhere to the rules strictly. Rule 4 says to say no if I can't answer. Since there's no context for MSc EIE courses, I must decline to answer. \n\nBut wait, maybe the user confused EIE with EE? The context has both programs, but EIE's curriculum isn't provided. The EE curriculum is detailed, but that's a different program. I should clarify that I can't answer because the required information isn't available, not because the user might have misspoken. \n\nAlso, the student might be transitioning from an undergraduate to a master's program. They might need guidance on course selection. Since I can't provide the EIE courses, I should politely decline and offer to help with other aspects, like the EE program or general advice. \n\nI need to ensure my response is clear and adheres to the rules. No speculation, no fabricated answers. Just a straightforward \"no\" because the data isn't present. Then, ask if they need anything else. \n\nYes, that approach aligns with the rules. The user's deeper need might be to understand the master's program structure, but since EIE isn't covered, I can't assist further. Redirecting them to EE or other programs might be helpful, but without context, it's risky. Better to stick to the rules and decline politely.\n</think>\n\nI'm sorry, I cannot answer that question as the provided context does not contain any information about the courses offered in the first year for the Master of Science in Electronic and Information Engineering (MSc EIE) program.",
-      "retrieval_avg_similarity": 0.6011267148621101,
-      "retrieval_max_similarity": 0.627225301229809,
-      "retrieval_min_similarity": 0.569621226514005,
-      "retrieval_std_similarity": 0.019753313687445113,
+      "answer": "<think>\nHmm, the user is asking about the first-year courses for the Master of Science in Electronic and Information Engineering (EIE) at PolyU. Let me recall the context provided. There's a mention of a dissertation subject (EIE590) in the syllabus, but that's clearly a later course, not first-year. \n\nOkay, so the user probably wants to know what foundational courses they'll encounter in their first semester. I remember the context includes some programme documents from EIE, but they're focused on dissertation details and aren't specific to first-year courses. \n\nHmm, this is tricky. The user might be a prospective student trying to plan their academic path, or maybe a current student looking for course sequencing info. Since the exact first-year curriculum isn't explicitly listed in the context, I can't fabricate an answer. \n\nBut I can be helpful by directing them to the official source. The EIE department's programme documents page should have the detailed course breakdown. I should also mention that the dissertation (EIE590) is a 9-credit capstone course, which they'll likely encounter later in their studies, not first year. \n\nThe user might be feeling uncertain about course selection, so I'll keep my response reassuring and point them to the most reliable source. They'll probably appreciate knowing exactly what page to visit and what to look for there. \n\nI should also offer additional help if they need anything else, since they might have follow-up questions about specific courses or credit requirements. Keeping a positive tone is important here while being transparent about what information isn't available in the context.\n</think>\n\nI don't have specific information about the first-year courses for the Master of Science in Electronic and Information Engineering (EIE) at The Hong Kong Polytechnic University based on the provided context.\n\nHowever, I can recommend the following:\n\n1. The most reliable source would be the official EIE programme page on the PolyU website: [https://www.polyu.edu.hk/eee/study/programmes/masters/master-of-science-in-electronic-and-information-engineering/](https://www.polyu.edu.hk/eee/study/programmes/masters/master-of-science-in-electronic-and-information-engineering/)\n\n2. You might also find relevant course information on the programme documents page: [https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)\n\nWould you like help finding specific information about EIE courses or perhaps academic advising on planning your studies?",
+      "retrieval_avg_similarity": 0.572440746677621,
+      "retrieval_max_similarity": 0.6186989175225789,
+      "retrieval_min_similarity": 0.5439291659634781,
+      "retrieval_std_similarity": 0.028445705617497097,
       "retrieval_num_docs": 6,
-      "retrieval_diversity": 0.2236504711524343,
-      "faithfulness": 1,
-      "relevance": 0.0,
-      "completeness": 1.0,
-      "keyword_coverage": 0.5,
-      "length_word_count": 384,
-      "length_char_count": 2366,
-      "length_sentence_count": 31,
+      "retrieval_diversity": 0.252136435792644,
+      "keyword_coverage": 1.0,
+      "length_word_count": 344,
+      "length_char_count": 2627,
+      "length_sentence_count": 32,
       "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 3,
-      "context_utilization": 0.054878048780487805
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.08083832335329341
     },
     {
       "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
       "category": "academic",
-      "answer": "<think>\nHmm, the user is asking about what to do if they failed a subject as a Year 3 student in BSc Information Security. Let me think through this carefully.\n\nFirst, I need to recall the specific rules from the provided context. The academic regulations clearly state that students can retake a compulsory subject up to two times. After two failures, they need to go through the Academic Appeals Committee (AAC) for a third chance.\n\nThe user might be feeling anxious about their academic standing, so I should provide clear, step-by-step guidance. They probably need to know the exact process and consequences, but also some reassurance. I should mention the AAC appeal option but emphasize that it's a formal process with specific criteria.\n\nWait, the context also mentions tie-subject arrangements if the original subject is phased out. But since the user didn't specify any subject being phased out, maybe that's not immediately relevant. However, it's good to include it as a possibility in case their failed subject has been discontinued.\n\nThe student's level is important too. Year 3 is a critical stage, so failing a subject could impact their progression. They might be worried about graduating on time. I should highlight the seriousness but also provide a clear path forward.\n\nI should also mention the role of the Academic Advisor since they're assigned till graduation. The student might benefit from reaching out to their advisor for personalized support and guidance.\n\nThe user might have deeper concerns about their academic performance or time management. While I can't provide unsolicited advice, I can subtly encourage them to seek additional resources or discuss their situation with faculty if needed.\n\nThe answer should be direct and affirmative, avoiding any tentative language. I'll structure it by first stating the two retake options, then the AAC appeal process, followed by the tie-subject alternative, and finally emphasizing the importance of consulting advisors. This covers all bases while keeping it concise and helpful.\n</think>\n\nIf you have failed a compulsory subject, you are entitled to retake it up to two times. Should you fail it after two attempts, you should formally appeal to the Academic Appeals Committee (AAC) for a third opportunity. If the AAC does not approve further retakes, and no equivalent subject is available with Faculty approval, you may be de-registered, and this decision will be final.\n\nIf the subject has been phased out or no longer offered, you can request a 'tie-subject' arrangement with Faculty Board approval, allowing you to take an equivalent subject instead.\n\nAs a Year 3 student, it is important to consult your Academic Advisor promptly to understand the specific procedures and deadlines for appeals or tie-subject arrangements. They can guide you through the process and help you plan your academic path.\n\nLet me know if you need further assistance!",
-      "retrieval_avg_similarity": 0.5817540344386086,
-      "retrieval_max_similarity": 0.6865164775964464,
-      "retrieval_min_similarity": 0.4537089238502056,
-      "retrieval_std_similarity": 0.08178375287532623,
+      "answer": "<think>\nHmm, the user is a year 3 student in BSc Information Security, and they're asking what to do if they failed a subject. This is a practical and somewhat urgent question, especially since they're in their third year, so academic decisions could impact their graduation timeline.\n\nFirst, I need to recall the context provided. The key document is about the BEng/BSc Scheme in Information and Artificial Intelligence Engineering, but wait\u2014the user is in Information Security. That's a different programme. The context mentions EIE3117 (Integrated Project) for IAIE, but not for Information Security. Hmm, that's a problem. The rules say to say no if I can't answer, but maybe I can still help with general advice if the specifics aren't available.\n\nThe user might be confused because the context is for IAIE, not Information Security. I should clarify that upfront. They probably want to know about retakes, equivalent subjects, or academic appeals. Since the exact rules for their programme aren't in the context, I need to be honest about that but still provide useful guidance.\n\nThe student is likely stressed about failing a subject, especially in third year. They might be worried about retaking, deadlines, or academic consequences. They need clear, actionable steps. Even without programme-specific details, I can suggest general PolyU resources, like academic advisors or the Wellness section, which is good advice regardless of the programme.\n\nI should also consider the broader context. The student might not just want to know what to do procedurally but also how to cope with the stress of failure. The PolyU Wellness resources could be helpful here. Maybe they're feeling overwhelmed and need emotional support too.\n\nThe answer should be direct but empathetic. Start by acknowledging their concern, explain the limitation (no specific programme details), then offer general advice. Suggest specific steps: contact an academic advisor, check the website for their programme, and reach out to Wellness for support. End by inviting more questions to show ongoing support.\n\nAlso, the rules say to avoid \"may\" or \"could,\" so I need to be confident. No speculation, just clear, affirmative advice. Make sure not to fabricate any information\u2014stick to what's available or general PolyU policies.\n\nOkay, structure the response: empathize, clarify the limitation, provide general steps, direct them to resources, and invite further questions. Keep it concise but thorough.\n</think>\n\nI understand your concern about academic performance, and I'm here to help. However, I must clarify that the provided context specifically refers to the **BEng/BSc Scheme in Information and Artificial Intelligence Engineering (IAIE)**, and it does not detail the academic policies for the **BSc in Information Security** programme. \n\nThat said, here\u2019s what I can advise based on general PolyU academic guidelines and resources:\n\n### 1. **Academic Advisor**\n   - You should contact your academic advisor or the department directly to discuss your situation. They can provide specific guidance tailored to your programme.\n   - **URL**: [Academic Advisor Information](https://www.polyu.edu.hk/eee/study/academic-advising/)\n\n### 2. **Subject Retake Policy**\n   - For most programmes at PolyU, students are allowed to retake a failed subject once. If you have already retaken it and failed again, you may need to seek approval from the Academic Appeals Committee (AAC) or the Faculty Board.\n   - **URL**: [Academic Appeals](https://www.polyu.edu.hk/sao/academic-appeals/)\n\n### 3. **Wellness and Mental Health Support**\n   - Academic challenges can be stressful. If you're feeling overwhelmed, consider seeking support from the Student Counselling and Wellness Service (CWS).\n   - **URL**: [Student Counselling and Wellness](https://www.polyu.edu.hk/sao/counselling-and-wellness-section/student-counselling/mental-health/)\n\n### 4. **General Tips for Academic Success**\n   - Time management and task planning are crucial for handling academic stress. The following resources may help you manage your workload effectively:\n   - **URL**: [Academic Performance Tips](https://www.polyu.edu.hk/sao/counselling-and-wellness-section/student-counselling/mental-health-educational-material-or-resources/academic/)\n\n### 5. **Next Steps**\n   - I recommend reaching out to your academic advisor or the department\u2019s administrative office for programme-specific advice. They can clarify the exact procedures for retaking a subject or pursuing an equivalent one.\n\nIf you have any more questions or need further assistance, feel free to ask!",
+      "retrieval_avg_similarity": 0.5703375554168743,
+      "retrieval_max_similarity": 0.6846218858812687,
+      "retrieval_min_similarity": 0.4634046402778011,
+      "retrieval_std_similarity": 0.08343263162846373,
       "retrieval_num_docs": 6,
-      "retrieval_diversity": 0.2752869611984109,
-      "faithfulness": 1.0,
-      "relevance": 0.3,
-      "completeness": 0.3,
-      "keyword_coverage": 0.5,
-      "length_word_count": 468,
-      "length_char_count": 2927,
-      "length_sentence_count": 30,
+      "retrieval_diversity": 0.36405720970904076,
+      "keyword_coverage": 0.25,
+      "length_word_count": 649,
+      "length_char_count": 4607,
+      "length_sentence_count": 59,
       "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
+      "hallucination_has_hedging": true,
       "hallucination_uncertainty_count": 4,
-      "context_utilization": 0.1871508379888268
+      "context_utilization": 0.20935960591133004
     },
     {
       "question": "Are there any internship opportunities available?",
       "category": "internship",
-      "answer": "<think>\nOkay, the user is asking about internship opportunities. Let me start by recalling the context provided. The documents mention different programmes: BEng/BSc in Information and AI Engineering, BEng in Electrical Engineering, and MSc in Electrical Engineering. \n\nFirst, the BEng/BSc IAIE programme has a Summer Internship for BSc (Hons) in IS students, which is part of EIE3189. They work in ICT-related organizations during the summer. There's also an Industrial Project for BEng in ESIoT and BSc in AIIE, which is a Capstone Project in a company. Additionally, the IAIE programme allows students to find their own jobs during breaks, but the department checks if it aligns with learning outcomes.\n\nFor the BEng Electrical Engineering programme, the internship starts in the third year, with preparation including skills and planning. They maintain a training journal documenting responsibilities and skills. \n\nThe MSc Electrical Engineering programme doesn't mention internships but has subjects on renewable energy, which might relate to industry projects but not explicitly internships.\n\nNow, the user's question is straightforward: are there internship opportunities? The answer needs to be affirmative and direct. I should list the programmes and their specific internships without using \"based on\" or uncertain terms. \n\nAlso, the response should be in English since the query is in English. Need to make sure each programme's details are clear. The IAIE programme has two main internships and self-found jobs with checks. EE undergrad has a structured third-year internship. MSc EE has coursework but no direct internship mentioned. \n\nWait, the student might be from IAIE or EE. The advisor should answer generally but mention each programme's specifics. Also, the helpful answer provided by the user includes all three programmes, so the thought process should reflect that. \n\nNeed to ensure the answer is confident and decisive, avoiding any hedging. Also, mention that students should consult their academic advisor for details. Keep it friendly and offer further help. \n\nCheck if there's any other programme mentioned in the context. The IAIE programme also has an Industrial Project, which is different from internships. Clarify that distinction if needed. But the user asked about internships, so focus on the internship parts. \n\nMake sure not to fabricate any information. The context provides specific details for each programme, so stick to that. Also, avoid markdown and keep the thought process natural. \n\nFinal answer should list the internships per programme, mention the IAIE's self-found jobs with checks, and note that EE undergrad has a structured internship. MSc EE has relevant courses but no internship. Then invite further questions.\n</think>\n\nYes, there are internship opportunities available, particularly for students in the BEng/BSc in Information and Artificial Intelligence Engineering and BEng in Electrical Engineering programmes. \n\nFor the BEng/BSc in Information and Artificial Intelligence Engineering programme, students in the BSc (Hons) in Information Systems can participate in a Summer Internship (EIE3189) during the summer months. This internship allows students to work in an ICT-related organization and apply their academic knowledge in a real-world context. Additionally, students in the BEng (Hons) in ESIoT and BSc (Hons) in AIIE can undertake an Industrial Project, which is a Capstone Project conducted in collaboration with industry partners. Furthermore, students may find their own jobs or internships during summer breaks or semester breaks, provided they align with the programme's learning outcomes and are approved by the Department.\n\nFor the BEng in Electrical Engineering programme, students typically begin their internship preparation in their third year of study. They are guided through the process of finding local or non-local work-based attachments, and during the internship, they maintain a training journal to document their progress, responsibilities, and the skills and knowledge they acquire. These internships are closely monitored to ensure they meet the programme's requirements.\n\nStudents in the Master of Science in Electrical Engineering programme may not have formal internships, but the programme includes courses on renewable energy, such as wind and solar energy, which may involve industry-related projects or case studies. \n\nIf you are interested in internships, I recommend consulting with your academic advisor or the WIE Coordinator for more specific details based on your programme and academic goals. Let me know if you have any more enquiries!",
-      "retrieval_avg_similarity": 0.5431718868633094,
-      "retrieval_max_similarity": 0.5904666634124064,
-      "retrieval_min_similarity": 0.4349370136436281,
-      "retrieval_std_similarity": 0.05514958078358118,
-      "retrieval_num_docs": 6,
-      "retrieval_diversity": 0.3385827819558631,
-      "faithfulness": 1,
-      "relevance": 0.7,
-      "completeness": 0.9,
-      "keyword_coverage": 0.5,
-      "length_word_count": 687,
-      "length_char_count": 4644,
-      "length_sentence_count": 46,
+      "answer": "<think>\nOkay, let me analyze this query carefully. The user is asking about internship opportunities, and I need to respond as a professional academic advisor at PolyU while following all the specified rules.\n\nFirst, I check the provided context which contains multiple URLs pointing to PolyU's SAO resources. The key section here is the internship-related information. Looking at the URLs, I see clear mentions of \"Local Internship Programme\" and \"STEM Internship Scheme\" across different pages. This gives me confidence to confirm these opportunities exist.\n\nThe student seems to be inquiring about internships, possibly as a student with SEN (special educational needs) given the context references. They might be looking for accessible work opportunities or career development options. Beyond just confirming availability, I should provide the direct URLs to help them explore further.\n\nI need to be affirmative in my response since the rules prohibit using uncertain language like \"may\" or \"might\". I'll state directly that yes, internships are available. Then I'll list the specific programmes mentioned in the context: Local Internship Programme and STEM Internship Scheme, along with their URLs.\n\nSince the student might need more guidance, I'll offer additional support by asking if they'd like help with the application process or connecting with mentors. This shows proactive care while staying within my role as an academic advisor.\n\nThe response should be polite and professional, matching my role as a university advisor. I'll structure it to first confirm availability, then provide resources, and finally offer further assistance.\n</think>\n\nYes, there are internship opportunities available at The Hong Kong Polytechnic University. Specifically, the **Local Internship Programme** and the **STEM Internship Scheme** are two options that students can explore. For more details, you can visit the following resources:\n\n- **Local Internship Programme**: [https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/inclusive-employer-network/](https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/inclusive-employer-network/)\n- **STEM Internship Scheme**: [https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/useful-resources/](https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/useful-resources/)\n\nIf you need assistance with the application process or have any questions about these opportunities, feel free to reach out. I\u2019d be happy to help! Is there anything else you\u2019d like to know?",
+      "retrieval_avg_similarity": 0.6486221899230399,
+      "retrieval_max_similarity": 0.651526794758306,
+      "retrieval_min_similarity": 0.6465358796533688,
+      "retrieval_std_similarity": 0.0021180986588974133,
+      "retrieval_num_docs": 3,
+      "retrieval_diversity": 0.026261257791540427,
+      "keyword_coverage": 0.75,
+      "length_word_count": 329,
+      "length_char_count": 2669,
+      "length_sentence_count": 34,
       "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": true,
-      "hallucination_uncertainty_count": 2,
-      "context_utilization": 0.23893805309734514
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 3,
+      "context_utilization": 0.3333333333333333
     }
   ]
 }

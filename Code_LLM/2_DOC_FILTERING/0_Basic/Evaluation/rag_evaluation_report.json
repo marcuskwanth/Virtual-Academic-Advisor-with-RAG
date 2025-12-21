@@ -1,0 +1,193 @@
+{
+  "evaluation_date": "2025-12-21 20:17:28",
+  "dataset_info": {
+    "total_queries": 5,
+    "evaluated_queries": 5,
+    "categories": [
+      "career",
+      "facility",
+      "curriculum",
+      "academic",
+      "internship"
+    ]
+  },
+  "overall_metrics": {
+    "keyword_coverage": {
+      "mean": 0.65,
+      "std": 0.13693063937629152,
+      "min": 0.5,
+      "max": 0.75
+    },
+    "retrieval_avg_similarity": {
+      "mean": 0.6051168679765289,
+      "std": 0.07671616392995122,
+      "min": 0.5129014715307988,
+      "max": 0.7125005502975866
+    },
+    "retrieval_max_similarity": {
+      "mean": 0.6360396242016895,
+      "std": 0.07876180254430819,
+      "min": 0.53714726020981,
+      "max": 0.7353852370249004
+    },
+    "retrieval_min_similarity": {
+      "mean": 0.5858979717722405,
+      "std": 0.08080774023991548,
+      "min": 0.49737628261672573,
+      "max": 0.7024073256926635
+    },
+    "retrieval_diversity": {
+      "mean": 0.20448010997373506,
+      "std": 0.0757505164317546,
+      "min": 0.11259721314366133,
+      "max": 0.2918421638343933
+    },
+    "context_utilization": {
+      "mean": 0.1686330618917621,
+      "std": 0.11358004810057734,
+      "min": 0.04417670682730924,
+      "max": 0.33495145631067963
+    },
+    "length_word_count": {
+      "mean": 555.4,
+      "std": 226.48686496130412,
+      "min": 293.0,
+      "max": 761.0
+    },
+    "hallucination_uncertainty_count": {
+      "mean": 3.2,
+      "std": 1.3038404810405297,
+      "min": 1.0,
+      "max": 4.0
+    }
+  },
+  "category_performance": {
+    "career": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.593765671607262,
+      "retrieval_diversity": 0.11259721314366133,
+      "context_utilization": 0.12550607287449392
+    },
+    "facility": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.7125005502975866,
+      "retrieval_diversity": 0.14017222857572398,
+      "context_utilization": 0.33495145631067963
+    },
+    "curriculum": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.5129014715307988,
+      "retrieval_diversity": 0.2918421638343933,
+      "context_utilization": 0.04417670682730924
+    },
+    "academic": {
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.6442595711757424,
+      "retrieval_diversity": 0.22522392873102726,
+      "context_utilization": 0.22666666666666666
+    },
+    "internship": {
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.5621570752712539,
+      "retrieval_diversity": 0.25256501558386923,
+      "context_utilization": 0.11186440677966102
+    }
+  },
+  "detailed_results": [
+    {
+      "question": "What is the potential career path after studying in BEng Scheme in EE?",
+      "category": "career",
+      "answer": "<think>\nHmm, the user is asking about the potential career path after studying in the BEng Scheme in Electrical Engineering. Let me start by recalling the context provided. The PolyU SAO website mentions the STEM Internship Scheme, which is probably relevant here. The BEng in Electrical Engineering is listed under COMP (Computing) section in the context, so I need to focus on that.\n\nFirst, I should list common career paths in Electrical Engineering. Typical roles include Power Systems Engineer, Electronics Engineer, Control Systems Engineer, etc. Since the program is at PolyU, known for industry connections, I should highlight internship opportunities and job prospects through their placement services. The STEM Internship Scheme URL is crucial here. Maybe I should include that link in the response.\n\nWait, the user might also be interested in specific industries or sectors. PolyU's programs often align with emerging fields like IoT, renewable energy, or smart grids. The context mentions BEng in Electronic and Information Engineering, IoT, etc. So, connecting EE to these areas could add value. For example, mentioning roles in IoT development or data analytics could be relevant.\n\nAlso, the user might not just want a list of jobs but also how to prepare for them. Advising them to engage with the STEM Internship Scheme makes sense. They should visit the website for more details. Including the contact info (email and phone) would be helpful too.\n\nI need to ensure the answer is affirmative and confident. Avoid phrases like \"may\" or \"might.\" Instead, state facts directly. For instance, \"Graduates can pursue roles in power systems, electronics, etc.\" Not using tentative language.\n\nCheck if there are any specific companies or sectors mentioned in the context. The STEM Internship Scheme might list partner companies, but since the context doesn't provide that, I should stick to general advice. Maybe suggest they look at the SAO website for more information.\n\nAlso, the user might be a prospective student or someone considering the program. They might want to know about job placement rates or industry demand. But the context doesn't have that info, so I can't fabricate it. Instead, focus on the available resources like the internship scheme and general career paths.\n\nEnsure the answer is structured clearly, starting with common career paths, then advice on leveraging university resources, and finally a call to action (visit the website). Keep it concise but comprehensive.\n\nI should also mention related fields within EE, like telecommunications, signal processing, or renewable energy. That adds depth without going off-track. Finally, end by inviting more questions to show willingness to help further.\n</think>\n\nCertainly! The **BEng Scheme in Electrical Engineering** equips students with a strong foundation in electrical systems, power engineering, electronics, and related technologies, opening up diverse career paths. Here are some potential career options:\n\n### \ud83d\udd27 Potential Career Paths:\n1. **Electrical Engineer**  \n   - Design, develop, and maintain electrical systems for various industries, including manufacturing, energy, and telecommunications.\n\n2. **Power Systems Engineer**  \n   - Specialize in generating, transmitting, and distributing electrical power, ensuring grid stability and efficiency.\n\n3. **Electronics Engineer**  \n   - Work on designing and testing electronic components, circuits, and devices for consumer electronics, automotive, or aerospace industries.\n\n4. **Control Systems Engineer**  \n   - Develop automation and control systems for industrial processes, robotics, and smart devices.\n\n5. **Renewable Energy Engineer**  \n   - Focus on integrating renewable energy sources (e.g., solar, wind) into existing power systems.\n\n6. **Telecommunications Engineer**  \n   - Design and implement communication networks, including 5G, IoT, and fiber optics.\n\n7. **Research and Development (R&D) Engineer**  \n   - Conduct research on emerging technologies, such as smart grids, energy storage, or semiconductor design.\n\n### \ud83d\ude80 Advice:\n- **Leverage Internship Opportunities**: The **STEM Internship Scheme** at PolyU provides hands-on industry experience, helping you build professional networks and gain practical skills.  \n  \ud83d\udd17 **Explore more here**: [PolyU SAO Internship Website](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/stem-internship-scheme/)  \n\n- **Develop Specialized Skills**: Focus on emerging areas like **IoT**, **AI-driven systems**, or **power electronics** to enhance your employability.  \n\n- **Contact the Careers & Placement Section**: For personalized guidance, reach out to them directly:  \n  \ud83d\udcde Tel: 3400 2446  \n  \ud83d\udce7 Email: stem.stud@polyu.edu.hk  \n\nIf you need more specific details or have further questions, feel free to ask! \ud83d\ude0a",
+      "retrieval_avg_similarity": 0.593765671607262,
+      "retrieval_max_similarity": 0.6398234494812205,
+      "retrieval_min_similarity": 0.5502198766116504,
+      "retrieval_std_similarity": 0.03093267977607439,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.11259721314366133,
+      "keyword_coverage": 0.75,
+      "length_word_count": 683,
+      "length_char_count": 4837,
+      "length_sentence_count": 63,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.12550607287449392
+    },
+    {
+      "question": "How can I apply for residential hall in the PolyU?",
+      "category": "facility",
+      "answer": "<think>\nOkay, the user is asking how to apply for a residential hall at PolyU. Let me start by recalling the provided context. There are several URLs listed, all related to hall admissions and policies. The main application periods are mentioned for different student types: current students and non-local new students. There's also a section about applicants with exceptional needs and details about admission policies for undergrad and postgrads.\n\nFirst, I need to make sure I address the user's question directly without any ambiguity. They probably want clear steps on where and when to apply. The context gives specific dates and links, so those should be highlighted. I should check if the URLs are correctly formatted and accessible. \n\nWait, the student might be a prospective student, maybe a non-local one since they're asking about the non-local new students' application period. But they could also be a current student. The answer should cover both scenarios. The application periods are different, so specifying the dates clearly is important. \n\nAlso, there's a mention of applicants with exceptional needs needing to send documentary proof. Should I include that? The user didn't ask about exceptions, but it's part of the admission process. Maybe it's better to mention it briefly in the advice section, just in case they have special circumstances. \n\nThe user might be looking for more than just the application process. They could need information on eligibility, required documents, or deadlines. But the question is straightforward. The assistant's response includes the links and the application periods. That's good because the user can click the URLs to get more details. \n\nI should ensure that the answer is affirmative and confident, as per the rules. Avoid any tentative language. The student might be anxious about the process, so clarity is key. They might not know where to start, so providing direct links helps. \n\nAlso, the user might not be aware of the different student categories. Clarifying whether they are a current student or a non-local new student would help them apply at the right time. The assistant's answer does that by specifying the periods for each group. \n\nAnother thing: the PolyU SAO website is the source. The assistant includes the URLs, which is correct. The user can navigate from there. Maybe the student needs help understanding the policies, but the answer sticks to the query without overstepping. \n\nI should check if there's any missing information. The context mentions eligibility criteria, but the answer doesn't delve into that. Since the question is about the application process, maybe that's sufficient. The user can explore the links for more details. \n\nOverall, the assistant's response is structured well, providing the necessary links and deadlines. The thought process here ensures that all key points from the context are covered without adding extra information not present in the provided material. The student should be able to follow the steps and find more info on the website if needed.\n</think>\n\nCertainly! Here\u2019s a step-by-step guide to help you apply for a residential hall at The Hong Kong Polytechnic University (PolyU):\n\n### **1. Check Eligibility**\n   - Ensure you meet the eligibility criteria for hall residence. All students (full-time undergraduates and research postgraduates) are generally eligible, subject to availability.\n\n### **2. Application Periods**\n   - **Full-time Undergraduate Students**:\n     - **Current Students** (including SRS and RSCRC): **2 May 2025 (10:00am) to 19 May 2025 (11:59pm)**.\n     - **Non-local New Students**:\n       - **Phase 1**: **11 June 2025 (10:00am) to 25 July 2025 (11:59pm)**.\n       - **Phase 2**: **26 July 2025 (10:00am) to 29 August 2025 (11:59pm)**.\n\n### **3. Application Process**\n   - Visit the **PolyU SAO Website** for detailed instructions on how to apply:\n     - **Hall Applications**: [https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/)\n\n### **4. Special Considerations**\n   - If you have **exceptional needs** (e.g., physical disability or personal hardships), submit documentary proof to **student.halls@polyu.edu.hk** by **30 June 2025** for the following academic year. Late applications without valid reasons may not be considered.\n\n### **5. Further Information**\n   - For more details on admission policies, eligibility, and fees, refer to:\n     - **Admission Policies for Undergraduates**: [https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/)\n     - **Admission Policies for Postgraduates**: [https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-rpg/](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-rpg/)\n\n### **Tips**\n   - Apply early to increase your chances of securing a hall space.\n   - Ensure you meet all requirements and submit complete documentation to avoid delays.\n\nIf you have any further questions or need assistance, feel free to ask!",
+      "retrieval_avg_similarity": 0.7125005502975866,
+      "retrieval_max_similarity": 0.7353852370249004,
+      "retrieval_min_similarity": 0.7024073256926635,
+      "retrieval_std_similarity": 0.011933158893206244,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.14017222857572398,
+      "keyword_coverage": 0.75,
+      "length_word_count": 714,
+      "length_char_count": 5440,
+      "length_sentence_count": 80,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.33495145631067963
+    },
+    {
+      "question": "What courses are offered in the first year in Master of Science in EIE?",
+      "category": "curriculum",
+      "answer": "<think>\nHmm, the user is asking about first-year courses in the Master of Science in EIE program at PolyU. Let me think about this carefully.\n\nLooking at the provided context, I don't see any specific course information for the Master of Science in EIE program. The context mainly covers undergraduate programs, non-local subjects, secondary majors, BDSIS program, and minor programs.\n\nI should be straightforward here - I don't have the information the user is looking for. The Master of Science in EIE isn't mentioned in the provided context, so I can't confirm what courses would be offered in the first year.\n\nThe user seems to be a prospective student interested in this Master's program, probably trying to plan their academic path. They're specifically asking about first-year courses, which suggests they're considering starting this program and want to know what to expect.\n\nI'll need to be clear that I can't answer this question based on the available information. I'll also mention that the context provided doesn't include details about Master's programs in EIE, only undergraduate offerings. Since I can't provide accurate information, I'll politely decline to answer and offer to help with other questions they might have about PolyU's programs.\n\nI'll make sure to be helpful while being honest about the limitations of the information I have. I won't pretend to know something I don't, and I'll maintain a professional but friendly tone.\n</think>\n\nI'm sorry, but I cannot provide information about the courses offered in the first year of the Master of Science in EIE program as it is not covered in the context provided. If you have any other questions regarding undergraduate programs, secondary majors, or other academic offerings at The Hong Kong Polytechnic University, I would be happy to assist you!",
+      "retrieval_avg_similarity": 0.5129014715307988,
+      "retrieval_max_similarity": 0.53714726020981,
+      "retrieval_min_similarity": 0.49737628261672573,
+      "retrieval_std_similarity": 0.01461274957592807,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.2918421638343933,
+      "keyword_coverage": 0.75,
+      "length_word_count": 293,
+      "length_char_count": 1822,
+      "length_sentence_count": 16,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.04417670682730924
+    },
+    {
+      "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
+      "category": "academic",
+      "answer": "<think>\nHmm, the user is a year 3 student in BSc Information Security asking about what to do if they failed a subject. They're probably feeling stressed or anxious about their academic standing. I need to respond as a professional academic advisor at HK PolyU, being confident and direct.\n\nLooking at the context provided, it's about the BEng/BSc in Information and Artificial Intelligence Engineering programme. There's specific information about failed compulsory subjects and appeals. The student is in Information Security, which might be similar but not exactly the same programme. I should note that the context is from IAIE, but still provide relevant advice.\n\nFor failed subjects, the key points are: two retakes allowed, then an appeal to the Academic Appeals Committee (AAC) for a third retake. If the AAC denies further retakes or equivalent subjects with faculty approval, the student gets de-registered and the decision is final. There's also a 'tie-subject' option if the subject is phased out, approved by the Faculty Board.\n\nThe student might not know the difference between compulsory and non-compulsory subjects. I should clarify that the rules apply specifically to compulsory subjects. For other subjects, they can retake up to three times without the same restrictions.\n\nI'll structure my response to be clear and reassuring. Start with the immediate steps, then the appeal process, and finally alternatives. I'll mention the specific subjects like COMP3334 and COMP3335 as examples, since they're related to security and might be relevant.\n\nI'll end by offering further help, to make the student feel supported. I'll stick to the rules: no \"may\" or \"maybe\", be affirmative, and provide URLs if needed. The URLs from the context are already given, but I can reference them indirectly.\n\nThe user might have deeper needs, like fear of de-registration or uncertainty about their future. I'll address that by being supportive and direct, showing that there's a clear path forward.\n</think>\n\nOkay, a third-year student in the BSc Information Security programme inquiring about academic support is a very important matter. I understand your concern.\n\nBased on the academic regulations for our programmes, here is the definitive procedure if you fail a compulsory subject:\n\n1.  **First Retake:** You are allowed to retake the compulsory subject once immediately after the first failure.\n2.  **Second Retake:** You are allowed to retake the compulsory subject a second time immediately after the first retake failure.\n3.  **Third Attempt / Appeal:** If you fail the second retake, you **must** submit an appeal to the **Academic Appeals Committee (AAC)** requesting a third opportunity to retake the subject or take an equivalent one (with Faculty approval if applicable).\n    *   If the AAC approves your appeal, you can attempt the subject a third time.\n    *   If the AAC **does not approve** further retakes of the failed compulsory subject or taking an equivalent subject with Faculty approval, you will be **de-registered** from the course and the programme. The AAC's decision is final.\n\n**Important Distinction:**\n\n*   The above procedure applies **only** to **compulsory subjects**. For non-compulsory subjects, you generally have more flexibility and are usually allowed up to three attempts before needing to retake the subject in a subsequent programme cycle or consider other options.\n\n**What you should do immediately:**\n\n*   **Identify the Subject:** Determine if the subject you failed is a compulsory one for your BSc Information Security programme. You can find this information in your programme structure document.\n*   **Review the Regulations:** Familiarise yourself with the full details of the Academic Appeals process. These are available through the University Student Portal, the Faculty office, or the official programme documents.\n*   **Prepare Your Appeal:** If it is a compulsory subject and you have used both retakes, prepare a formal appeal request according to the University guidelines, clearly stating your reasons and circumstances.\n*   **Seek Advice Early:** Discuss your situation with your academic advisor or the relevant Faculty office as soon as possible. They can provide specific guidance based on your individual circumstances and the specific subject.\n\n**Relevant Context (for Information and Artificial Intelligence Engineering programme, but similar principles may apply):**\n\n*   The regulations explicitly mention the two retake limit for compulsory subjects and the subsequent AAC appeal process leading to potential de-registration if the appeal is denied. (See the section starting with \"Students who have failed a compulsory subject...\")\n\n**Please note:** The specific procedures might have nuances, and it is crucial to follow the official guidelines and seek direct advice from your academic advisors or the Faculty office promptly.\n\nDo you have any more specific questions regarding the appeal process or identifying if your subject is compulsory?",
+      "retrieval_avg_similarity": 0.6442595711757424,
+      "retrieval_max_similarity": 0.6846218858812687,
+      "retrieval_min_similarity": 0.6310139193036802,
+      "retrieval_std_similarity": 0.020302831013144777,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.22522392873102726,
+      "keyword_coverage": 0.5,
+      "length_word_count": 761,
+      "length_char_count": 5018,
+      "length_sentence_count": 46,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 3,
+      "context_utilization": 0.22666666666666666
+    },
+    {
+      "question": "Are there any internship opportunities available?",
+      "category": "internship",
+      "answer": "<think>\nOkay, let's tackle this query. The student is asking about internship opportunities. First, I need to check the provided context to see if there's any mention of internships. Scanning through the CUS website URLs and the content, I don't see any direct references to internships. The context talks about non-local subjects, study tours, a minor in research and innovation, academic publications, and general university requirements. \n\nHmm, the study tours might involve some practical components, but that's not the same as internships. The minor in research could offer hands-on experience, but it's not explicitly stated as internships. Since the context doesn't mention internships, I should be upfront and say that based on the available information, there's no direct mention. \n\nBut wait, maybe the student is looking for broader opportunities beyond what's listed. They might be interested in internships related to their subjects, like aviation or space exploration. However, the context doesn't provide specific internship programs. The best approach is to inform them that internships aren't covered in the given context but suggest they explore other resources like the university's career services or academic departments. \n\nI should also mention that they can contact the CUS for more details if needed. Making sure to stay confident and avoid using tentative language. Let me structure the answer to first state that internships aren't directly mentioned, then offer alternative avenues for finding opportunities. That way, the student gets a clear answer and knows where to look next.\n</think>\n\nThank you for your question. Based on the provided context, there is no specific information regarding internship opportunities. The context focuses on non-local subjects, study tours, academic programs, and minor offerings, but does not mention internships. \n\nHowever, I recommend exploring the university\u2019s career services, academic departments, or contacting the CUS office directly for more comprehensive information on internships. You can visit the following URL for further assistance:  \nhttps://www.polyu.edu.hk/cus/non-local-gur-study/non-local-car-subjects/non-local-car-subjects/  \n\nIf you have any more questions or need further guidance, feel free to ask!",
+      "retrieval_avg_similarity": 0.5621570752712539,
+      "retrieval_max_similarity": 0.5832202884112471,
+      "retrieval_min_similarity": 0.5484724546364826,
+      "retrieval_std_similarity": 0.011774643996644834,
+      "retrieval_num_docs": 5,
+      "retrieval_diversity": 0.25256501558386923,
+      "keyword_coverage": 0.5,
+      "length_word_count": 326,
+      "length_char_count": 2285,
+      "length_sentence_count": 25,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": true,
+      "hallucination_uncertainty_count": 4,
+      "context_utilization": 0.11186440677966102
+    }
+  ]
+}

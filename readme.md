@@ -1,20 +1,29 @@
 # Virtual Academic Advisor Chatbot
-Author: Marcus Kwan
-Type: FYP, private repository
+Author: Marcus Kwan <br>
+Type: FYP, private repository <br>
+Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
-(Todo: Routing logics)
+2025-12-21 (2):
+- Evaluated the basic LLM, 3 query-enhanced LLM, and basic LLM but with semantic routing.
+
+2025-12-21 (1):
+- Added the website URL to each chunks for PolyU SAO & CUS webpages, and the EEE programme booklet URL for programme documents.
+    - Also prompted the LLM to refer to the webpages if deemed necessary.
+- Removed some excluded webpages in PolyU SAO.
+- Updated stripped webpage range for SAO webpage to better include the nav bar.
+- **CRITICAL FIX**: Correct import for OllamaEmbeddings (must be langchain_community.embeddings, NOT langchain_ollama), otherwise, the quality of the retrieved result will be different!
 
 2025-12-19 (1):
-- Tested evaluations in 3 different query enhancement techniques.
+- Investigating the poor performance (won't retrieve sao/cus data at all? Maybe need routing)
 
-2025-12-17 (2):
-- Added evaluations (Faithfulness, context relevancy, completeness), to be tested.
+2025-12-18 (1):
+- Added evaluations, to be tested.
 
 2025-12-17 (1):
 - Re-organized folder structure.
 - Modified chroma_db path to always points to that folder from the root directory!
-- Added source and programme title for the PDF chunks.
+- Added source and programme title (using LLM) for the PDF chunks.
 
 2025-12-16 (1):
 - Amended prompt with correct grammar and formatting.
@@ -22,7 +31,7 @@ Type: FYP, private repository
 2025-12-15 (1):
 - Added Sub-query Implementation. (But it takeas too long to execute!)
 
-2025-12-10 (1):
+2025-12-10/11 (1):
 - Updated LLM Prompt (more specific on not saying 'context')
 - Added RAG-Fusion Implementation.
 - Added Step-back Implementation.

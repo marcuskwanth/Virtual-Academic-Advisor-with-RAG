@@ -1,202 +1,193 @@
 {
-  "evaluation_date": "2025-12-19 17:41:52",
+  "evaluation_date": "2025-12-21 20:04:28",
   "dataset_info": {
     "total_queries": 5,
     "evaluated_queries": 5,
     "categories": [
       "career",
-      "university",
+      "facility",
       "curriculum",
       "academic",
       "internship"
     ]
   },
   "overall_metrics": {
-    "faithfulness": {
-      "mean": 0.18,
-      "std": 0.30331501776206204,
-      "min": 0.0,
-      "max": 0.7
-    },
-    "relevance": {
-      "mean": 0.76,
-      "std": 0.3209361307176243,
-      "min": 0.2,
-      "max": 1.0
-    },
-    "completeness": {
-      "mean": 0.72,
-      "std": 0.3033150177620621,
-      "min": 0.2,
-      "max": 0.9
-    },
     "keyword_coverage": {
-      "mean": 0.6,
-      "std": 0.37914377220257756,
-      "min": 0.0,
-      "max": 1.0
+      "mean": 0.55,
+      "std": 0.2091650066335189,
+      "min": 0.25,
+      "max": 0.75
     },
     "retrieval_avg_similarity": {
-      "mean": 0.5814236554518823,
-      "std": 0.04140311451403618,
-      "min": 0.5300368103040894,
-      "max": 0.6250919214038689
+      "mean": 0.5960130291203398,
+      "std": 0.08424345857455494,
+      "min": 0.494341283607395,
+      "max": 0.715935781064945
+    },
+    "retrieval_max_similarity": {
+      "mean": 0.6126646867197614,
+      "std": 0.08739956377840637,
+      "min": 0.5118706596636554,
+      "max": 0.7353852370249004
+    },
+    "retrieval_min_similarity": {
+      "mean": 0.5775468095059414,
+      "std": 0.0876384082094439,
+      "min": 0.4741695196865724,
+      "max": 0.7043059752096046
     },
     "retrieval_diversity": {
-      "mean": 0.20597948457839635,
-      "std": 0.09408609736652736,
-      "min": 0.10584102612089896,
-      "max": 0.34200035469051915
+      "mean": 0.12396758367097802,
+      "std": 0.049308623996953974,
+      "min": 0.07613911465237522,
+      "max": 0.19328209640218752
     },
     "context_utilization": {
-      "mean": 0.09669362432878523,
-      "std": 0.04288932769788797,
-      "min": 0.04716981132075472,
-      "max": 0.13725490196078433
+      "mean": 0.15808184159242217,
+      "std": 0.10742458204891231,
+      "min": 0.02631578947368421,
+      "max": 0.30927835051546393
+    },
+    "length_word_count": {
+      "mean": 231.2,
+      "std": 104.73156162303702,
+      "min": 144.0,
+      "max": 346.0
+    },
+    "hallucination_uncertainty_count": {
+      "mean": 0.6,
+      "std": 0.8944271909999159,
+      "min": 0.0,
+      "max": 2.0
     }
   },
   "category_performance": {
     "career": {
-      "faithfulness": 0.0,
-      "relevance": 1.0,
-      "completeness": 0.9,
-      "keyword_coverage": 1.0
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.601169788581759,
+      "retrieval_diversity": 0.07613911465237522,
+      "context_utilization": 0.09774436090225563
     },
-    "university": {
-      "faithfulness": 0.2,
-      "relevance": 0.2,
-      "completeness": 0.2,
-      "keyword_coverage": 0.75
+    "facility": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.715935781064945,
+      "retrieval_diversity": 0.1456448637716301,
+      "context_utilization": 0.20555555555555555
     },
     "curriculum": {
-      "faithfulness": 0.0,
-      "relevance": 0.9,
-      "completeness": 0.9,
-      "keyword_coverage": 0.75
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.5432684525843934,
+      "retrieval_diversity": 0.07756801749951148,
+      "context_utilization": 0.02631578947368421
     },
     "academic": {
-      "faithfulness": 0.0,
-      "relevance": 0.9,
-      "completeness": 0.7,
-      "keyword_coverage": 0.0
+      "keyword_coverage": 0.25,
+      "retrieval_avg_similarity": 0.494341283607395,
+      "retrieval_diversity": 0.12720382602918578,
+      "context_utilization": 0.30927835051546393
     },
     "internship": {
-      "faithfulness": 0.7,
-      "relevance": 0.8,
-      "completeness": 0.9,
-      "keyword_coverage": 0.5
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.6253498397632068,
+      "retrieval_diversity": 0.19328209640218752,
+      "context_utilization": 0.15151515151515152
     }
   },
   "detailed_results": [
     {
       "question": "What is the potential career path after studying in BEng Scheme in EE?",
       "category": "career",
-      "answer": "Certainly! Based on the BEng in Electrical Engineering programme at The Hong Kong Polytechnic University, here\u2019s a breakdown of the specific skills, qualifications, and research interests that are typically required or beneficial for success in common job roles:\n\n### **Specific Skills and Qualifications for Common Job Roles**:\n1. **Power Systems Engineer**:\n   - **Skills**: Proficiency in power system analysis (e.g., fault analysis, load flow studies), knowledge of transmission and distribution networks, and expertise in software tools like ETAP or PowerFactory.\n   - **Qualifications**: Certifications in power system engineering (e.g., from IEEE or CIGRE) or a Master\u2019s degree in Electrical Engineering with a specialization in power systems can enhance career prospects.\n   - **Research Interests**: Smart grids, renewable energy integration, and energy storage systems are emerging areas that can lead to advanced roles or academic pursuits.\n\n2. **Electronics Engineer**:\n   - **Skills**: Strong understanding of semiconductor devices, circuit design (both analogue and digital), and proficiency in PCB design tools (e.g., Altium Designer or Cadence).\n   - **Qualifications**: Certifications in electronics design (e.g., from IEEE) or experience with embedded systems (e.g., using ARM or Microchip technologies) is highly valued.\n   - **Research Interests**: Internet of Things (IoT), semiconductor technology, and analog-to-digital signal processing are key areas for innovation.\n\n3. **Electrical Design Engineer**:\n   - **Skills**: Expertise in CAD software for electrical design (e.g., AutoCAD Electrical) and knowledge of electrical codes and standards (e.g., IEC or IEEE standards).\n   - **Qualifications**: A professional engineering license (e.g., in Hong Kong or Mainland China) can significantly boost career opportunities, especially in large-scale projects.\n   - **Research Interests**: Building automation, smart grids, and energy-efficient design are relevant for both industry and academic growth.\n\n4. **Control Systems Engineer**:\n   - **Skills**: Proficiency in control theory, programming (e.g., PLC programming using Siemens or Allen-Bradley systems), and simulation tools (e.g., MATLAB/Simulink).\n   - **Qualifications**: Certifications in industrial automation (e.g., from Siemens or Rockwell Automation) or a Master\u2019s in Control Systems can add depth to one\u2019s expertise.\n   - **Research Interests**: Industrial Internet of Things (IIoT), robotics, and AI-driven control systems are cutting-edge areas for research.\n\n5. **Energy Systems Engineer**:\n   - **Skills**: Knowledge of renewable energy systems (e.g., solar, wind), energy management systems (EMS), and HVAC systems for energy optimization.\n   - **Qualifications**: Certifications in energy management (e.g., LEED AP or IES BEMP) or a Master\u2019s in Energy Systems can strengthen one\u2019s profile.\n   - **Research Interests**: Sustainable energy, battery storage technology, and smart energy grid management are critical for future developments.\n\n6. **Signal Processing Engineer**:\n   - **Skills**: Expertise in DSP algorithms, programming (e.g., Python, MATLAB), and familiarity with communication protocols (e.g., 5G, IoT protocols).\n   - **Qualifications**: Certifications in signal processing (e.g., from IEEE) or experience with real-time systems (e.g., using DSP processors) is advantageous.\n   - **Research Interests**: Advances in telecommunications, audio processing, and biomedical signal analysis offer exciting research avenues.\n\n### **Further Academic Pursuits**:\n- **PhD Opportunities**: Students interested in research can pursue advanced degrees in areas like renewable energy, signal processing, or power systems, focusing on emerging technologies such as smart grids, AI in engineering, or sustainable energy solutions.\n- **Postgraduate Studies**: A Master\u2019s degree in a specialized discipline (e.g., Power Systems, Control Engineering) can open doors to academia or R&D roles in industries.\n\n### **Additional Advice**:\n- **Practical Experience**: Gain hands-on experience through internships, industrial placements, or capstone projects, as these are highly valued by employers.\n- **Certifications**: Pursue industry-recognized certifications to complement your degree and enhance your competitiveness.\n- **Networking**: Engage with professional organizations (e.g., IEEE, Institution of Engineers Hong Kong) to stay updated on industry trends and opportunities.\n\nIf you have any more specific questions or need guidance on aligning your studies with your career goals, feel free to ask!",
-      "retrieval_avg_similarity": 0.6250919214038689,
-      "retrieval_max_similarity": 0.6622229012674946,
-      "retrieval_min_similarity": 0.5836560289462254,
-      "retrieval_std_similarity": 0.03221891329553969,
+      "answer": "Certainly! Here's a structured overview of common career progression paths and potential specializations for BEng Electrical Engineering (EE) graduates from The Hong Kong Polytechnic University (PolyU):\n\n---\n\n### **Career Progression Paths**\nGraduates typically start in entry-level technical or engineering roles and advance over time based on expertise, experience, and industry trends:\n\n1. **Entry-Level Roles**  \n   - Junior Engineer (Design/Systems Engineer)  \n   - Assistant Engineer (in power systems, electronics, or control systems)  \n   - Technical Support Engineer  \n\n2. **Mid-Career Roles**  \n   - **Specialized Engineer** (e.g., Protection Engineer, High Voltage Engineer, Signal Processing Engineer)  \n   - **Project Engineer** (leading technical projects in industries like renewable energy or railway systems)  \n   - **Simulation Engineer** (using tools like MATLAB or PSpice for system modeling)  \n\n3. **Senior/Leadership Roles**  \n   - **Team Lead/Project Manager** (overseeing engineering teams or complex projects)  \n   - **Technical Manager** (in sectors like power transmission or automotive)  \n   - **Research & Development Engineer** (in industries focusing on innovation, e.g., electric vehicles or IoT)  \n\n---\n\n### **Potential Specializations**\nGraduates can specialize in emerging fields aligned with industry demand, often through advanced coursework or postgraduate studies:\n\n1. **Power Systems**  \n   - Focus on power generation, transmission, and distribution (e.g., roles in CLP Power).  \n\n2. **Renewable Energy**  \n   - Opportunities in solar, wind, and smart grid technologies (e.g., through courses like *Renewable Energy Integration*).  \n\n3. **Electric Vehicles (EVs)**  \n   - Growing demand in battery technology, motor control, and EV infrastructure (e.g., roles in Tesla, BYD).  \n\n4. **Railway Systems**  \n   - Specialized knowledge in railway power supply and signaling (e.g., working with MTR Corporation).  \n\n5. **Digital/Embedded Systems**  \n   - Expertise in IoT, microcontroller design, and real-time systems (e.g., roles in Huawei or Xiaomi).  \n\n6. **Telecommunications**  \n   - Network design and optimization (e.g., in Ericsson or China Mobile).  \n\n---\n\n### **Further Education & Advancement**\n- **Postgraduate Studies**: Pursue MSc or MPhil in specialized areas (e.g., *MSc in Electric Vehicles* or *MSc in Microelectronics*).  \n- **Professional Certifications**: Obtain engineering licenses or industry-specific certifications (e.g., Chartered Engineer).  \n\nFor detailed course planning or career guidance, refer to:  \n[PolyU EEE Subject Syllabi](https://www.polyu.edu.hk/eee/study/information-for-current-students/subject-syllabi/).  \n\n---\n\nIf you'd like help tailoring your academic path or exploring specific industry roles, feel free to ask! \ud83d\ude0a",
+      "retrieval_avg_similarity": 0.601169788581759,
+      "retrieval_max_similarity": 0.6398234494812205,
+      "retrieval_min_similarity": 0.5525193815548461,
+      "retrieval_std_similarity": 0.036335944269880384,
       "retrieval_num_docs": 3,
-      "retrieval_diversity": 0.10584102612089896,
-      "faithfulness": 0.0,
-      "relevance": 1.0,
-      "completeness": 0.9,
-      "keyword_coverage": 1.0,
-      "length_word_count": 601,
-      "length_char_count": 4589,
-      "length_sentence_count": 70,
+      "retrieval_diversity": 0.07613911465237522,
+      "keyword_coverage": 0.75,
+      "length_word_count": 345,
+      "length_char_count": 2797,
+      "length_sentence_count": 44,
       "hallucination_has_uncertainty": false,
       "hallucination_has_hedging": true,
       "hallucination_uncertainty_count": 0,
-      "context_utilization": 0.1348314606741573
+      "context_utilization": 0.09774436090225563
     },
     {
       "question": "How can I apply for residential hall in the PolyU?",
-      "category": "university",
-      "answer": "I cannot answer that question based on the provided context. The information available does not detail the specific process for submitting the application or the notification procedure. I recommend contacting the Student Housing Office directly for accurate and detailed guidance on these matters. If you have any other questions, please let me know.",
-      "retrieval_avg_similarity": 0.5300368103040894,
-      "retrieval_max_similarity": 0.567837234772224,
-      "retrieval_min_similarity": 0.5059772664515767,
-      "retrieval_std_similarity": 0.027058858934151293,
+      "category": "facility",
+      "answer": "Certainly! Here\u2019s how to submit an application for a residential hall at PolyU:\n\n### Steps to Apply for a Residential Hall at PolyU:\n\n1. **Eligibility Check**: Ensure you meet the eligibility criteria for hall residence (e.g., local or non-local undergraduate student, current student, or those with exceptional needs).\n\n2. **Online Application**:\n   - **Current Students (including SRS/RSCRC applicants)**: Apply between **2 May 2025 (10:00am) and 19 May 2025 (11:59pm)** via the PolyU Student Halls Office portal.\n   - **Non-local New Undergraduate Students**: Apply during the two phases in 2025 (Phase 1: 11 June \u2013 25 July; Phase 2: 26 July \u2013 29 August) via the online portal.\n\n3. **Submission Method**:\n   - All applications must be submitted online through the PolyU Student Halls Office website.\n   - Ensure you upload all required documents and provide documentary proof if applying under exceptional circumstances.\n\nFor detailed instructions and the application portal, visit the official PolyU Student Halls Office website:  \n[Hall Applications](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/)\n\nIf you have any more questions or need further assistance, feel free to ask!",
+      "retrieval_avg_similarity": 0.715935781064945,
+      "retrieval_max_similarity": 0.7353852370249004,
+      "retrieval_min_similarity": 0.7043059752096046,
+      "retrieval_std_similarity": 0.013840528038213958,
       "retrieval_num_docs": 3,
-      "retrieval_diversity": 0.34200035469051915,
-      "faithfulness": 0.2,
-      "relevance": 0.2,
-      "completeness": 0.2,
+      "retrieval_diversity": 0.1456448637716301,
       "keyword_coverage": 0.75,
-      "length_word_count": 53,
-      "length_char_count": 350,
-      "length_sentence_count": 5,
-      "hallucination_has_uncertainty": false,
-      "hallucination_has_hedging": true,
-      "hallucination_uncertainty_count": 0,
-      "context_utilization": 0.04716981132075472
+      "length_word_count": 169,
+      "length_char_count": 1252,
+      "length_sentence_count": 16,
+      "hallucination_has_uncertainty": true,
+      "hallucination_has_hedging": false,
+      "hallucination_uncertainty_count": 1,
+      "context_utilization": 0.20555555555555555
     },
     {
       "question": "What courses are offered in the first year in Master of Science in EIE?",
       "category": "curriculum",
-      "answer": "Certainly! Based on the provided context, the **Master of Science in Electronic and Information Engineering (EIE)** program includes foundational and core subjects in its curriculum. The first year typically covers courses such as:\n\n1. **Mathematics for Engineering**  \n2. **Digital Logic Design**  \n3. **Signals and Systems**  \n4. **Communication Systems**  \n5. **Control Systems**  \n6. **Electronic Circuits**  \n\nThese courses are designed to provide students with a strong academic base. However, the exact list of courses may vary, and students should refer to the official programme page or contact the department for the most accurate and up-to-date information.  \n\nIf you need further details or assistance, feel free to ask!",
-      "retrieval_avg_similarity": 0.5757705094583458,
-      "retrieval_max_similarity": 0.5821452389911937,
-      "retrieval_min_similarity": 0.569767906265462,
-      "retrieval_std_similarity": 0.005059871530683931,
+      "answer": "Okay, I understand you're asking about the specific courses for the first year of the Master of Science in Electronic and Information Engineering program.\n\nBased on the context provided, I can tell you the official name and code for the Master of Science degree specializing in Electronic and Information Engineering (EIE) is **Master of Science in Electronic and Information Engineering** (Programme Code: **46011-EIE**).\n\nHowever, I cannot provide a specific list of courses for the first academic year. The context does not contain this detailed information.\n\nFor the most accurate and up-to-date information regarding the curriculum, including courses for the first year, I strongly recommend you consult the official programme document for the Master of Science in Electronic and Information Engineering. You can find these documents on the Hong Kong Polytechnic University website:\n\n[https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)\n\nIf you have any more questions about the application process, program structure, or anything else, feel free to ask!",
+      "retrieval_avg_similarity": 0.5432684525843934,
+      "retrieval_max_similarity": 0.5469353675246321,
+      "retrieval_min_similarity": 0.5375070956310873,
+      "retrieval_std_similarity": 0.004124164015023967,
       "retrieval_num_docs": 3,
-      "retrieval_diversity": 0.2274764509651943,
-      "faithfulness": 0.0,
-      "relevance": 0.9,
-      "completeness": 0.9,
-      "keyword_coverage": 0.75,
-      "length_word_count": 105,
-      "length_char_count": 732,
-      "length_sentence_count": 12,
-      "hallucination_has_uncertainty": true,
+      "retrieval_diversity": 0.07756801749951148,
+      "keyword_coverage": 0.5,
+      "length_word_count": 152,
+      "length_char_count": 1187,
+      "length_sentence_count": 13,
+      "hallucination_has_uncertainty": false,
       "hallucination_has_hedging": true,
-      "hallucination_uncertainty_count": 1,
-      "context_utilization": 0.05583756345177665
+      "hallucination_uncertainty_count": 0,
+      "context_utilization": 0.02631578947368421
     },
     {
       "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
       "category": "academic",
-      "answer": "Certainly! Here\u2019s a detailed breakdown of the academic support resources and strategies available to help you succeed in your subject or replacement subject:\n\n### **Academic Support Resources**\n1. **Academic Advising**  \n   - Schedule regular appointments with your academic advisor to discuss your academic progress, course selection, and study strategies.  \n   - Your advisor can provide guidance on time management, goal-setting, and avoiding common pitfalls in challenging subjects.\n\n2. **Tutoring and Workshops**  \n   - Utilize the university\u2019s academic support services, such as the Writing Centre, Maths Centre, and subject-specific tutoring.  \n   - Attend workshops on study skills, exam preparation, and critical thinking offered by the Student Development and Academic Support Division.\n\n3. **Library Resources**  \n   - Access the PolyU Library\u2019s academic databases, e-books, and research guides for subject-specific resources.  \n   - Use the library\u2019s research consultations to learn effective search strategies and citation management.\n\n4. **Online Learning Tools**  \n   - Explore platforms like Moodle, which offer learning materials, discussion forums, and virtual office hours for additional support.  \n   - Utilize the university\u2019s Learning Management System (LMS) for recorded lectures and supplementary materials.\n\n5. **Peer Support Networks**  \n   - Join study groups or academic clubs to collaborate with peers and share resources.  \n   - Participate in peer mentoring programs to gain insights from upper-year students.\n\n### **Strategies for Success**\n1. **Time Management**  \n   - Create a study schedule that allocates specific time slots for each subject.  \n   - Use tools like digital calendars or apps to track deadlines and assignments.\n\n2. **Active Learning Techniques**  \n   - Employ strategies such as summarizing notes, teaching concepts to peers, and creating flashcards to reinforce understanding.  \n   - Break down complex topics into smaller, manageable chunks and tackle them one at a time.\n\n3. **Engagement with Lecturers**  \n   - Attend all lectures and participate actively in class discussions.  \n   - Don\u2019t hesitate to ask questions during or after lectures, or schedule one-on-one meetings with lecturers for clarification.\n\n4. **Exam Preparation**  \n   - Review past papers and practice questions to identify areas for improvement.  \n   - Formulate a study plan that includes regular quizzes and mock exams to build confidence.\n\n5. **Mental Well-being**  \n   - Maintain a balanced lifestyle by incorporating breaks, exercise, and hobbies into your routine.  \n   - Seek support from the university\u2019s Counselling and Psychological Services (CAPS) if you\u2019re feeling overwhelmed.\n\n### **Summary**\n- **Academic Support Resources**: Leverage tutoring, library services, and academic advising for structured help.  \n- **Strategies for Success**: Focus on active learning, time management, and mental well-being to build resilience and improve performance.\n\nI hope this information is helpful! If you have any more questions or need further clarification, feel free to ask.",
-      "retrieval_avg_similarity": 0.6211850882113975,
-      "retrieval_max_similarity": 0.6865164775964464,
-      "retrieval_min_similarity": 0.5559094527713164,
-      "retrieval_std_similarity": 0.05332010918215137,
+      "answer": "If you cannot or choose not to retake a subject, here are the recommended steps and resources:\n\n1.  **Academic Advisor**: Contact your academic advisor *immediately*. They are the best resource for personalized advice. Discuss your situation, explore all options (including credit transfer if applicable and allowed by your program's rules), and understand the potential impact on your degree progression and graduation date.\n    *   **Resource**: Your university will have designated advisors for your faculty or program. Locate your specific advisor.\n    *   **URL**: While the CUS website provides general credit transfer info ([https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/](https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/), [https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/](https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/)), the **Academic Advising Office (SAO)** or your faculty's advising centre is the primary contact for academic guidance.\n\n2.  **Credit Transfer**: If you have successfully passed a similar subject elsewhere, you can explore applying for credit transfer.\n    *   **Resource**: Check the official PolyU credit transfer guidelines ([https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/](https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/), [https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/](https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/)). Note that policies vary, especially for Articulation/Senior Year Intakes (reduced curriculum students cannot get credit transfer for GUR subjects).\n    *   **Requirement**: The subject must be passed in the *last attempt* for credit transfer to be considered. The courses must be equivalent.\n\n3.  **Advanced Standing/Reduced Curriculum**: Depending on your admission type and program, you might consider applying for admission to a different program with a different structure that allows credit transfer for the failed subject.\n    *   **Resource**: Consult your academic advisor or the Admissions Office about program switching options and eligibility criteria. Some students may be eligible for advanced standing or entry into a reduced curriculum (e.g., switching from a 4-year to an Articulation Degree if applicable).\n\n4.  **Academic Appeals Committee (AAC)**: If you are facing de-registration or other severe consequences due to exhausting retakes (as mentioned in the policy), you may need to appeal the decision.\n    *   **Resource**: Your academic advisor or the Faculty Office will guide you on the formal appeal process.\n\n**Recommendation**: Your academic advisor is your most crucial contact. Schedule an appointment to discuss your specific circumstances and determine the best path forward. Do not rely solely on online resources; personalized advice is key.\n\nIf you have any more questions, feel free to ask!",
+      "retrieval_avg_similarity": 0.494341283607395,
+      "retrieval_max_similarity": 0.5118706596636554,
+      "retrieval_min_similarity": 0.4741695196865724,
+      "retrieval_std_similarity": 0.01550442193081252,
       "retrieval_num_docs": 3,
-      "retrieval_diversity": 0.128447852382242,
-      "faithfulness": 0.0,
-      "relevance": 0.9,
-      "completeness": 0.7,
-      "keyword_coverage": 0.0,
-      "length_word_count": 422,
-      "length_char_count": 3108,
-      "length_sentence_count": 36,
-      "hallucination_has_uncertainty": false,
+      "retrieval_diversity": 0.12720382602918578,
+      "keyword_coverage": 0.25,
+      "length_word_count": 346,
+      "length_char_count": 3165,
+      "length_sentence_count": 51,
+      "hallucination_has_uncertainty": true,
       "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 0,
-      "context_utilization": 0.13725490196078433
+      "hallucination_uncertainty_count": 2,
+      "context_utilization": 0.30927835051546393
     },
     {
       "question": "Are there any internship opportunities available?",
       "category": "internship",
-      "answer": "Yes, there are specific industries that frequently offer internships, as mentioned in the provided context. However, the context does not list specific company names. Instead, it highlights the main source of placement opportunities as the **Job Board arranged by the Student Affairs Office (SAO)** of the University.\n\nTo find specific companies, I recommend checking:\n\n1. The **Job Board** managed by the SAO.\n2. University career websites.\n3. Professional industry associations.\n4. Company career pages directly.\n\nThese resources will provide up-to-date information on companies seeking interns. Let me know if you'd like help finding any of these resources!",
-      "retrieval_avg_similarity": 0.55503394788171,
-      "retrieval_max_similarity": 0.571405283871083,
-      "retrieval_min_similarity": 0.5294103179153633,
-      "retrieval_std_similarity": 0.0183502588407316,
+      "answer": "Certainly! Here's a helpful response based on the context provided:\n\n---\n\nI don't have personal qualifications or academic backgrounds, as I'm an AI assistant. However, I can provide guidance on the minimum qualifications typically required for internships at The Hong Kong Polytechnic University (PolyU). \n\nFor example:\n\n- **STEM Internship Scheme**: This program is designed for students pursuing STEM fields (e.g., engineering, computer science, data analytics, etc.) and requires a strong academic record in relevant subjects.  \n- **Job Recommendation Scheme**: Collaborates with corporations to offer internships to graduates or students from various disciplines, depending on the company\u2019s requirements.  \n\nFor more specific details, you can refer to the following resources:  \n- [PolyU Careers and Placements](https://www.polyu.edu.hk/cps/)  \n- [STEM Internship Scheme](https://www.itc.org.hk/steminternship/)  \n\nIf you need assistance with drafting an internship application or preparing for interviews, feel free to ask!  \n\n--- \n\nLet me know if there are any more enquiries.",
+      "retrieval_avg_similarity": 0.6253498397632068,
+      "retrieval_max_similarity": 0.6293087199043982,
+      "retrieval_min_similarity": 0.6192320754475963,
+      "retrieval_std_similarity": 0.004387883053448978,
       "retrieval_num_docs": 3,
-      "retrieval_diversity": 0.2261317387331273,
-      "faithfulness": 0.7,
-      "relevance": 0.8,
-      "completeness": 0.9,
+      "retrieval_diversity": 0.19328209640218752,
       "keyword_coverage": 0.5,
-      "length_word_count": 97,
-      "length_char_count": 660,
-      "length_sentence_count": 14,
+      "length_word_count": 144,
+      "length_char_count": 1083,
+      "length_sentence_count": 17,
       "hallucination_has_uncertainty": false,
-      "hallucination_has_hedging": false,
+      "hallucination_has_hedging": true,
       "hallucination_uncertainty_count": 0,
-      "context_utilization": 0.10837438423645321
+      "context_utilization": 0.15151515151515152
     }
   ]
 }

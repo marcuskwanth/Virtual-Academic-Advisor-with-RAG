@@ -1,116 +1,126 @@
-question,category,answer,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,faithfulness,relevance,completeness,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization
-What is the potential career path after studying in BEng Scheme in EE?,career,"Certainly! Based on the BEng in Electrical Engineering programme at The Hong Kong Polytechnic University, here’s a breakdown of the specific skills, qualifications, and research interests that are typically required or beneficial for success in common job roles:
+question,category,answer,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization
+What is the potential career path after studying in BEng Scheme in EE?,career,"Certainly! Here's a structured overview of common career progression paths and potential specializations for BEng Electrical Engineering (EE) graduates from The Hong Kong Polytechnic University (PolyU):
 
-### **Specific Skills and Qualifications for Common Job Roles**:
-1. **Power Systems Engineer**:
-   - **Skills**: Proficiency in power system analysis (e.g., fault analysis, load flow studies), knowledge of transmission and distribution networks, and expertise in software tools like ETAP or PowerFactory.
-   - **Qualifications**: Certifications in power system engineering (e.g., from IEEE or CIGRE) or a Master’s degree in Electrical Engineering with a specialization in power systems can enhance career prospects.
-   - **Research Interests**: Smart grids, renewable energy integration, and energy storage systems are emerging areas that can lead to advanced roles or academic pursuits.
+---
 
-2. **Electronics Engineer**:
-   - **Skills**: Strong understanding of semiconductor devices, circuit design (both analogue and digital), and proficiency in PCB design tools (e.g., Altium Designer or Cadence).
-   - **Qualifications**: Certifications in electronics design (e.g., from IEEE) or experience with embedded systems (e.g., using ARM or Microchip technologies) is highly valued.
-   - **Research Interests**: Internet of Things (IoT), semiconductor technology, and analog-to-digital signal processing are key areas for innovation.
+### **Career Progression Paths**
+Graduates typically start in entry-level technical or engineering roles and advance over time based on expertise, experience, and industry trends:
 
-3. **Electrical Design Engineer**:
-   - **Skills**: Expertise in CAD software for electrical design (e.g., AutoCAD Electrical) and knowledge of electrical codes and standards (e.g., IEC or IEEE standards).
-   - **Qualifications**: A professional engineering license (e.g., in Hong Kong or Mainland China) can significantly boost career opportunities, especially in large-scale projects.
-   - **Research Interests**: Building automation, smart grids, and energy-efficient design are relevant for both industry and academic growth.
+1. **Entry-Level Roles**  
+   - Junior Engineer (Design/Systems Engineer)  
+   - Assistant Engineer (in power systems, electronics, or control systems)  
+   - Technical Support Engineer  
 
-4. **Control Systems Engineer**:
-   - **Skills**: Proficiency in control theory, programming (e.g., PLC programming using Siemens or Allen-Bradley systems), and simulation tools (e.g., MATLAB/Simulink).
-   - **Qualifications**: Certifications in industrial automation (e.g., from Siemens or Rockwell Automation) or a Master’s in Control Systems can add depth to one’s expertise.
-   - **Research Interests**: Industrial Internet of Things (IIoT), robotics, and AI-driven control systems are cutting-edge areas for research.
+2. **Mid-Career Roles**  
+   - **Specialized Engineer** (e.g., Protection Engineer, High Voltage Engineer, Signal Processing Engineer)  
+   - **Project Engineer** (leading technical projects in industries like renewable energy or railway systems)  
+   - **Simulation Engineer** (using tools like MATLAB or PSpice for system modeling)  
 
-5. **Energy Systems Engineer**:
-   - **Skills**: Knowledge of renewable energy systems (e.g., solar, wind), energy management systems (EMS), and HVAC systems for energy optimization.
-   - **Qualifications**: Certifications in energy management (e.g., LEED AP or IES BEMP) or a Master’s in Energy Systems can strengthen one’s profile.
-   - **Research Interests**: Sustainable energy, battery storage technology, and smart energy grid management are critical for future developments.
+3. **Senior/Leadership Roles**  
+   - **Team Lead/Project Manager** (overseeing engineering teams or complex projects)  
+   - **Technical Manager** (in sectors like power transmission or automotive)  
+   - **Research & Development Engineer** (in industries focusing on innovation, e.g., electric vehicles or IoT)  
 
-6. **Signal Processing Engineer**:
-   - **Skills**: Expertise in DSP algorithms, programming (e.g., Python, MATLAB), and familiarity with communication protocols (e.g., 5G, IoT protocols).
-   - **Qualifications**: Certifications in signal processing (e.g., from IEEE) or experience with real-time systems (e.g., using DSP processors) is advantageous.
-   - **Research Interests**: Advances in telecommunications, audio processing, and biomedical signal analysis offer exciting research avenues.
+---
 
-### **Further Academic Pursuits**:
-- **PhD Opportunities**: Students interested in research can pursue advanced degrees in areas like renewable energy, signal processing, or power systems, focusing on emerging technologies such as smart grids, AI in engineering, or sustainable energy solutions.
-- **Postgraduate Studies**: A Master’s degree in a specialized discipline (e.g., Power Systems, Control Engineering) can open doors to academia or R&D roles in industries.
+### **Potential Specializations**
+Graduates can specialize in emerging fields aligned with industry demand, often through advanced coursework or postgraduate studies:
 
-### **Additional Advice**:
-- **Practical Experience**: Gain hands-on experience through internships, industrial placements, or capstone projects, as these are highly valued by employers.
-- **Certifications**: Pursue industry-recognized certifications to complement your degree and enhance your competitiveness.
-- **Networking**: Engage with professional organizations (e.g., IEEE, Institution of Engineers Hong Kong) to stay updated on industry trends and opportunities.
+1. **Power Systems**  
+   - Focus on power generation, transmission, and distribution (e.g., roles in CLP Power).  
 
-If you have any more specific questions or need guidance on aligning your studies with your career goals, feel free to ask!",0.6250919214038689,0.6622229012674946,0.5836560289462254,0.03221891329553969,3,0.10584102612089896,0.0,1.0,0.9,1.0,601,4589,70,False,True,0,0.1348314606741573
-How can I apply for residential hall in the PolyU?,university,"I cannot answer that question based on the provided context. The information available does not detail the specific process for submitting the application or the notification procedure. I recommend contacting the Student Housing Office directly for accurate and detailed guidance on these matters. If you have any other questions, please let me know.",0.5300368103040894,0.567837234772224,0.5059772664515767,0.027058858934151293,3,0.34200035469051915,0.2,0.2,0.2,0.75,53,350,5,False,True,0,0.04716981132075472
-What courses are offered in the first year in Master of Science in EIE?,curriculum,"Certainly! Based on the provided context, the **Master of Science in Electronic and Information Engineering (EIE)** program includes foundational and core subjects in its curriculum. The first year typically covers courses such as:
+2. **Renewable Energy**  
+   - Opportunities in solar, wind, and smart grid technologies (e.g., through courses like *Renewable Energy Integration*).  
 
-1. **Mathematics for Engineering**  
-2. **Digital Logic Design**  
-3. **Signals and Systems**  
-4. **Communication Systems**  
-5. **Control Systems**  
-6. **Electronic Circuits**  
+3. **Electric Vehicles (EVs)**  
+   - Growing demand in battery technology, motor control, and EV infrastructure (e.g., roles in Tesla, BYD).  
 
-These courses are designed to provide students with a strong academic base. However, the exact list of courses may vary, and students should refer to the official programme page or contact the department for the most accurate and up-to-date information.  
+4. **Railway Systems**  
+   - Specialized knowledge in railway power supply and signaling (e.g., working with MTR Corporation).  
 
-If you need further details or assistance, feel free to ask!",0.5757705094583458,0.5821452389911937,0.569767906265462,0.005059871530683931,3,0.2274764509651943,0.0,0.9,0.9,0.75,105,732,12,True,True,1,0.05583756345177665
-I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,"Certainly! Here’s a detailed breakdown of the academic support resources and strategies available to help you succeed in your subject or replacement subject:
+5. **Digital/Embedded Systems**  
+   - Expertise in IoT, microcontroller design, and real-time systems (e.g., roles in Huawei or Xiaomi).  
 
-### **Academic Support Resources**
-1. **Academic Advising**  
-   - Schedule regular appointments with your academic advisor to discuss your academic progress, course selection, and study strategies.  
-   - Your advisor can provide guidance on time management, goal-setting, and avoiding common pitfalls in challenging subjects.
+6. **Telecommunications**  
+   - Network design and optimization (e.g., in Ericsson or China Mobile).  
 
-2. **Tutoring and Workshops**  
-   - Utilize the university’s academic support services, such as the Writing Centre, Maths Centre, and subject-specific tutoring.  
-   - Attend workshops on study skills, exam preparation, and critical thinking offered by the Student Development and Academic Support Division.
+---
 
-3. **Library Resources**  
-   - Access the PolyU Library’s academic databases, e-books, and research guides for subject-specific resources.  
-   - Use the library’s research consultations to learn effective search strategies and citation management.
+### **Further Education & Advancement**
+- **Postgraduate Studies**: Pursue MSc or MPhil in specialized areas (e.g., *MSc in Electric Vehicles* or *MSc in Microelectronics*).  
+- **Professional Certifications**: Obtain engineering licenses or industry-specific certifications (e.g., Chartered Engineer).  
 
-4. **Online Learning Tools**  
-   - Explore platforms like Moodle, which offer learning materials, discussion forums, and virtual office hours for additional support.  
-   - Utilize the university’s Learning Management System (LMS) for recorded lectures and supplementary materials.
+For detailed course planning or career guidance, refer to:  
+[PolyU EEE Subject Syllabi](https://www.polyu.edu.hk/eee/study/information-for-current-students/subject-syllabi/).  
 
-5. **Peer Support Networks**  
-   - Join study groups or academic clubs to collaborate with peers and share resources.  
-   - Participate in peer mentoring programs to gain insights from upper-year students.
+---
 
-### **Strategies for Success**
-1. **Time Management**  
-   - Create a study schedule that allocates specific time slots for each subject.  
-   - Use tools like digital calendars or apps to track deadlines and assignments.
+If you'd like help tailoring your academic path or exploring specific industry roles, feel free to ask! 😊",0.601169788581759,0.6398234494812205,0.5525193815548461,0.036335944269880384,3,0.07613911465237522,0.75,345,2797,44,False,True,0,0.09774436090225563
+How can I apply for residential hall in the PolyU?,facility,"Certainly! Here’s how to submit an application for a residential hall at PolyU:
 
-2. **Active Learning Techniques**  
-   - Employ strategies such as summarizing notes, teaching concepts to peers, and creating flashcards to reinforce understanding.  
-   - Break down complex topics into smaller, manageable chunks and tackle them one at a time.
+### Steps to Apply for a Residential Hall at PolyU:
 
-3. **Engagement with Lecturers**  
-   - Attend all lectures and participate actively in class discussions.  
-   - Don’t hesitate to ask questions during or after lectures, or schedule one-on-one meetings with lecturers for clarification.
+1. **Eligibility Check**: Ensure you meet the eligibility criteria for hall residence (e.g., local or non-local undergraduate student, current student, or those with exceptional needs).
 
-4. **Exam Preparation**  
-   - Review past papers and practice questions to identify areas for improvement.  
-   - Formulate a study plan that includes regular quizzes and mock exams to build confidence.
+2. **Online Application**:
+   - **Current Students (including SRS/RSCRC applicants)**: Apply between **2 May 2025 (10:00am) and 19 May 2025 (11:59pm)** via the PolyU Student Halls Office portal.
+   - **Non-local New Undergraduate Students**: Apply during the two phases in 2025 (Phase 1: 11 June – 25 July; Phase 2: 26 July – 29 August) via the online portal.
 
-5. **Mental Well-being**  
-   - Maintain a balanced lifestyle by incorporating breaks, exercise, and hobbies into your routine.  
-   - Seek support from the university’s Counselling and Psychological Services (CAPS) if you’re feeling overwhelmed.
+3. **Submission Method**:
+   - All applications must be submitted online through the PolyU Student Halls Office website.
+   - Ensure you upload all required documents and provide documentary proof if applying under exceptional circumstances.
 
-### **Summary**
-- **Academic Support Resources**: Leverage tutoring, library services, and academic advising for structured help.  
-- **Strategies for Success**: Focus on active learning, time management, and mental well-being to build resilience and improve performance.
+For detailed instructions and the application portal, visit the official PolyU Student Halls Office website:  
+[Hall Applications](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/)
 
-I hope this information is helpful! If you have any more questions or need further clarification, feel free to ask.",0.6211850882113975,0.6865164775964464,0.5559094527713164,0.05332010918215137,3,0.128447852382242,0.0,0.9,0.7,0.0,422,3108,36,False,False,0,0.13725490196078433
-Are there any internship opportunities available?,internship,"Yes, there are specific industries that frequently offer internships, as mentioned in the provided context. However, the context does not list specific company names. Instead, it highlights the main source of placement opportunities as the **Job Board arranged by the Student Affairs Office (SAO)** of the University.
+If you have any more questions or need further assistance, feel free to ask!",0.715935781064945,0.7353852370249004,0.7043059752096046,0.013840528038213958,3,0.1456448637716301,0.75,169,1252,16,True,False,1,0.20555555555555555
+What courses are offered in the first year in Master of Science in EIE?,curriculum,"Okay, I understand you're asking about the specific courses for the first year of the Master of Science in Electronic and Information Engineering program.
 
-To find specific companies, I recommend checking:
+Based on the context provided, I can tell you the official name and code for the Master of Science degree specializing in Electronic and Information Engineering (EIE) is **Master of Science in Electronic and Information Engineering** (Programme Code: **46011-EIE**).
 
-1. The **Job Board** managed by the SAO.
-2. University career websites.
-3. Professional industry associations.
-4. Company career pages directly.
+However, I cannot provide a specific list of courses for the first academic year. The context does not contain this detailed information.
 
-These resources will provide up-to-date information on companies seeking interns. Let me know if you'd like help finding any of these resources!",0.55503394788171,0.571405283871083,0.5294103179153633,0.0183502588407316,3,0.2261317387331273,0.7,0.8,0.9,0.5,97,660,14,False,False,0,0.10837438423645321
+For the most accurate and up-to-date information regarding the curriculum, including courses for the first year, I strongly recommend you consult the official programme document for the Master of Science in Electronic and Information Engineering. You can find these documents on the Hong Kong Polytechnic University website:
+
+[https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)
+
+If you have any more questions about the application process, program structure, or anything else, feel free to ask!",0.5432684525843934,0.5469353675246321,0.5375070956310873,0.004124164015023967,3,0.07756801749951148,0.5,152,1187,13,False,True,0,0.02631578947368421
+I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,"If you cannot or choose not to retake a subject, here are the recommended steps and resources:
+
+1.  **Academic Advisor**: Contact your academic advisor *immediately*. They are the best resource for personalized advice. Discuss your situation, explore all options (including credit transfer if applicable and allowed by your program's rules), and understand the potential impact on your degree progression and graduation date.
+    *   **Resource**: Your university will have designated advisors for your faculty or program. Locate your specific advisor.
+    *   **URL**: While the CUS website provides general credit transfer info ([https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/](https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/), [https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/](https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/)), the **Academic Advising Office (SAO)** or your faculty's advising centre is the primary contact for academic guidance.
+
+2.  **Credit Transfer**: If you have successfully passed a similar subject elsewhere, you can explore applying for credit transfer.
+    *   **Resource**: Check the official PolyU credit transfer guidelines ([https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/](https://www.polyu.edu.hk/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/), [https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/](https://www.polyu.edu.hk/cus/student/4-year-undergraduate-student/credit-transfer/)). Note that policies vary, especially for Articulation/Senior Year Intakes (reduced curriculum students cannot get credit transfer for GUR subjects).
+    *   **Requirement**: The subject must be passed in the *last attempt* for credit transfer to be considered. The courses must be equivalent.
+
+3.  **Advanced Standing/Reduced Curriculum**: Depending on your admission type and program, you might consider applying for admission to a different program with a different structure that allows credit transfer for the failed subject.
+    *   **Resource**: Consult your academic advisor or the Admissions Office about program switching options and eligibility criteria. Some students may be eligible for advanced standing or entry into a reduced curriculum (e.g., switching from a 4-year to an Articulation Degree if applicable).
+
+4.  **Academic Appeals Committee (AAC)**: If you are facing de-registration or other severe consequences due to exhausting retakes (as mentioned in the policy), you may need to appeal the decision.
+    *   **Resource**: Your academic advisor or the Faculty Office will guide you on the formal appeal process.
+
+**Recommendation**: Your academic advisor is your most crucial contact. Schedule an appointment to discuss your specific circumstances and determine the best path forward. Do not rely solely on online resources; personalized advice is key.
+
+If you have any more questions, feel free to ask!",0.494341283607395,0.5118706596636554,0.4741695196865724,0.01550442193081252,3,0.12720382602918578,0.25,346,3165,51,True,False,2,0.30927835051546393
+Are there any internship opportunities available?,internship,"Certainly! Here's a helpful response based on the context provided:
+
+---
+
+I don't have personal qualifications or academic backgrounds, as I'm an AI assistant. However, I can provide guidance on the minimum qualifications typically required for internships at The Hong Kong Polytechnic University (PolyU). 
+
+For example:
+
+- **STEM Internship Scheme**: This program is designed for students pursuing STEM fields (e.g., engineering, computer science, data analytics, etc.) and requires a strong academic record in relevant subjects.  
+- **Job Recommendation Scheme**: Collaborates with corporations to offer internships to graduates or students from various disciplines, depending on the company’s requirements.  
+
+For more specific details, you can refer to the following resources:  
+- [PolyU Careers and Placements](https://www.polyu.edu.hk/cps/)  
+- [STEM Internship Scheme](https://www.itc.org.hk/steminternship/)  
+
+If you need assistance with drafting an internship application or preparing for interviews, feel free to ask!  
+
+--- 
+
+Let me know if there are any more enquiries.",0.6253498397632068,0.6293087199043982,0.6192320754475963,0.004387883053448978,3,0.19328209640218752,0.5,144,1083,17,False,True,0,0.15151515151515152
