@@ -1,5 +1,5 @@
 {
-  "evaluation_date": "2025-12-22 16:33:25",
+  "evaluation_date": "2025-12-23 20:01:16",
   "dataset_info": {
     "total_queries": 5,
     "categories": [
@@ -12,84 +12,84 @@
   },
   "overall_metrics": {
     "keyword_coverage": {
-      "mean": 0.75,
-      "std": 0.30618621784789724,
-      "min": 0.25,
+      "mean": 0.8,
+      "std": 0.2091650066335189,
+      "min": 0.5,
       "max": 1.0
     },
     "retrieval_avg_similarity": {
-      "mean": 0.6035902318382125,
-      "std": 0.07717231745501073,
-      "min": 0.5210844747658294,
+      "mean": 0.6721846199885826,
+      "std": 0.03386468073313839,
+      "min": 0.6442595711757424,
       "max": 0.7125005502975866
     },
     "retrieval_max_similarity": {
-      "mean": 0.623305314144842,
-      "std": 0.08053567122484581,
-      "min": 0.5420159958652621,
+      "mean": 0.6891858399708845,
+      "std": 0.034834421675988506,
+      "min": 0.651526794758306,
       "max": 0.7353852370249004
     },
     "retrieval_min_similarity": {
-      "mean": 0.5881848891062139,
-      "std": 0.0798001243024068,
-      "min": 0.5071948653399939,
+      "mean": 0.6642433441805741,
+      "std": 0.03474453859780092,
+      "min": 0.6310139193036802,
       "max": 0.7024073256926635
     },
     "retrieval_diversity": {
-      "mean": 0.14259603722390457,
-      "std": 0.11238217186069481,
-      "min": 0.0276523203955159,
-      "max": 0.3292896703342092
+      "mean": 0.11567092438568967,
+      "std": 0.07545060572217854,
+      "min": 0.027652320395515906,
+      "max": 0.22522392873102726
     },
     "context_utilization": {
-      "mean": 0.2129983432936997,
-      "std": 0.14112856449384636,
-      "min": 0.0769230769230769,
-      "max": 0.3834951456310679
+      "mean": 0.33505836682096624,
+      "std": 0.07295645725445465,
+      "min": 0.23,
+      "max": 0.41262135922330095
     },
     "length_word_count": {
-      "mean": 617.8,
-      "std": 372.6723762234062,
-      "min": 284.0,
-      "max": 1199.0
+      "mean": 647.2,
+      "std": 238.77855850138639,
+      "min": 330.0,
+      "max": 939.0
     },
     "hallucination_uncertainty_count": {
-      "mean": 3.8,
-      "std": 0.44721359549995787,
-      "min": 3.0,
+      "mean": 2.0,
+      "std": 1.4142135623730951,
+      "min": 1.0,
       "max": 4.0
     }
   },
   "category_performance": {
     "career": {
-      "keyword_coverage": 0.75,
-      "retrieval_avg_similarity": 0.593765671607262,
-      "retrieval_diversity": 0.1125972131436613,
-      "context_utilization": 0.1417004048582996
+      "keyword_coverage": 1.0,
+      "retrieval_avg_similarity": 0.6538794587161382,
+      "retrieval_diversity": 0.11874984636209496,
+      "context_utilization": 0.2962962962962963
     },
     "facility": {
       "keyword_coverage": 0.75,
       "retrieval_avg_similarity": 0.7125005502975866,
-      "retrieval_diversity": 0.1401722285757239,
-      "context_utilization": 0.3834951456310679
+      "retrieval_diversity": 0.14017222857572398,
+      "context_utilization": 0.41262135922330095
     },
     "curriculum": {
-      "keyword_coverage": 1.0,
-      "retrieval_avg_similarity": 0.5457036653226208,
-      "retrieval_diversity": 0.1032687536704125,
-      "context_utilization": 0.0769230769230769
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.7053867225556828,
+      "retrieval_diversity": 0.06655629786408623,
+      "context_utilization": 0.35175879396984927
     },
     "academic": {
-      "keyword_coverage": 0.25,
-      "retrieval_avg_similarity": 0.5210844747658294,
-      "retrieval_diversity": 0.3292896703342092,
-      "context_utilization": 0.1167192429022082
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.6442595711757424,
+      "retrieval_diversity": 0.22522392873102726,
+      "context_utilization": 0.23
     },
     "internship": {
       "keyword_coverage": 1.0,
       "retrieval_avg_similarity": 0.6448967971977633,
-      "retrieval_diversity": 0.0276523203955159,
-      "context_utilization": 0.3461538461538461
+      "retrieval_diversity": 0.027652320395515906,
+      "context_utilization": 0.38461538461538464
     }
   }
 }

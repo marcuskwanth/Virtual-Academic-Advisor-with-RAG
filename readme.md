@@ -4,6 +4,10 @@ Type: FYP, private repository <br>
 Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
+2025-12-23 (1):
+- Fixed RAG-Fusion, should not include the original question.
+- Re-run the evaluation with corrected test data!
+
 2025-12-22 (1):
 - Added more visualization to the evaluated data. All methods are evaluated again!
 - Added an option to load previously saved evaluation results for all notebook files.

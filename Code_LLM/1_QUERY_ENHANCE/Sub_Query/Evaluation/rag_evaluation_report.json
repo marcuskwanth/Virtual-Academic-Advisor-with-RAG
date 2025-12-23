@@ -1,5 +1,5 @@
 {
-  "evaluation_date": "2025-12-22 17:12:26",
+  "evaluation_date": "2025-12-23 21:27:32",
   "dataset_info": {
     "total_queries": 5,
     "categories": [
@@ -12,84 +12,84 @@
   },
   "overall_metrics": {
     "keyword_coverage": {
-      "mean": 0.55,
-      "std": 0.2091650066335189,
-      "min": 0.25,
+      "mean": 0.45,
+      "std": 0.27386127875258304,
+      "min": 0.0,
       "max": 0.75
     },
     "retrieval_avg_similarity": {
-      "mean": 0.5960130291203398,
-      "std": 0.08424345857455494,
-      "min": 0.494341283607395,
-      "max": 0.715935781064945
+      "mean": 0.5981744858367094,
+      "std": 0.06725616704838959,
+      "min": 0.5044809739590841,
+      "max": 0.692195011284575
     },
     "retrieval_max_similarity": {
-      "mean": 0.6126646867197614,
-      "std": 0.08739956377840637,
-      "min": 0.5118706596636554,
-      "max": 0.7353852370249004
+      "mean": 0.6273213932484982,
+      "std": 0.06491227119086684,
+      "min": 0.5299476510933212,
+      "max": 0.7081161309603301
     },
     "retrieval_min_similarity": {
-      "mean": 0.5775468095059414,
-      "std": 0.0876384082094439,
-      "min": 0.4741695196865724,
-      "max": 0.7043059752096046
+      "mean": 0.5555270381147958,
+      "std": 0.08190672451261174,
+      "min": 0.4624877802644218,
+      "max": 0.666061577200731
     },
     "retrieval_diversity": {
-      "mean": 0.12396758367097797,
-      "std": 0.04930862399695398,
-      "min": 0.0761391146523752,
-      "max": 0.1932820964021875
+      "mean": 0.16028369605269785,
+      "std": 0.07671251136839623,
+      "min": 0.07613911465237522,
+      "max": 0.23378458431815152
     },
     "context_utilization": {
-      "mean": 0.15808184159242214,
-      "std": 0.10742458204891228,
-      "min": 0.0263157894736842,
-      "max": 0.3092783505154639
+      "mean": 0.08197277954243899,
+      "std": 0.02825648439573825,
+      "min": 0.03759398496240601,
+      "max": 0.1118421052631579
     },
     "length_word_count": {
-      "mean": 231.2,
-      "std": 104.73156162303702,
-      "min": 144.0,
-      "max": 346.0
+      "mean": 233.8,
+      "std": 234.96957249822793,
+      "min": 76.0,
+      "max": 624.0
     },
     "hallucination_uncertainty_count": {
-      "mean": 0.6,
-      "std": 0.8944271909999159,
+      "mean": 0.0,
+      "std": 0.0,
       "min": 0.0,
-      "max": 2.0
+      "max": 0.0
     }
   },
   "category_performance": {
     "career": {
       "keyword_coverage": 0.75,
-      "retrieval_avg_similarity": 0.601169788581759,
-      "retrieval_diversity": 0.0761391146523752,
-      "context_utilization": 0.0977443609022556
+      "retrieval_avg_similarity": 0.6154406604789541,
+      "retrieval_diversity": 0.0840776415489195,
+      "context_utilization": 0.1118421052631579
     },
     "facility": {
-      "keyword_coverage": 0.75,
-      "retrieval_avg_similarity": 0.715935781064945,
-      "retrieval_diversity": 0.1456448637716301,
-      "context_utilization": 0.2055555555555555
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.692195011284575,
+      "retrieval_diversity": 0.17652636639752506,
+      "context_utilization": 0.08088235294117647
     },
     "curriculum": {
       "keyword_coverage": 0.5,
-      "retrieval_avg_similarity": 0.5432684525843934,
-      "retrieval_diversity": 0.0775680174995114,
-      "context_utilization": 0.0263157894736842
+      "retrieval_avg_similarity": 0.5927210734628617,
+      "retrieval_diversity": 0.07613911465237522,
+      "context_utilization": 0.03759398496240601
     },
     "academic": {
-      "keyword_coverage": 0.25,
-      "retrieval_avg_similarity": 0.494341283607395,
-      "retrieval_diversity": 0.1272038260291857,
-      "context_utilization": 0.3092783505154639
+      "keyword_coverage": 0.0,
+      "retrieval_avg_similarity": 0.5044809739590841,
+      "retrieval_diversity": 0.23089077334651797,
+      "context_utilization": 0.1
     },
     "internship": {
       "keyword_coverage": 0.5,
-      "retrieval_avg_similarity": 0.6253498397632068,
-      "retrieval_diversity": 0.1932820964021875,
-      "context_utilization": 0.1515151515151515
+      "retrieval_avg_similarity": 0.5860347099980721,
+      "retrieval_diversity": 0.23378458431815152,
+      "context_utilization": 0.07954545454545454
     }
   }
 }
