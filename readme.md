@@ -4,8 +4,16 @@ Type: FYP, private repository <br>
 Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
-2025-12-21 (2):
+2025-12-22 (1):
+- Added more visualization to the evaluated data. All methods are evaluated again!
+- Added an option to load previously saved evaluation results for all notebook files.
+- Hotfix: Always points to that folder from the root directory
+
+2025-12-21 (3):
 - Evaluated the basic LLM, 3 query-enhanced LLM, and basic LLM but with semantic routing.
+
+2025-12-21 (2):
+- Implemented semantic routing (using LLM without reasoning to decide which DB to use, due to speed issue).
 
 2025-12-21 (1):
 - Added the website URL to each chunks for PolyU SAO & CUS webpages, and the EEE programme booklet URL for programme documents.
@@ -15,6 +23,7 @@ Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 - **CRITICAL FIX**: Correct import for OllamaEmbeddings (must be langchain_community.embeddings, NOT langchain_ollama), otherwise, the quality of the retrieved result will be different!
 
 2025-12-19 (1):
+- Added visualizations to the evaluated data.
 - Investigating the poor performance (won't retrieve sao/cus data at all? Maybe need routing)
 
 2025-12-18 (1):

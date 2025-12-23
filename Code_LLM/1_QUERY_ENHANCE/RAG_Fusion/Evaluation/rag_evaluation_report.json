@@ -1,8 +1,7 @@
 {
-  "evaluation_date": "2025-12-21 19:21:45",
+  "evaluation_date": "2025-12-22 17:09:20",
   "dataset_info": {
     "total_queries": 5,
-    "evaluated_queries": 5,
     "categories": [
       "career",
       "facility",
@@ -38,14 +37,14 @@
     },
     "retrieval_diversity": {
       "mean": 0.21854722895621403,
-      "std": 0.048919447154965275,
-      "min": 0.13923284700888128,
+      "std": 0.048919447154965295,
+      "min": 0.1392328470088812,
       "max": 0.2720574955270665
     },
     "context_utilization": {
-      "mean": 0.1929042933288836,
-      "std": 0.06686527939197301,
-      "min": 0.09862385321100918,
+      "mean": 0.19290429332888356,
+      "std": 0.06686527939197304,
+      "min": 0.0986238532110091,
       "max": 0.281437125748503
     },
     "length_word_count": {
@@ -65,129 +64,32 @@
     "career": {
       "keyword_coverage": 0.5,
       "retrieval_avg_similarity": 0.6362595562200271,
-      "retrieval_diversity": 0.13923284700888128,
+      "retrieval_diversity": 0.1392328470088812,
       "context_utilization": 0.2
     },
     "facility": {
       "keyword_coverage": 0.75,
       "retrieval_avg_similarity": 0.6754648279334683,
-      "retrieval_diversity": 0.23663194546402766,
+      "retrieval_diversity": 0.2366319454640276,
       "context_utilization": 0.1687170474516696
     },
     "curriculum": {
       "keyword_coverage": 0.75,
       "retrieval_avg_similarity": 0.5879218885128136,
-      "retrieval_diversity": 0.22795120007418235,
-      "context_utilization": 0.09862385321100918
+      "retrieval_diversity": 0.2279512000741823,
+      "context_utilization": 0.0986238532110091
     },
     "academic": {
       "keyword_coverage": 1.0,
       "retrieval_avg_similarity": 0.6361572881009913,
       "retrieval_diversity": 0.2720574955270665,
-      "context_utilization": 0.21574344023323616
+      "context_utilization": 0.2157434402332361
     },
     "internship": {
       "keyword_coverage": 1.0,
       "retrieval_avg_similarity": 0.628715534329411,
-      "retrieval_diversity": 0.21686265670691252,
+      "retrieval_diversity": 0.2168626567069125,
       "context_utilization": 0.281437125748503
     }
-  },
-  "detailed_results": [
-    {
-      "question": "What is the potential career path after studying in BEng Scheme in EE?",
-      "category": "career",
-      "answer": "<think>\nOkay, the user is asking about potential career paths after studying in the BEng Scheme in Electrical Engineering at PolyU. Let me start by recalling the context provided. The programme focuses on power systems, energy utilisation, and includes multidisciplinary studies, work-integrated education, and capstone projects. There's also mention of specific courses like Electric Vehicles, Railway Power Supply Systems, and Maintenance and Reliability Engineering.\n\nFirst, I need to outline the key areas from the programme. The EE degree prepares students for roles in power systems, energy sectors, transportation (given the TSE programme connections), and industries involving electronics. The curriculum includes engineering economics, which is crucial for understanding project feasibility. Also, the WIE component suggests practical experience, which is important for employability.\n\nNext, I should break down the career options into sectors. Power grid companies, energy providers, and renewable energy firms are obvious choices. Then, transportation systems, especially with courses like Railway Power Supply Systems and Electric Vehicles, opens doors in that sector. Electronics and manufacturing industries would value the technical skills. Consulting firms might hire graduates for their analytical abilities.\n\nThe user might be a prospective student considering this programme. They might want to know if their degree aligns with their career goals. They might not just want a list of jobs but also how the programme prepares them for those roles. They might also be interested in emerging fields like renewable energy or smart grids, which are growing areas.\n\nI should mention the specific courses and how they relate to careers. For example, EE512 (Electric Vehicles) prepares students for the EV industry. Also, the capstone project and WIE give hands-on experience, which is attractive to employers. Including industries like consumer electronics or biomedical could show versatility.\n\nNeed to ensure the answer is affirmative and confident, avoiding any hedging. Also, check if there are URLs or resources to recommend. The programme documents are available on the PolyU site, so including that link adds value. Finally, invite further questions to be helpful.\n</think>\n\nAfter earning your Bachelor of Engineering (Honours) in Electrical Engineering from The Hong Kong Polytechnic University, your career prospects will be broad and promising, given the programme's focus on power systems, energy utilisation, and multidisciplinary skills. Here\u2019s a structured overview of your potential career paths:\n\n---\n\n### **1. Power Systems and Energy Sector**  \n- **Roles**: Power System Engineer, Grid Engineer, Energy Management Specialist.  \n- **Industries**: Power grid companies (e.g., CLP Power Hong Kong, Mainland China utilities), renewable energy firms (e.g., solar, wind), and energy consulting firms.  \n- **Skills**: The programme\u2019s emphasis on power transmission, distribution, and smart grids prepares you for roles in designing, managing, and optimising electrical infrastructure.\n\n---\n\n### **2. Transportation Systems Engineering**  \n- **Roles**: Railway Systems Engineer, Traffic Control Engineer, Urban Transport Planner.  \n- **Industries**: MTR Corporation, Hong Kong Railway Authority, transportation consultancies.  \n- **Relevant Coursework**: EE533 (Railway Power Supply Systems), EE536 (Signalling and Train Control Systems), and the BEng (Hons) in Transportation Systems Engineering (TSE) pathway.\n\n---\n\n### **3. Electronics and Manufacturing**  \n- **Roles**: Electronics Design Engineer, Industrial Automation Engineer, Product Development Engineer.  \n- **Industries**: Electronics manufacturing companies (e.g., consumer electronics, biomedical devices), automotive firms (e.g., EV manufacturers).  \n- **Relevant Coursework**: EE3001 (Analogue and Digital Circuits), EE521 (Industrial Power Electronics), EE520 (Intelligent Motion Systems).\n\n---\n\n### **4. Consulting and Research**  \n- **Roles**: Engineering Consultant, Research and Development Engineer, Project Manager.  \n- **Industries**: Global consulting firms (e.g., Arup, AECOM), research institutions (e.g., CERN, NUS), and tech companies.  \n- **Skills**: The programme\u2019s capstone project and Work-Integrated Education (WIE) provide practical experience in solving real-world engineering challenges.\n\n---\n\n### **5. Emerging Fields**  \n- **Roles**: Energy Storage Engineer, Sustainable Energy Specialist, Smart Grid Analyst.  \n- **Industries**: Green energy startups, tech giants (e.g., Tesla, Siemens), and government agencies.  \n- **Relevant Coursework**: EE546 (Electric Energy Storage), EE548 (New Energy Sources), and sustainability-focused subjects.\n\n---\n\n### **6. General Engineering Roles**  \n- **Roles**: Project Engineer, Technical Sales Engineer, Quality Assurance Engineer.  \n- **Industries**: Electronics, manufacturing, and construction sectors.  \n- **Skills**: The programme\u2019s focus on engineering economics (AF3625), systems design, and multidisciplinary collaboration prepares you for diverse roles.\n\n---\n\n### **Key Advantages of the PolyU EE Programme**  \n- **Work-Integrated Education (WIE)**: Gain industry exposure through internships and projects.  \n- **Capstone Project**: Develop problem-solving skills in a team-based setting.  \n- **Multidisciplinary Skills**: Courses like Engineering Materials (ENG2001) and electives in biology/chemistry enhance adaptability.  \n- **Global Opportunities**: The programme aligns with industry needs in Hong Kong, Mainland China, and neighbouring regions.\n\n---\n\n### **Next Steps**  \nFor more details on course content or career resources, visit:  \n- [PolyU EEE Programme Documents](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)  \n\nWould you like guidance on preparing for specific roles or further details about the programme?",
-      "retrieval_avg_similarity": 0.6362595562200271,
-      "retrieval_max_similarity": 0.6619743957342731,
-      "retrieval_min_similarity": 0.5954900005288905,
-      "retrieval_std_similarity": 0.0232754499734598,
-      "retrieval_num_docs": 10,
-      "retrieval_diversity": 0.13923284700888128,
-      "keyword_coverage": 0.5,
-      "length_word_count": 770,
-      "length_char_count": 5924,
-      "length_sentence_count": 73,
-      "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 2,
-      "context_utilization": 0.2
-    },
-    {
-      "question": "How can I apply for residential hall in the PolyU?",
-      "category": "facility",
-      "answer": "<think>\nOkay, the user is asking how to apply for a residential hall at PolyU. Let me start by recalling the context provided. The URLs and the content mention several key points. First, there's a specific application period for non-local new students divided into two phases. Then, there's information about the Off-campus Housing (OCH) application, including deadlines and the need to settle fees by mid-August. Also, there's a note about current students having a different application period.\n\nHmm, the user might be a prospective student, probably non-local, given the focus on their application dates. They might not be aware of the different categories\u2014undergraduates, postgraduates, current students. I should clarify the process step by step, mentioning the online application, the email verification, and the registration deadline. Wait, the OCH offer is announced on July 30, so timing is crucial. They need to apply during the specified period, then wait for the email, accept the offer, and pay by mid-August. Also, the check-in date is August 29, so emphasizing the deadlines is key.\n\nI should check if there are any other details. The context also mentions eligibility criteria for different groups, but the user didn't specify their status. Maybe they're an undergraduate, so I should include the general admission policies link. Also, the OCH regulations and room types are mentioned, but maybe that's too detailed unless they ask. The user's main need is the application process, so I'll focus on that, providing clear steps and deadlines. Make sure to mention the specific dates and URLs so they can navigate the website easily. Avoid any markdown, keep it natural. Let me structure the answer with phases: application, acceptance, payment, and check-in. That should cover everything they need to know.\n</think>\n\nTo apply for a residential hall at The Hong Kong Polytechnic University (PolyU), follow these steps:\n\n1. **Eligibility Check**: Ensure you meet the eligibility criteria. For example, undergraduate students, including those in the Special Readmission Scheme (SRS) or Readmission Scheme of CURI Residential College (RSCRC), have specific application periods. Non-local new students have a phased application period.\n\n2. **Application Period**:\n   - **Non-local new students**: Apply during Phase 1 (11 June to 25 July 2025) or Phase 2 (26 July to 29 August 2025).\n   - **Current students** (including SRS and RSCRC): Apply from 2 May to 19 May 2025.\n\n3. **Application Process**:\n   - Submit your application online via the PolyU Student Admission Office (SAO) website.\n   - For non-local students, you will receive an email with the online application link.\n\n4. **Acceptance and Payment**:\n   - **Announcement of OCH offer**: Successful applicants will receive an email by 30 July 2025 to accept their offer.\n   - **Payment deadline**: Settle the Lodging Fee and Caution Money by mid-August 2025.\n\n5. **Check-in Date**: Check-in is required by 29 August 2025.\n\nFor detailed information, refer to the official PolyU SAO website:  \n[Hall Applications](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/)\n\nIf you have any more questions or need further assistance, feel free to ask!",
-      "retrieval_avg_similarity": 0.6754648279334683,
-      "retrieval_max_similarity": 0.7353852370249004,
-      "retrieval_min_similarity": 0.6335297962461348,
-      "retrieval_std_similarity": 0.030970083081160577,
-      "retrieval_num_docs": 12,
-      "retrieval_diversity": 0.23663194546402766,
-      "keyword_coverage": 0.75,
-      "length_word_count": 487,
-      "length_char_count": 3276,
-      "length_sentence_count": 41,
-      "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 3,
-      "context_utilization": 0.1687170474516696
-    },
-    {
-      "question": "What courses are offered in the first year in Master of Science in EIE?",
-      "category": "curriculum",
-      "answer": "<think>\nOkay, the user is asking about the first-year courses for the Master of Science in Electronic and Information Engineering (EIE). Let me start by checking the provided context. I see multiple sources, including the BEngBSc_Scheme_IAIE_46409_2526.pdf and MSc_EIE_46011_2526.pdf. The MSc_EIE_46011_2526.pdf mentions the Dissertation subject, which is at the 5th level, so that's definitely not first year. \n\nLooking at the BEngBSc_Scheme_IAIE_46409_2526.pdf, there's a list of courses under Year 2, but the user is asking for first-year courses. Wait, the context also includes a part where it says \"Year 2 (31 academic credits + 3 training credits)\" with courses like AMA2111 Mathematics I, CLC1104P Chinese LCR Subject, EIE1003 Foundations of Data Science, etc. But the user is asking about the Master's program, not the undergraduate. \n\nHmm, the context doesn't explicitly mention the Master's courses. The sources provided are mostly about the BEng/BSc in Information and Artificial Intelligence Engineering. The MSc_EIE_46011_2526.pdf only details the Dissertation, which is in Year 4. There's no mention of Year 1 courses for the MSc EIE. \n\nSo, I need to determine if the information is available. Since the context doesn't provide any details about first-year courses for the MSc EIE, I should say no. But maybe there's an indirect hint. Wait, the PolyU SAO website URL is mentioned, but no specific course details. \n\nThe user might be a prospective student looking to plan their studies. They need accurate course information to decide on applying or planning their academic path. Since the context lacks the required data, I can't fabricate an answer. I should politely decline and suggest they contact the EEE department directly. \n\nAlso, the user might not be aware that the provided context is for a different program. Clarifying that the context is for the BEng/BSc IAIE, not the MSc EIE, would help, but the answer should stay concise. \n\nI need to ensure the response is affirmative but clear that the info isn't available here. Mentioning the EEE department contact is appropriate. Let me structure the answer to confirm the inability to answer due to missing context and provide the contact info.\n</think>\n\nI can't answer that question as the provided context does not contain any information about the courses offered in the first year for the Master of Science in Electronic and Information Engineering (MSc EIE) programme. The context primarily describes the BEng/BSc in Information and Artificial Intelligence Engineering programme and its curriculum structure.\n\nTo get accurate information about the first-year courses for the MSc EIE programme, I recommend contacting the Electronic and Electrical Engineering Department (EEE) directly or visiting their programme documentation page on the PolyU website.",
-      "retrieval_avg_similarity": 0.5879218885128136,
-      "retrieval_max_similarity": 0.6445394937245209,
-      "retrieval_min_similarity": 0.5375070956310873,
-      "retrieval_std_similarity": 0.04377159456860488,
-      "retrieval_num_docs": 10,
-      "retrieval_diversity": 0.22795120007418235,
-      "keyword_coverage": 0.75,
-      "length_word_count": 432,
-      "length_char_count": 2831,
-      "length_sentence_count": 33,
-      "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 3,
-      "context_utilization": 0.09862385321100918
-    },
-    {
-      "question": "I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?",
-      "category": "academic",
-      "answer": "<think>\nOkay, let me start by understanding the user's query. The user is a Year 3 student in the BSc Information Security program who failed a subject. They need guidance on what to do next.\n\nFirst, I should check the provided context. The key points from the context are about retaking failed subjects, the Academic Appeals Committee (AAC), and the Integrated Project (EIE3117) details. The student's program is BSc Information Security, which might be related to the IAIE program mentioned in the context.\n\nThe student failed a subject. The first step is to check if it's a compulsory or elective subject. The context mentions that after two retakes, a third retake can be requested through AAC. If the subject is compulsory and failed twice, they can appeal to AAC. But if it's an elective, the student needs to retake it again or find an equivalent with faculty approval. Also, if replacing a subject, the original fail grade still counts in GPA.\n\nWait, the context also talks about the Integrated Project (EIE3117) having strict deadlines. The student must complete the assessment by the 5th week. If they failed this subject, they might need to retake it, but since it's a Level 3 subject, maybe it's compulsory. The student should check if their failed subject is compulsory or elective.\n\nAlso, the context mentions that if a subject is phased out, a 'tie-subject' can be arranged. But the student's subject might still be offered. So, the main steps are: retake once, then second retake requires a faculty request. After two fails, appeal to AAC. If elective, retake again or find equivalent. Check the failed subject's type (compulsory/elective) and prerequisites. If it's EIE3117, they must meet the deadline. \n\nThe student might not know the difference between compulsory and elective subjects, so advising them to check their curriculum or consult the academic advisor is important. Also, emphasizing the need to submit requests to the Faculty/School Board for second retakes is crucial. \n\nI should structure the answer step-by-step: first, determine the subject type, then retake once, then second retake with a request, then AAC appeal. Also, mention the impact on GPA and the possibility of equivalent subjects. Make sure to be clear and direct, avoiding any uncertainty words. Provide URLs to relevant programme documents for reference. Finally, remind them to seek personalized advice from academic advisors if needed.\n</think>\n\nIf you have failed a subject, the following steps should be taken:\n\n1. **Determine the Subject Type**:  \n   - If the subject is **compulsory**, you are allowed two retakes. After two failures, you may submit an appeal to the **Academic Appeals Committee (AAC)** for a third retake. If the AAC denies approval, the decision is final.  \n   - If the subject is **elective**, you may retake it again or seek an equivalent subject with Faculty approval. Note that the original fail grade will still count in your GPA, even if you pass a replacement subject.  \n\n2. **Second Retake Process**:  \n   - For a second retake, you must submit a request to the **Faculty/School Board**.  \n\n3. **Appeal Process**:  \n   - If you have already retaken a compulsory subject twice and wish for a third attempt, you must appeal to the **AAC**.  \n\n4. **Check Subject-Specific Requirements**:  \n   - Ensure you meet any prerequisites or deadlines for the subject. For example, **EIE3117 (Integrated Project)** requires completion of the assessment by the 5th week of the semester.  \n\n5. **Replacement Subjects**:  \n   - If replacing a failed subject, confirm with the Faculty/School Board whether the replacement is valid and whether the original fail grade affects your GPA.  \n\nFor detailed information, refer to the programme documents:  \n- [BEngBSc_Scheme_IAIE_46409_2526.pdf](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)  \n\nIf you need further clarification, I recommend contacting your academic advisor or the Faculty/School Board directly.  \n\nLet me know if you have any more questions!",
-      "retrieval_avg_similarity": 0.6361572881009913,
-      "retrieval_max_similarity": 0.6846218858812687,
-      "retrieval_min_similarity": 0.6094688821153842,
-      "retrieval_std_similarity": 0.021688068785315363,
-      "retrieval_num_docs": 7,
-      "retrieval_diversity": 0.2720574955270665,
-      "keyword_coverage": 1.0,
-      "length_word_count": 624,
-      "length_char_count": 4061,
-      "length_sentence_count": 52,
-      "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 3,
-      "context_utilization": 0.21574344023323616
-    },
-    {
-      "question": "Are there any internship opportunities available?",
-      "category": "internship",
-      "answer": "<think>\nOkay, the user is asking if there are any internship opportunities available. Let me start by checking the provided context to find relevant information. \n\nLooking at the PolyU SAO website links, there are several internships mentioned. The STEM Internship Scheme is one, which is part of a government initiative. Then there's the Local Internship Programme and the Work-on-Campus Scheme. Also, study/curriculum-related internships are mentioned for certain programs, requiring a No Objection Letter from the department.\n\nI need to list all these options clearly. The STEM Internship Scheme has specific details about the allowance, duration, and eligibility. The Local Internship Programme and Work-on-Campus Scheme are also under the job opportunities section. The study-related internships are for students whose programs require them.\n\nI should mention the mandatory pre-internship workshop for the STEM scheme and the requirements for study internships. Also, include the IANG program for postgraduates staying in Hong Kong. \n\nNeed to provide direct URLs so the student can access more info. Make sure the answer is affirmative and confident, avoiding any tentative language. Check if all the points from the context are covered without adding extra info. Ensure the URLs are correctly formatted and relevant. Finally, offer further assistance to be helpful.\n</think>\n\nYes, there are several internship opportunities available at The Hong Kong Polytechnic University (PolyU):\n\n1. **STEM Internship Scheme**: This scheme encourages STEM students to gain work experience related to innovation and technology (I&T). It is supported by the Innovation and Technology Commission (ITC) of the HKSAR Government. Student interns receive a monthly allowance of HK$11,490 per month (capped at two months), subject to meeting attendance and completion requirements.  \n   - **Eligibility**: Students must successfully enroll in the scheme, complete the internship, and submit post-internship documents.  \n   - **Requirements**: Includes attending a pre-internship training workshop, maintaining an 80% attendance rate, and submitting documents such as an assessment form, timesheet, and learning journal.  \n   - **URL**: [STEM Internship Scheme](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/stem-internship-scheme/)\n\n2. **Local Internship Programme**: This programme offers students local internship opportunities.  \n   - **URL**: [Local Internship Programme](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/local-internship-programme/)\n\n3. **Work-on-Campus Scheme**: This scheme provides on-campus employment opportunities for students.  \n   - **URL**: [Work-on-Campus Scheme](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/work-on-campus-scheme/)\n\n4. **Study/Curriculum-Related Internship**: If your study programme allows or requires a study/curriculum-related internship, you will receive a No Objection Letter (NOL) from your department. The duration can be up to one year or one-third of the normal study programme duration, whichever is shorter.  \n   - **URL**: [Study/curriculum related internship](https://www.polyu.edu.hk/sao/student-resources-and-support-section/non-local-student-services/living-and-working-in-hong-kong/legal-employment/)\n\n5. **\"INSPIRE\" Mentorship Programme**: While not an internship, this programme offers mentorship and career support, which can complement your professional development.  \n   - **URL**: [INSPIRE Mentorship Programme](https://www.polyu.edu.hk/sao/careers-and-placement-section/careers-and-placement-section/career-support-for-students-with-sen/inclusive-employer-network/)\n\nFor postgraduate students planning to stay in Hong Kong after graduation, the **Immigration Arrangement for Non-local Graduates (IANG)** may also be relevant.  \n   - **URL**: [Immigration Arrangement for Non-local Graduates (IANG)](https://www.polyu.edu.hk/sao/student-resources-and-support-section/non-local-student-services/living-and-working-in-hong-kong/legal-employment/)\n\nIf you need more specific details or assistance with any of these opportunities, feel free to ask!",
-      "retrieval_avg_similarity": 0.628715534329411,
-      "retrieval_max_similarity": 0.651526794758306,
-      "retrieval_min_similarity": 0.6020853166343063,
-      "retrieval_std_similarity": 0.015969757128365944,
-      "retrieval_num_docs": 9,
-      "retrieval_diversity": 0.21686265670691252,
-      "keyword_coverage": 1.0,
-      "length_word_count": 469,
-      "length_char_count": 4192,
-      "length_sentence_count": 53,
-      "hallucination_has_uncertainty": true,
-      "hallucination_has_hedging": false,
-      "hallucination_uncertainty_count": 1,
-      "context_utilization": 0.281437125748503
-    }
-  ]
+  }
 }
