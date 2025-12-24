@@ -1,5 +1,5 @@
 {
-  "evaluation_date": "2025-12-23 19:47:02",
+  "evaluation_date": "2025-12-24 14:59:57",
   "dataset_info": {
     "total_queries": 5,
     "categories": [
@@ -36,14 +36,14 @@
       "max": 0.6804688978828805
     },
     "retrieval_diversity": {
-      "mean": 0.19754951544778257,
-      "std": 0.14121446638425383,
-      "min": 0.027603716912275367,
-      "max": 0.34574050291503533
+      "mean": 0.19754951544778254,
+      "std": 0.14121446638425386,
+      "min": 0.0276037169122753,
+      "max": 0.3457405029150353
     },
     "context_utilization": {
       "mean": 0.3312197469010886,
-      "std": 0.19973267740772024,
+      "std": 0.19973267740772027,
       "min": 0.1583710407239819,
       "max": 0.6470588235294118
     },
@@ -64,31 +64,31 @@
     "career": {
       "keyword_coverage": 0.5,
       "retrieval_avg_similarity": 0.6215888589433894,
-      "retrieval_diversity": 0.18588021169522562,
+      "retrieval_diversity": 0.1858802116952256,
       "context_utilization": 0.1583710407239819
     },
     "facility": {
       "keyword_coverage": 0.75,
       "retrieval_avg_similarity": 0.6951042347061027,
       "retrieval_diversity": 0.3330664559281209,
-      "context_utilization": 0.22614840989399293
+      "context_utilization": 0.2261484098939929
     },
     "curriculum": {
       "keyword_coverage": 1.0,
       "retrieval_avg_similarity": 0.6874056669682136,
-      "retrieval_diversity": 0.09545668978825561,
+      "retrieval_diversity": 0.0954566897882556,
       "context_utilization": 0.4076086956521739
     },
     "academic": {
       "keyword_coverage": 0.5,
       "retrieval_avg_similarity": 0.6336713675544158,
-      "retrieval_diversity": 0.34574050291503533,
-      "context_utilization": 0.21691176470588236
+      "retrieval_diversity": 0.3457405029150353,
+      "context_utilization": 0.2169117647058823
     },
     "internship": {
       "keyword_coverage": 0.75,
       "retrieval_avg_similarity": 0.6807122149769347,
-      "retrieval_diversity": 0.027603716912275367,
+      "retrieval_diversity": 0.0276037169122753,
       "context_utilization": 0.6470588235294118
     }
   }
