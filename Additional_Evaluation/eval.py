@@ -39,6 +39,7 @@ df['Query time (s)'] = pd.to_numeric(df['Query time (s)'], errors='coerce')
 df['retrieval_avg_similarity'] = pd.to_numeric(df['retrieval_avg_similarity'], errors='coerce')
 df['retrieval_diversity'] = pd.to_numeric(df['retrieval_diversity'], errors='coerce')
 df['context_utilization'] = pd.to_numeric(df['context_utilization'], errors='coerce')
+df['hallucination_uncertainty_count'] = pd.to_numeric(df['hallucination_uncertainty_count'], errors='coerce')
 
 # Group by system and compute averages
 grouped = df.groupby('System', sort=False).agg({
@@ -46,7 +47,8 @@ grouped = df.groupby('System', sort=False).agg({
     'Query time (s)': 'mean',
     'retrieval_avg_similarity': 'mean',
     'retrieval_diversity': 'mean',
-    'context_utilization': 'mean'
+    'context_utilization': 'mean',
+    'hallucination_uncertainty_count': 'mean'
 }).reset_index()
 
 # Set the categorical order for plotting
@@ -58,6 +60,7 @@ systems = grouped['System']
 x = np.arange(len(systems))  # the label locations
 width = 0.25  # the width of the bars
 
+# Overall metric of retrieval quality
 fig, ax = plt.subplots(figsize=(10,6))
 rects1 = ax.bar(x - width, grouped['retrieval_avg_similarity'], width, label='Avg Similarity', color='#FF6B6B', edgecolor='black')
 rects2 = ax.bar(x, grouped['retrieval_diversity'], width, label='Avg Diversity', color='#F19BBF', edgecolor='black')
@@ -90,7 +93,7 @@ plt.show()
 
 # Plot average query time per system
 plt.figure(figsize=(8,5))
-bars2 = plt.bar(grouped['System'], grouped['Query time (s)'], color='salmon', edgecolor='black')
+bars2 = plt.bar(grouped['System'], grouped['Query time (s)'], color="#A7F579", edgecolor='black')
 for bar in bars2:
     height = bar.get_height()
     plt.text(bar.get_x() + bar.get_width()/2., height, f'{height:.2f}', ha='center', va='bottom', fontsize=12, rotation=0)
@@ -102,4 +105,19 @@ plt.ylim(0,300)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('avg_query_time.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+# Plot average hallucination uncertainty count per system
+plt.figure(figsize=(8,5))
+bars3 = plt.bar(grouped['System'], grouped['hallucination_uncertainty_count'], color='#FFA07A', edgecolor='black')
+for bar in bars3:
+    height = bar.get_height()
+    plt.text(bar.get_x() + bar.get_width()/2., height, f'{height:.2f}', ha='center', va='bottom', fontsize=12, rotation=0)
+plt.ylabel('Average Uncertainty Word Count')
+plt.xlabel('System')
+plt.title('Average Hallucination (Uncertainty Words) per System')
+plt.xticks(rotation=30)
+plt.grid(axis='y', alpha=0.3)
+plt.tight_layout()
+plt.savefig('avg_hallucination_count.png', dpi=300, bbox_inches='tight')
 plt.show()

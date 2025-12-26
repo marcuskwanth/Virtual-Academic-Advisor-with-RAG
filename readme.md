@@ -4,6 +4,9 @@ Type: FYP, private repository <br>
 Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
+2025-12-26 (1):
+- Added hallucination counts in he additional evaluation.
+
 2025-12-24 (1):
 - Added additional evaluation (overall results of every new modification).
 - Simplified the evaluations (reduced keyword coverage).
