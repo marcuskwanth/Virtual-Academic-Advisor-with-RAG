@@ -14,7 +14,7 @@ No Text Processing,,,,,,,,,,,,,,,,,,
 ,I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,0.6336713675544158,0.6723179461030306,0.61839836,0.02004421,5,0.34574050291503533,0.5,322,2064,21,TRUE,FALSE,2,0.21691176470588236,48.21,Yes
 ,Are there any internship opportunities available?,internship,0.6807122149769347,0.6831016203835494,0.6711545933504759,0.004778811,5,0.027603716912275367,0.75,261,1767,19,TRUE,FALSE,1,0.6470588235294118,38.21,Yes
 ,,,,,,,,,,,,,,,,,,
-RAG-Fusion,,,,,,,,,,,,,,,,,,
+Method 1: RAG-Fusion,,,,,,,,,,,,,,,,,,
 ,question,category,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization,Query time (s),Successful?
 ,What is the potential career path after studying in BEng Scheme in EE?,career,0.624529224,0.661974396,0.549621041,0.041912281,10,0.201117826,1,894,6476,88,TRUE,TRUE,4,0.213793103,172.28,Yes
 ,How can I apply for residential hall in the PolyU?,facility,0.676912115,0.735385237,0.633529796,0.030030213,8,0.202989417,1,648,4438,58,TRUE,TRUE,3,0.254950495,122.9,Yes
@@ -22,7 +22,7 @@ RAG-Fusion,,,,,,,,,,,,,,,,,,
 ,I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,0.598696003,0.684621886,0.51704653,0.052919259,10,0.294485475,0.5,515,3584,37,TRUE,FALSE,3,0.136904762,129.5,Yes
 ,Are there any internship opportunities available?,internship,0.6409414,0.651526795,0.627508724,0.008781262,6,0.178826913,1,379,2990,38,TRUE,FALSE,2,0.2,104.05,Yes
 ,,,,,,,,,,,,,,,,,,
-Step-back,,,,,,,,,,,,,,,,,,
+Method 2: Step-back,,,,,,,,,,,,,,,,,,
 ,question,category,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization,Query time (s),Successful?
 ,What is the potential career path after studying in BEng Scheme in EE?,career,0.618920355,0.654410604,0.565963078,0.036300934,6,0.188239211,0.75,826,6196,68,TRUE,FALSE,4,0.241758242,164.65,Yes
 ,How can I apply for residential hall in the PolyU?,facility,0.69729954,0.735385237,0.660985822,0.024241591,6,0.189386694,0.75,706,5006,69,TRUE,TRUE,3,0.279461279,130.18,Yes
@@ -30,7 +30,7 @@ Step-back,,,,,,,,,,,,,,,,,,
 ,I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,0.580820933,0.684621886,0.502677732,0.072242028,6,0.305430333,0.5,467,2984,31,TRUE,FALSE,2,0.187335092,103.77,Yes
 ,Are there any internship opportunities available?,internship,0.636706596,0.651526795,0.608357689,0.016110818,5,0.135279948,1,259,1999,22,FALSE,FALSE,0,0.185483871,86.92,Yes
 ,,,,,,,,,,,,,,,,,,
-Sub-queries,,,,,,,,,,,,,,,,,,
+Method 3: Sub-queries,,,,,,,,,,,,,,,,,,
 ,question,category,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization,Query time (s),Successful?
 ,What is the potential career path after studying in BEng Scheme in EE?,career,0.61544066,0.639823449,0.595331997,0.018413282,3,0.084077642,0.75,624,5278,76,FALSE,FALSE,0,0.111842105,326.99,Yes
 ,How can I apply for residential hall in the PolyU?,facility,0.692195011,0.708116131,0.666061577,0.018625518,3,0.176526366,0.5,97,727,13,FALSE,FALSE,0,0.080882353,197.84,Yes
@@ -38,7 +38,7 @@ Sub-queries,,,,,,,,,,,,,,,,,,
 ,I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,0.504480974,0.529947651,0.46248778,0.02991714,3,0.230890773,0,287,2604,59,FALSE,FALSE,0,0.1,282.92,Partial
 ,Are there any internship opportunities available?,internship,0.58603471,0.647803895,0.489900137,0.068891868,3,0.233784584,0.5,76,986,20,FALSE,FALSE,0,0.079545455,152.92,Yes
 ,,,,,,,,,,,,,,,,,,
-Semantic routing,,,,,,,,,,,,,,,,,,
+Method 4: Query Routing,,,,,,,,,,,,,,,,,,
 ,question,category,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization,Query time (s),Successful?
 ,What is the potential career path after studying in BEng Scheme in EE?,career,0.653879459,0.661974396,0.649471755,0.004546321,5,0.118749846,0.5,581,4204,53,TRUE,FALSE,2,0.259259259,78.54,Yes
 ,How can I apply for residential hall in the PolyU?,facility,0.71250055,0.735385237,0.702407326,0.011933159,5,0.140172229,0.75,466,3513,52,TRUE,TRUE,2,0.281553398,83.96,Yes
