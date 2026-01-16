@@ -4,6 +4,12 @@ Type: FYP, private repository <br>
 Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
+2026-1-16 (1):
+- Re-build the CHroma vector databases with webpages that have a max-depth of 5 instead of 2.
+- Changed RAG-Fusion to now use top 5 documents in the list.
+- Changed RAG-Fusion and Step-back prompting to use non-reasoning LLM for queries generation.
+- Prompt enhancement: Advise the LLM not to fabricate URLs (discovered in RAG-Fusion testing).
+
 2025-12-26 (1):
 - Added hallucination counts in he additional evaluation.
 
