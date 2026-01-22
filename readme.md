@@ -4,6 +4,10 @@ Type: FYP, private repository <br>
 Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
 
 ## PROGRESS HISTORY
+2026-1-22 (1):
+- Renamed the notebook files w/ "TYPENUMBER_NUMBER_xxx".
+- Implemented in-memory Chat History using LangChain InMemoryStore (using RAG-Fusion as example).
+
 2026-1-16 (1):
 - Re-build the CHroma vector databases with webpages that have a max-depth of 5 instead of 2.
 - Changed RAG-Fusion to now use top 5 documents in the list.
