@@ -1,15 +1,21 @@
-# Virtual Academic Advisor Chatbot
+# PolyU Virtual Academic Advisor Chatbot
 Author: Marcus Kwan <br>
 Type: FYP, private repository <br>
-Technical information: DeepSeek-R1, BGE-m3, ChromaDB, LangChain
+Technical information: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-1-23 (1):
+- Implemented ColBERT doc-ranking and its evaluation. (Using Ragatouille)
+- Updated the content ordering in the chat-memory prompt.
+- To be done: Persistence chat-history via database...
+
 2026-1-22 (1):
 - Renamed the notebook files w/ "TYPENUMBER_NUMBER_xxx".
 - Implemented in-memory Chat History using LangChain InMemoryStore (using RAG-Fusion as example).
+    - With a new prompt tailor-made for chat-history handling
 
 2026-1-16 (1):
-- Re-build the CHroma vector databases with webpages that have a max-depth of 5 instead of 2.
+- Re-build the Chroma vector databases with webpages that have a max-depth of 5 instead of 2.
 - Changed RAG-Fusion to now use top 5 documents in the list.
 - Changed RAG-Fusion and Step-back prompting to use non-reasoning LLM for queries generation.
 - Prompt enhancement: Advise the LLM not to fabricate URLs (discovered in RAG-Fusion testing).
