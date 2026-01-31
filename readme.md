@@ -4,9 +4,14 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-1-31 (1):
+- Fixed some connection issue in the code. (mainly setup()).
+- Enhanced RAG-Fusion prompt to make sure alt. query can focus on each sub-question if required.
+
 2026-1-30 (1):
 - Implemented persistence memory for chat history in separate notebook.
-    - using PostgresSQL, with LangChain PostgresSaver(), babystep thing only, need to think how to implement it in production...
+    - using PostgresSQL, with LangChain PostgresStore() and PostgresSaver(), babystep thing only, need to think how to implement it in production...
+    - database need to set-up manually using brew + commands (vaa_chat_mem_db).
 - Fixed LLM Prompt formatting, particularly indentation, also prompt strictly # of alt. questions during RAG-Fusion.
 
 2026-1-29 (1):
@@ -17,7 +22,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
     - After testing, still, it sometimes give non-existence URLs... (e.g. hkie.org without .hk)
 
 2026-1-23 (1):
-- Implemented ColBERT doc-ranking and its evaluation. (Using Ragatouille)
+- Experimented ColBERT doc-ranking and its evaluation. (Using Ragatouille)
 - Updated the content ordering in the chat-memory prompt.
 
 2026-1-22 (1):
