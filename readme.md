@@ -14,36 +14,39 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
     - **FIX**: the chat-history cannot be saved correctly. Need to source from GPT + official Gradio page on how to achieve = input + output.
 
 2026-1-31 (1):
-- Fixed some connection issue in the code. (mainly setup()).
-- Enhanced RAG-Fusion prompt to make sure alt. query can focus on each sub-question if required.
+- Fixed some connection issue in the code for PostgresSQL (mainly setup()).
+- Prompt enhancement: to make sure alt. query can focus on each sub-question if required.
 
 2026-1-30 (1):
 - Implemented persistence memory for chat history in separate notebook.
     - using PostgresSQL, with LangChain PostgresStore() and PostgresSaver(), babystep thing only, need to think how to implement it in production...
-    - database need to set-up manually using brew + commands (vaa_chat_mem_db).
-- Fixed LLM Prompt formatting, particularly indentation, also prompt strictly # of alt. questions during RAG-Fusion.
+    -  nee to set-up a local database manually using brew + commands (vaa_chat_mem_db).
+- Prompt enhancement: Fixed formatting, particularly indentation, also prompt strictly no.# of alt. questions during RAG-Fusion.
 
 2026-1-29 (1):
 - Implemented stateful retrieval in chat-history program with Query Transformation.
     - By using LLM and a prompt to rewrite/contextualize the user prompt if prev. conversations are found, to reduce ambiguity!
     - Added readmes for Query Transformation.
-- LLM Prompt improvement. (ordering + never fabricate non-existence URLs!)
+- Prompt enhancement: ordering + never fabricate non-existence URLs!
     - After testing, still, it sometimes give non-existence URLs... (e.g. hkie.org without .hk)
+    - May try to tune the temperature of the LLM instead.
 
 2026-1-23 (1):
-- Experimented ColBERT doc-ranking and its evaluation. (Using Ragatouille)
-- Updated the content ordering in the chat-memory prompt.
+- Experimented ColBERT doc-ranking and its evaluation (Using Ragatouille, with reference from a classmate).
+    - Thought of RankGPT as well, but concerned about the query time...
+- Prompt enhancement: Updated the content ordering in the prompt.
 
 2026-1-22 (1):
 - Renamed the notebook files w/ "TYPENUMBER_NUMBER_xxx".
-- Implemented in-memory Chat History using LangChain InMemoryStore() (using RAG-Fusion as example).
-    - With a new prompt tailor-made for chat-history handling
-    - Current issue: Retriever is stateless, leading to contextual drift.
+- Implemented in-memory Chat History persistence using LangChain InMemoryStore() (using RAG-Fusion as example).
+    - With a enhanced prompt tailor-made for chat-history handling.
+    - Current issue: Retriever is stateless, leading to contextual drift (i.e. follow-up question may not be contextualized with existing chat data).
 
 2026-1-16 (1):
 - Re-build the Chroma vector databases with webpages that have a max-depth of 5 instead of 2.
-- Changed RAG-Fusion to now use top 5 documents in the list.
-- Changed RAG-Fusion and Step-back prompting to use non-reasoning LLM for queries generation.
+    - Initially has issue due to error in parasing HTML when higher depth is used. Fixed by using different parser for the HTML syntax (html.parser instead of lxml).
+- Changed RAG-Fusion to now use top 5 documents in the list (a conclusion from interim).
+- Changed RAG-Fusion and Step-back prompting to use non-reasoning LLM for queries generation (a conclusion from interim).
 - Prompt enhancement: Advise the LLM not to fabricate URLs (discovered in RAG-Fusion testing).
 
 ## INTERIM STAGE: PROGRESS HISTORY
