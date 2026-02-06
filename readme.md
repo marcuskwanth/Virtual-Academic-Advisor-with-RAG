@@ -11,7 +11,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
         - First, demo in the code.
         - Modifications are needed in the graph to use llm.stream() function.
     - The chat-history saving is also moved to the stage after streaming is complete.
-    - **FIX**: the chat-history cannot be saved correctly. Need to source from GPT + official Gradio page on how to achieve = input + output.
+    - **CRITICAL FIX**: the chat-history cannot be saved correctly after modification. Need to source from GPT + official Gradio page on how to achieve! = input + output.
 
 2026-1-31 (1):
 - Fixed some connection issue in the code for PostgresSQL (mainly setup()).
@@ -127,3 +127,6 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 2025-10-26 (1):
 - Added webpage and PDF text-extraction functionality using Langchain libraries.
 - Added code for filtering some non-relevant webpage.
+
+2025-10-20 (1):
+- Initial Commit.
