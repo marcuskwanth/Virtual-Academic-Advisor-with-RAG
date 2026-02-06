@@ -4,6 +4,15 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-2-6 (1):
+- Added a gradio 5 test GUI for the application. (with gr.ChatInterface())
+    - Now uses in-memory approach, later see if I can port PostgresSQL into it.
+    - The code follows the official Gradio guide on streaming output. 
+        - First, demo in the code.
+        - Modifications are needed in the graph to use llm.stream() function.
+    - The chat-history saving is also moved to the stage after streaming is complete.
+    - **FIX**: the chat-history cannot be saved correctly. Need to source from GPT + official Gradio page on how to achieve = input + output.
+
 2026-1-31 (1):
 - Fixed some connection issue in the code. (mainly setup()).
 - Enhanced RAG-Fusion prompt to make sure alt. query can focus on each sub-question if required.
