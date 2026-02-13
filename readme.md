@@ -4,6 +4,19 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-2-14 (1):
+- Added routing to the Gradio code.
+    - Instead of routing to different DB, it routes based on the user input to see if its relevant to the domain.
+    - If not, route to a separate function with a different LLM prompt.
+- Fix: Previously used captialize character for the category result, but have wrong result... Now no need to process the category character!
+
+2026-2-13 (1):
+- Prepared 3 sample questions pairs for each test categories (in evaluation).
+- Added ColBERT retrieval mechanism to the Gradio code, with a switch to change between RAG-Fusion and ColBERT.
+- Added retrieval score (distance score) to the Gradio code.
+- Revised LLM prompt: Now specifies the chatbot from "Department of EEE at the PolyU", instead of just PolyU.
+- Changed the temperature of the main LLM to be 0.5 from 0.6.
+
 2026-2-6 (1):
 - Added a gradio 5 test GUI for the application. (with gr.ChatInterface())
     - Now uses in-memory approach, later see if I can port PostgresSQL into it.
