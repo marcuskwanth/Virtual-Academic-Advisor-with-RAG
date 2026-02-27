@@ -4,6 +4,14 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-2-26/27 (1):
+- Renamed files for Code_Extraction.
+- Changed PDF embedding approach: RCS -> Unstructured
+    - **WIP**: Extract string and table parts, and process them separately. Table: Summarize them into natural language w/ LLM, embed it. Store the original table (in markup format) into the corresponding metadata. 
+- Duplicated GRADIO notebook file for the following changes:
+    - Modified it to use PostgresSQL with LangChain PostgresStore() and PostgresSaver().
+    - **WIP**: Modified the Gradio Interface to select chat history separately in a tab.
+
 2026-2-14 (1):
 - Added routing to the Gradio code.
     - Instead of routing to different DB, it routes based on the user input to see if its relevant to the domain.
@@ -33,7 +41,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 2026-1-30 (1):
 - Implemented persistence memory for chat history in separate notebook.
     - using PostgresSQL, with LangChain PostgresStore() and PostgresSaver(), babystep thing only, need to think how to implement it in production...
-    -  nee to set-up a local database manually using brew + commands (vaa_chat_mem_db).
+    - need to set-up a local database manually using brew + commands (vaa_chat_mem_db).
 - Prompt enhancement: Fixed formatting, particularly indentation, also prompt strictly no.# of alt. questions during RAG-Fusion.
 
 2026-1-29 (1):
