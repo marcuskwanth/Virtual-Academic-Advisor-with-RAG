@@ -4,6 +4,10 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-1 (2):
+- Updated webpage embedding handling:
+    - Instead of hard-coding splitting position, now uses BeautifulSoups functions (title and find) to get the webpage title and main content directly. Removed unwanted metadatas.
+
 2026-3-1 (1):
 - Amended PDF processing part after testing:
     - Changed the LLM for title extraction and table summarization: DeepSeek_R1:8b -> Llama3.1:8b, for faster processing.
@@ -15,7 +19,6 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 - Updated the prompt for question reformulating slightly.
 
 2026-2-26/27 (1):
-- Renamed files for Code_Extraction.
 - Changed programme booklet PDF embedding approach for tables: RecursiveCharacterSplit -> Unstructured
     - Extract text and table parts, and process them separately. 
         - Table: Summarize them into natural language w/ LLM, embed it. Store the original table (in markup format) into the corresponding metadata. 
@@ -23,6 +26,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 - Duplicated GRADIO notebook file for the following changes:
     - Modified it to use PostgresSQL with LangChain PostgresStore() and PostgresSaver().
     - **WIP**: Modified the Gradio Interface to select chat history separately in a tab (still have bugs atm).
+- Renamed files for Code_Extraction.
 
 2026-2-14 (1):
 - Added routing to the Gradio code.
