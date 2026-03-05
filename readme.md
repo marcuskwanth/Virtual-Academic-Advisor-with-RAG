@@ -4,6 +4,9 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-5 (1):
+- Added requirement.txt, preparing for package-ize the RAG application.
+
 2026-3-2 (1):
 - HotFix: Updated table_docs.pkl for PDF tables processing (includes all tables from all programme booklets now).
 

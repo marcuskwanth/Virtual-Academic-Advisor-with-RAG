@@ -1,0 +1,35 @@
+# PDF and Webpage Loading
+pymupdf==1.26.3
+beautifulsoup4==4.13.4
+
+# RAG Vector Store
+chromadb==1.0.20
+
+# Core RAG Structure
+langchain==0.3.27
+langchain-core==0.3.75
+langchain-community==0.3.29
+langchain-ollama==0.3.6
+langgraph==0.6.6
+langsmith==0.4.13
+ragatouille==0.0.9.post2
+
+# GUI
+gradio==5.50.0
+
+# Database for Chat History
+psycopg==3.3.2
+psycopg-pool==3.3.0
+
+# Evaluation
+pandas==2.2.3
+numpy==2.2.6
+matplotlib==3.10.3
+seaborn==0.13.2
+
+# Misc
+ipython==9.4.0
+typing-extensions==4.14.1
+requests==2.32.5
+
+# Please install the LLM models (deepSeek-R1 and bge-m3) separately from Ollama.
