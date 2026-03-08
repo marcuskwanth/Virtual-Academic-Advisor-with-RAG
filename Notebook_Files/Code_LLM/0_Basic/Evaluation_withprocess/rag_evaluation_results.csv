@@ -1,0 +1,260 @@
+question,category,answer,retrieval_avg_similarity,retrieval_max_similarity,retrieval_min_similarity,retrieval_std_similarity,retrieval_num_docs,retrieval_diversity,keyword_coverage,length_word_count,length_char_count,length_sentence_count,hallucination_has_uncertainty,hallucination_has_hedging,hallucination_uncertainty_count,context_utilization
+What is the potential career path after studying in BEng Scheme in EE?,career,"<think>
+Okay, the user is asking about the potential career path after studying the BEng Scheme in Electrical Engineering at PolyU. Let me start by recalling the context provided. The document mentions that the programme prepares students for the electrical engineering profession, focusing on power systems and related disciplines. It also notes that the curriculum includes work-integrated education, capstone projects, and outcome-based education.
+
+First, I need to outline the key areas of expertise from the programme. The major subjects listed under Level 5 electives include subjects like EE502 (Modern Protection Methods), EE509 (High Voltage Engineering), EE512 (Electric Vehicles), etc. These subjects suggest that graduates can specialize in areas like power systems, renewable energy, electric vehicles, and industrial electronics.
+
+Next, considering the BEng TSE programme, even though the user is in EE, mentioning related fields like transportation systems engineering could be relevant if they're interested in that sector. The document highlights growing demand in Hong Kong and neighbouring regions, so pointing out job opportunities in infrastructure projects there would be useful.
+
+The Work-Integrated Education (WIE) part is important. It implies that students gain practical experience, which can lead to job placements. Including advice on leveraging WIE opportunities and networking during internships would add value.
+
+I should also mention industries like power utilities, manufacturing, research institutions, and tech companies. Specific roles like Power Systems Engineer, Control Systems Engineer, and mentioning emerging fields like renewable energy and EV technology would cover diverse options.
+
+The user might be a prospective student or someone considering the programme. They probably want to know how their degree translates into real career opportunities. They might also be interested in how to align their studies with specific sectors or how to make themselves stand out in the job market.
+
+I need to ensure the answer is affirmative, confident, and provides actionable advice. Including URLs to the subject syllabi and the WIE page would help them explore further. Also, reminding them to consult the academic advisors ensures they get personalized guidance.
+
+Wait, the context mentions that students can choose one subject from Engineering Materials, Biology, or Chemistry. Should I include interdisciplinary career paths? Maybe not directly, unless those subjects lead to specific roles, but the main focus is on EE, so sticking to core engineering roles is better.
+
+Also, checking if the answer adheres to the rules: no ""may"" or ""maybe"", direct answers, no reference to provided context. The response should be structured with clear sections: overview, specializations, industries, advice. Making sure each point is backed by the context provided, like mentioning the curriculum's alignment with societal needs.
+
+Including the capstone project as a way to gain practical experience and problem-solving skills is good. Highlighting the programme's compliance with the new curriculum framework emphasizes its modernity and relevance.
+
+I think that covers the main points. Let me structure the answer to flow from programme strengths to career outcomes, then advice. Keeping it concise but comprehensive, with relevant URLs for further exploration.
+</think>
+
+Certainly! Here's a direct and affirmative response to your query:
+
+---
+
+**Answer:**
+
+The Bachelor of Engineering (Honours) in Electrical Engineering (BEng (Hons) in EE) at The Hong Kong Polytechnic University prepares graduates for diverse and promising career paths in the electrical engineering field. Graduates are equipped with strong fundamentals in electrical engineering, problem-solving skills, and practical experience through work-integrated education and capstone projects.
+
+### **Potential Career Paths:**
+1. **Power Systems Engineer**  
+   - Designs, develops, and maintains electrical power systems for utilities, industries, and infrastructure projects.
+
+2. **Control Systems Engineer**  
+   - Specializes in automation, robotics, and industrial control systems for manufacturing and transportation sectors.
+
+3. **Electronics Engineer**  
+   - Works on hardware design, embedded systems, and signal processing for consumer electronics, telecommunications, and IoT devices.
+
+4. **Renewable Energy Engineer**  
+   - Focuses on solar, wind, and other sustainable energy technologies, supporting the transition to green energy solutions.
+
+5. **High Voltage or Protection Engineer**  
+   - Deals with power system protection, safety, and reliability in power transmission and distribution networks.
+
+6. **Electric Vehicle (EV) Engineer**  
+   - Designs and optimizes electric drivetrains, battery systems, and charging infrastructure for the growing EV industry.
+
+7. **Research and Development Engineer**  
+   - Conducts innovation-driven research in emerging technologies such as smart grids, AI-driven systems, and energy storage.
+
+8. **Project Manager**  
+   - Oversees engineering projects from conception to completion in industries like power utilities, construction, and manufacturing.
+
+### **Industries and Roles:**
+- **Power Utilities:** Hong Kong Power & Water Corporation (HKP&WC), CLP Power, Mainland China power companies.
+- **Manufacturing:** Siemens, ABB, Foxconn, Tesla, BYD.
+- **Transportation:** MTR Corporation, Urban rail systems, automotive companies (e.g., BYD, Tesla).
+- **Research Institutions:** Hong Kong PolyU, CERN, NREL, and other global research labs.
+- **Tech Companies:** Huawei, Tencent, Xiaomi, working on electronics, telecommunications, and IoT.
+
+### **Advice:**
+- **Leverage Work-Integrated Education (WIE):** Gain real-world experience through internships and industry attachments.
+- **Explore Advanced Electives:** Choose Level 5 electives (e.g., EE502, EE509, EE512) to specialize in areas like high voltage engineering or electric vehicles.
+- **Capstone Project:** Use your capstone project to demonstrate expertise in a specific engineering challenge.
+- **Stay Updated:** Follow trends in renewable energy, AI, and smart grids to align with emerging industry needs.
+
+For more details on curriculum and subjects, visit:  
+- [EEE Subject Syllabi](https://www.polyu.edu.hk/eee/study/information-for-current-students/subject-syllabi/)  
+- [Work-Integrated Education](https://www.polyu.edu.hk/eee/study/programme-training/wie.html)
+
+If you have any more questions about course selection, internships, or career planning, feel free to reach out to the academic advisors at [Academic Advising Office](https://www.polyu.edu.hk/pao/).
+
+--- 
+
+Let me know if you'd like assistance with further academic planning! 😊",0.6538794587161382,0.6619743957342731,0.6494717553319418,0.004546320557193062,5,0.11874984636209496,0.75,907,6757,76,True,False,4,0.3292181069958848
+How can I apply for residential hall in the PolyU?,facility,"<think>
+Okay, the user is asking how to apply for a residential hall at PolyU. Let me start by recalling the provided context. There are several URLs listed, so I need to extract the relevant information from those.
+
+First, the main page for hall applications mentions the application periods for different student types. Current students have a period from May 2 to May 19, 2025, while non-local new students have two phases in June and July, followed by another phase in August. That's important to note for deadlines.
+
+The second URL talks about admission policies, especially for applicants with exceptional needs. They need to send documentary proof by email to student.halls@polyu.edu.hk by June 30. Late applications without justification won't be considered. This is a key detail for students with disabilities or personal hardships.
+
+The third URL is about postgraduate admission policies. Only full-time research students are eligible for about one year of residence, subject to availability. This might be useful if the user is a postgraduate.
+
+The fourth URL lists the hall admission sections, including policies for undergraduates, postgraduates, and fees. The application process is outlined here, so directing the user to the main application page is essential.
+
+Now, considering the user's possible identity. They could be a prospective student, maybe a non-local new student or a current student. Their main need is to know the steps and deadlines. But deeper needs might include understanding the requirements, how to handle special cases, or where to find more details.
+
+I should structure the answer clearly, separating for current and non-local students. Mentioning the email for exceptional needs is crucial. Also, providing the URLs directly helps them navigate to the exact pages without confusion. Need to ensure all deadlines and email addresses are accurate based on the context. Avoid any ambiguity by being specific. Check if the answer adheres to the rules: no ""may"" or ""maybe,"" be affirmative. Also, ensure not to fabricate any info. Since the context is clear, the answer can be confident. Finally, ask if they need more help to be proactive.
+</think>
+
+Certainly! Here’s a step-by-step guide on how to apply for a residential hall at PolyU:
+
+### **Application Process for Residential Hall at PolyU**
+1. **Eligibility**  
+   - **Current Students**: Full-time undergraduate students (including those in the Special Readmission Scheme (SRS) or Readmission Scheme of CURI Residential College (RSCRC)).  
+   - **Non-local New Students**: Must apply during the specified phases (Phase 1: 11 June – 25 July 2025; Phase 2: 26 July – 29 August 2025).  
+
+2. **Application Periods**  
+   - **Current Students**: 2 May 2025 (10:00am) to 19 May 2025 (11:59pm).  
+   - **Non-local New Students**:  
+     - Phase 1: 11 June – 25 July 2025 (10:00am – 11:59pm).  
+     - Phase 2: 26 July – 29 August 2025 (10:00am – 11:59pm).  
+
+3. **Application Method**  
+   - Applications must be submitted online via the [PolyU Student Halls Office (SAO) website](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/).  
+
+4. **Special Considerations**  
+   - **Exceptional Needs**: Students with physical disabilities or personal hardships must submit documentary proof by email to **student.halls@polyu.edu.hk** on or before **30 June 2025** for the 2025/26 academic year. Late applications without valid reasons will not be considered.  
+
+5. **Admission Policies**  
+   - For detailed policies, including eligibility criteria and allocation principles, refer to the [Admission Policies for Undergraduates](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/) and [Admission Policies for Postgraduates](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-postgraduates/).  
+
+6. **Postgraduate Applications**  
+   - Full-time research students (within normal study period) are eligible for approximately one year of hall residence, subject to availability.  
+
+### **Key Resources**
+- **Main Application Page**: [Hall Applications](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/hall-applications/)  
+- **Admission Policies**:  
+  - Undergraduates: [Admission Policies for Undergraduates](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-undergraduates/)  
+  - Postgraduates: [Admission Policies for Postgraduates](https://www.polyu.edu.hk/sao/student-resources-and-support-section/residential-life/hall-admission/admission-policies-postgraduates/)  
+
+If you have any further questions or need assistance with the application process, feel free to ask!",0.7125005502975866,0.7353852370249004,0.7024073256926635,0.011933158893206244,5,0.14017222857572398,0.75,607,4887,71,True,True,4,0.3932038834951456
+What courses are offered in the first year in BEng/BSc Scheme in IAIE?,curriculum,"<think>
+Okay, let me start by understanding the user's question. They want to know the courses offered in the first year for the BEng/BSc Scheme in IAIE at HK PolyU. 
+
+First, I need to check the provided context. There are multiple sources, all from the same programme document. Looking through them, I see sections about the progression patterns for both Normal and Senior Year intakes. 
+
+For the BSc in AIIE, the first year includes AMA1110 and AMA1120, which are basic math courses. Then there are English LCR subjects, Tomorrow’s Leaders, and some IT-related courses like ENG2003. There's also EIE1005 on fundamental AI and data analytics, along with programming and innovation courses. 
+
+The BEng in Electronic Systems and IoT has similar foundational courses but adds more technical subjects like EIE2113 and EIE3112. Both intakes require CAR I and a free elective. 
+
+I should list all the courses mentioned, categorizing them by type (math, programming, etc.) to make it clear. Also, mention the training credits and the requirement for CAR I and free electives. 
+
+Wait, the user might be a prospective student trying to plan their course load. They probably want a clear, concise list without jargon. Need to ensure all course codes and titles are correctly extracted from the context. 
+
+Also, the user might not just want the list but also an understanding of how these courses fit into the programme structure. However, the question specifically asks for first-year courses, so I should stick to that. 
+
+Check if there are any differences between BEng and BSc intakes. The BSc has EIE1005, while BEng has EIE2113. Both have the same foundational courses. 
+
+Make sure to include the credit values and training credits as they are important for planning. Also, note that the first year has two intakes (Normal and Senior), but the courses vary slightly. 
+
+Need to present this information clearly, separating the BSc and BEng courses, and highlight the common and differing elements. Avoid using markdown, so just plain text with bullet points or numbered lists would work. 
+
+Double-check the context to ensure no courses are missed. For example, the BSc courses include ENG2002 Computer Programming, which is common to both, but the BEng has different technical electives. 
+
+Also, mention the training credits and the CAR requirements since they are part of the first year. 
+
+Finally, structure the answer by breaking down the courses into categories (math, programming, etc.) and clearly state the differences between BSc and BEng intakes. Ensure the answer is affirmative and confident, avoiding any tentative language.
+</think>
+
+Certainly! Here is the list of courses offered in the first year for the BEng/BSc Scheme in Information and Artificial Intelligence Engineering (IAIE) at The Hong Kong Polytechnic University:
+
+### **BSc (Hons) in Artificial Intelligence and Information Engineering (Normal Year 1 Intake)**  
+- **AMA1110**: Basic Mathematics I – Calculus and Probability & Statistics (3 credits)  
+- **AMA1120**: Basic Mathematics II – Calculus and Linear Algebra (3 credits)  
+- **ELCXXXX**: English LCR Subject 1 (3 credits)  
+- **APSS1L01**: Tomorrow’s Leaders (3 credits)  
+- **ENG2003**: Information Technology (3 credits)  
+- **EIE1005**: Fundamental AI and Data Analytics (2 credits)  
+- **MM1031**: Introduction to Innovation and Entrepreneurship (1 credit)  
+- **ELCXXXX**: English LCR Subject 2 (3 credits)  
+- **ENG1004**: Engineering Professionals in Society I (1 credit)  
+- **ENG2002**: Computer Programming (3 credits)  
+
+### **BEng (Hons) in Electronic Systems and Internet-of-Things (Normal Year 1 Intake)**  
+- **AMA1110**: Basic Mathematics I – Calculus and Probability & Statistics (3 credits)  
+- **AMA1120**: Basic Mathematics II – Calculus and Linear Algebra (3 credits)  
+- **ELCXXXX**: English LCR Subject 1 (3 credits)  
+- **APSS1L01**: Tomorrow’s Leaders (3 credits)  
+- **ENG2003**: Information Technology (3 credits)  
+- **EIE2113**: Introduction to Internet of Things (3 credits)  
+- **EIE3112**: Database System (3 credits)  
+- **EIE3311**: Computer System Fundamentals (3 credits)  
+- **EIE3373**: Microcontroller Systems and Interface (Technical Elective) (3 credits)  
+- **ELCXXXX**: English LCR Subject 2 (3 credits)  
+- **ENG1004**: Engineering Professionals in Society I (1 credit)  
+- **ENG2002**: Computer Programming (3 credits)  
+
+### **Key Notes**  
+1. **Training Credits**: Both intakes include training credits (e.g., EEE2101 for BEng).  
+2. **Cluster Area Requirement (CAR I)**: Students must take one CAR I subject (e.g., CLC3241P or ELCXXXX).  
+3. **Free Elective**: One free elective is required in the first year.  
+
+For further details, you can refer to the official programme documents:  
+- [BEng/BSc Scheme in IAIE](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)  
+
+If you have any more questions, feel free to ask!",0.7053867225556828,0.712420886455674,0.7007962106717635,0.004204343310929468,5,0.06655629786408623,0.75,730,4934,47,True,False,1,0.3969849246231156
+I am a year 3 student studying in BSc Information Security. What should I do if I failed a subject?,academic,"<think>
+Hmm, the user is asking about what to do if they failed a subject as a year 3 student in BSc Information Security. Let me think about this carefully.
+
+First, I need to consider the academic policies at The Hong Kong Polytechnic University. From the context provided, students can retake a failed compulsory subject up to two times. After two failures, they need to go through the Academic Appeals Committee (AAC) for approval for a third attempt. If AAC denies this, the student may be de-registered, and that decision is final.
+
+The user is in their third year, which is a critical stage. They might be feeling anxious about their academic progress. The stakes are higher later in the program, so they might be worried about graduating on time or maintaining their academic standing.
+
+I should also consider the possibility that the user might not be aware of the specific procedures. They might need guidance on where to find more information, like the official programme documents or academic advising resources. It's important to provide clear steps but also encourage them to reach out for personalized help.
+
+Another thing to note is that the subject they failed could be compulsory or optional. The consequences differ based on that. Since the user didn't specify, I should cover both scenarios. Also, mentioning the 'tie-subject' arrangement could be useful if the subject is phased out, though that might be less relevant now.
+
+The user might also be concerned about the impact on their degree progression. Year 3 students are likely in the middle of their program, so failing a subject could affect their course load in subsequent semesters. They might need advice on managing their schedule post-retake.
+
+Additionally, the user might have unspoken worries about academic performance overall. They could be seeking reassurance that there are support systems in place, like academic advisors or tutoring, to help them succeed in future courses, especially in their field of Information Security.
+
+I should make sure the response is reassuring but factual. Highlighting the available options and the steps to take, along with directing them to official resources, would be helpful. Also, advising them to consult with academic advisors is crucial because each case might have unique circumstances.
+
+Finally, the response should end by offering further assistance, showing willingness to help beyond the immediate question. This addresses any potential anxiety by letting them know support is available.
+</think>
+
+If you have failed a subject, follow these steps:
+
+1. **Check if the subject is compulsory**.  
+   - If it is compulsory, you can retake it **once more** (after two failures).  
+   - If the Academic Appeals Committee (AAC) does not approve a third retake or an equivalent subject, you will be de-registered, and the AAC's decision is final.  
+
+2. **If the subject is not compulsory**:  
+   - You may need to discuss options with your academic advisor or faculty to see if an equivalent subject can be taken or other alternatives approved.  
+
+**Next steps**:  
+- Review the official programme documents for detailed policies:  
+  - [BEng/BSc Scheme in IAIE (2025/26)](https://www.polyu.edu.hk/eee/study/information-for-current-students/programme-documents/)  
+
+- Consult your academic advisor for personalized guidance.  
+
+If you have any further questions, feel free to ask!",0.6442595711757424,0.6846218858812687,0.6310139193036802,0.020302831013144777,5,0.22522392873102726,0.5,527,3403,38,True,True,3,0.19333333333333333
+Are there any internship opportunities available?,internship,"<think>
+Hmm, the user is asking if there are any internship opportunities available. Let me check the context provided.
+
+Looking at the URLs listed, they all point to the PolyU SAO website sections. The URLs include:
+- Careers and Placement Section > Career Support for Students with SEN > Inclusive Employer Network
+- Careers and Placement Section > Useful Resources
+- Work on Campus Scheme
+- Recruitment Talks and Career Events
+- STEM Internship Scheme
+
+The program names under each URL are consistent across the sections. Among them, the STEM Internship Scheme and Local Internship Programme are mentioned multiple times. These seem to be the direct internship opportunities.
+
+The STEM Internship Scheme URL specifically mentions the STEM Internship Scheme, so that's a confirmed opportunity. The Local Internship Programme appears in other sections, indicating it's a separate program. The Work on Campus Scheme is also listed in one URL, which might be another type of internship or part-time opportunity.
+
+The student might be a PolyU student looking for internships, possibly with disabilities or needing support. They might not just want a list but guidance on how to access these. The answer should confirm the opportunities and provide URLs for more details. Also, the student might need assistance in applying or connecting with mentors, which the INSPIRE program could help with.
+
+I should ensure the response is affirmative, provides direct links, and offers further help. The student might appreciate knowing the exact programs available and how to proceed. No need to mention other sections that don't directly address internships unless they intersect, but the main ones are STEM and Local Internship. The Work on Campus Scheme is mentioned once, so it's probably a separate opportunity. I'll include all three as they are all internship-related.
+</think>
+
+Yes, there are internship opportunities available. Here are some of the key internship programs at The Hong Kong Polytechnic University (PolyU):
+
+1. **STEM Internship Scheme**: This program offers students opportunities to gain hands-on experience in STEM fields through internships with various companies and organizations.  
+   - URL: [https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/stem-internship-scheme/](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/stem-internship-scheme/)
+
+2. **Local Internship Programme**: This program connects students with local companies for internship opportunities, providing valuable work experience.  
+   - URL: [https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/useful-resources/](https://www.polyu.edu.hk/sao/careers-and-placement-section/career-support-for-students-with-sen/useful-resources/)
+
+3. **Work on Campus Scheme**: This scheme offers students the chance to participate in on-campus internships, allowing them to gain practical experience while studying.  
+   - URL: [https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/work-on-campus-scheme/](https://www.polyu.edu.hk/sao/careers-and-placement-section/job-opportunities/work-on-campus-scheme/)
+
+These programs are designed to help students gain practical work experience and build their professional skills. If you need further assistance or more information, feel free to ask!",0.6448967971977633,0.651526794758306,0.6375275099028218,0.004977820649108954,5,0.027652320395515906,1.0,416,3380,46,True,False,3,0.4230769230769231

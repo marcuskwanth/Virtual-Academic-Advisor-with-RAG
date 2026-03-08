@@ -28,13 +28,13 @@ import chromadb
 
 def get_root_dir() -> pathlib.Path:
     """Return the root by searching for a .git directory."""
-    current = pathlib.Path(__file__).resolve().parent.parent.parent
-    if (current / ".git").exists():
-        return current
-    for parent in current.parents:
+    current_file_dir = pathlib.Path(pathlib.Path.cwd()).resolve().parent
+    if (current_file_dir / ".git").exists():
+        return current_file_dir
+    for parent in current_file_dir.parents:
         if (parent / ".git").exists():
             return parent
-    return current  # fallback
+    return current_file_dir  # fallback
 
 ROOT_DIR = get_root_dir()
 

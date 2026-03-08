@@ -8,13 +8,13 @@ def get_root_dir() -> pathlib.Path:
     """
     Climbing up the directory tree to locate the root directory.
     """
-    current = pathlib.Path(__file__).resolve().parent.parent.parent
-    if (current / ".git").exists():
-        return current
-    for parent in current.parents:
+    current_file_dir = pathlib.Path(pathlib.Path.cwd()).resolve().parent
+    if (current_file_dir / ".git").exists():
+        return current_file_dir
+    for parent in current_file_dir.parents:
         if (parent / ".git").exists():
             return parent
-    return current  # fallback to Code_Integrated's parent
+    return current_file_dir
 
 def get_chroma_client(chroma_db_path: str = None) -> PersistentClient:
     """

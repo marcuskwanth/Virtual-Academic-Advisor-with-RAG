@@ -1,0 +1,439 @@
+
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+ <!--<![endif]-->
+<!--  -->
+<head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css?v=20241025140449">
+    <link rel="stylesheet" type="text/css" href="/bundles/print?v=J-PTrEjgaCPtyofHD6Hj7e6FR7o886lah6ZuKJRgQ3k1" media="print">
+
+    <link rel="stylesheet" type="text/css" href="/bundles/event?v=Og0JDCHi0CyQzgSeGClNi3J9BIdIY42bXl965G4jDlA1">
+
+    
+
+<link rel="stylesheet" type="text/css" href="/bundles/its?v=3vvm2XY779ZYWCtimjE81BUajA8Fnt8_ozkIVI5bV0k1">
+
+    <script type="text/javascript" src="/bundles/jsLib?v=1PlBjXLpGou0PTc3WJ3qRjA3j-t5xJSAc64Lp4N2KtQ1"></script>
+
+    
+        <!-- <p></p>  -->
+    <script type="text/javascript">
+        //if security block for using iframe to read directly, can use "HTML5 window.postMessage" method, but need to check browser support
+        function ITS_loadFrame() {
+            var iframe = document.createElement('iframe');
+
+            //load your page
+            iframe.src = "/?p=1";  //window.location.href
+
+            //hide the iframe using css
+            iframe.style.cssText = 'position: absolute; opacity:0; z-index: -9999';
+
+            //set iframe onload function, this will execute after the append
+            iframe.onload = function (e) {
+                //get iframe cookies
+                var cookies = iframe.contentDocument.cookie;
+                //remove iframe after load
+                document.body.removeChild(iframe);
+
+                //read particular cookies value instead of load all cookies to avoid duplicate
+                //var acceptCookie = ITS_getCookie("is_accepted_cookie", cookies);
+                var globalCookie = ITS_getCookieFromSource("SC_ANALYTICS_GLOBAL_COOKIE", cookies);
+                var aspnetCookie = ITS_getCookieFromSource("ASP.NET_SessionId", cookies);
+
+                ITS_setCookie("SC_ANALYTICS_GLOBAL_COOKIE", globalCookie, 3652);
+                ITS_setCookie("ASP.NET_SessionId", aspnetCookie, 0);
+            }
+
+            if (typeof callGoogleTagManager == 'function') {
+                callGoogleTagManager();
+            }
+            if (typeof callSocialAds == 'function') {
+                callSocialAds();
+            }
+            if (typeof callCustomScript == 'function') {
+                callCustomScript();
+            }
+            document.body.appendChild(iframe);
+        }
+
+        function ITS_getCookie(name) {
+            var cookies = document.cookie;
+            var nameEQ = name + "=";
+            var ca = cookies.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function ITS_getCookieFromSource(name, cookies) {
+            var nameEQ = name + "=";
+            var ca = cookies.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function ITS_setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + ";path=/;SameSite=None;secure;";
+        }
+
+    </script>
+    <!-- Public Library -->
+<script type="text/javascript" src="/bundles/js?v=ufNls3nvdC6VHEh7xrZX0WeV4EVFsPdvBKJoEZVYs981"></script>
+    <!-- End Public Library -->
+    <script type="text/javascript">
+		$(function () {
+			$("a[href^='http']:not([href*='polyu.edu.hk'])").attr("rel", "nofollow");
+
+				
+					$(".cookie-alert__btn").click(function() {
+						ITS_setCookie('LabelName', '', 7);
+						ITS_setCookie('LabelTimes', '', 7);
+						ITS_setCookie('LabelExpire','', 7);
+					});
+				
+		});
+		$(document).ready(function () {
+			$('a[href*="/sitecore/content/"]').each(function () {
+				var oldUrl = $(this).attr("href");
+				var newUrl = oldUrl.replace("/sitecore/content/", "/");
+				$(this).attr("href", newUrl);
+			});
+		});
+
+		var url = window.location.pathname;
+		if (url.includes("/sitecore/content")) {
+			var destination = "/";
+			var path = url.split("/sitecore/content");
+			if (path.length > 1) {
+				destination = path[1];
+				if (destination === "")
+				{
+					destination = "/";
+				}
+			}
+			window.location.href = destination;
+		}
+
+    </script>
+
+
+    
+        <meta name="robots" content="index, follow">
+    <meta property="og:title" content="IELTS_Test | Events | News and Events | About CUS | College of Undergraduate Studies" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.polyu.edu.hk/cus/about-cus/news-and-events/ous-events/2025/6/20250614_ielts/" />
+    <meta property="og:image" content="https://www.polyu.edu.hk/cus/cus/-/media/department/cus/events/ielts/ielts-24-25-aug-to-nov_revised-(1).png?bc=ffffff&amp;mh=630&amp;mw=1200&amp;rev=e7123c9c56de47d5b2dbde985e808c4b&amp;hash=C079F4B6BAAE5BC760E2D16BA9CBEE35" />
+    <meta property="og:site_name" content="College of Undergraduate Studies" />
+        <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="College of Undergraduate Studies">
+    <meta name="twitter:title" content="IELTS_Test | Events | News and Events | About CUS | College of Undergraduate Studies" />
+    <meta name="twitter:image" content="https://www.polyu.edu.hk/cus/cus/-/media/department/cus/events/ielts/ielts-24-25-aug-to-nov_revised-(1).png?bc=ffffff&amp;mh=630&amp;mw=1200&amp;rev=e7123c9c56de47d5b2dbde985e808c4b&amp;hash=C079F4B6BAAE5BC760E2D16BA9CBEE35" />
+    <title>IELTS_Test | College of Undergraduate Studies</title>
+    <link href="/_img/favicon.ico" rel="shortcut icon" type="image/x-icon">
+            <link rel="alternate" href="https://www.polyu.edu.hk/cus/about-cus/news-and-events/ous-events/2025/6/20250614_ielts/?sc_lang=en" hreflang="en" />
+            <link rel="alternate" href="https://www.polyu.edu.hk/cus/about-cus/news-and-events/ous-events/2025/6/20250614_ielts/?sc_lang=en" hreflang="x-default" />
+    <link rel="canonical" href="https://www.polyu.edu.hk/cus/about-cus/news-and-events/ous-events/2025/6/20250614_ielts/" />
+    <meta name="format-detection" content="telephone=no">
+        <script async src='https://www.googletagmanager.com/gtag/js?id=G-S5XXZG4X0K'></script>
+        <script>
+			    window.dataLayer = window.dataLayer || [];
+		        function gtag() { dataLayer.push(arguments); }
+		        gtag('js', new Date());
+
+						gtag('config', "G-S5XXZG4X0K");
+						gtag('config', "G-Y164LC6VS4");
+
+        </script>
+<link rel="stylesheet" href="https://puva-ous.polyu.edu.hk/static/css/chatbot_client.css"/>
+
+
+    
+</head>
+<body class="lang-en css-transitions-only-after-page-load">
+        <div class="wrapper">
+
+        <a class="sr-only sr-only-focusable" id="skip-to-content" href="#skip-start">Skip to main content</a>
+        
+
+        
+    <header class="page-head menu fact-header " id="header">
+        <div class="header-wrap">
+			<div class="fact-header__top">
+				<div class="container header-top__container">
+					<div class="header-wrap__left">
+							<div class="logo-container">
+								<a href="/cus/" target="">
+									<picture>
+										<source srcset="/cus/-/media/department/cus/setting/cus-logo.png?bc=ffffff&amp;h=64&amp;mw=350&amp;rev=e74b66fd3e014e4fa5404ad79b0b3328&amp;hash=76B738FEC873B51B9B277367378663D7 1x, /cus/-/media/department/cus/setting/cus-logo.png?bc=ffffff&amp;h=128&amp;mw=700&amp;rev=e74b66fd3e014e4fa5404ad79b0b3328&amp;hash=129B2062758B70307349CD499C83F601 2x">
+										<img class="main-logo main-logo--fact" src="/cus/-/media/department/cus/setting/cus-logo.png?bc=ffffff&amp;h=64&amp;mw=350&amp;rev=e74b66fd3e014e4fa5404ad79b0b3328&amp;hash=76B738FEC873B51B9B277367378663D7" alt="CUS-logo">
+									</picture>
+									<img src="/assets/img/blank.png" data-src="/cus/-/media/department/cus/setting/cus-logo.png?bc=ffffff&amp;h=192&amp;mw=1050&amp;rev=e74b66fd3e014e4fa5404ad79b0b3328&amp;hash=7975B7B3B23163539E3A4F8F0F75EF8E" alt="Logo" class="main-logo main-logo--zoom main-logo--fact">
+								</a>
+							</div>
+											</div>
+					<div class="header-wrap__right">
+						<div class="fn-blk-wrap">
+															<div class="fn-blk sitesearch-blk">
+									<div class="sitesearch">
+										<button class="sitesearch__trigger fn-blk__link" data-toggle="modal" data-target="#search-modal"><span class="ico ico-search" aria-hidden="true"></span><span class="sr-only">Open Site Search Popup</span></button>
+									</div>
+								</div>
+															<div class="fn-blk share-blk">
+									
+            <div class="dropdown sharedrop__container share-area">
+                <button class="share-blk__trigger sharedrop__trigger dropdown-toggle fn-blk__link" id="dropdown-header-share" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="ico-share" aria-hidden="true"></span><span class="sr-only">Share</span></button>
+                <ul class="dropdown-menu" aria-labelledby="dropdown-header-share">
+                    <li><a data-media="facebook" href="javascript:void(0);"><span class="ico ico-fw ico-facebook"></span>Facebook</a></li>
+                    <li><a data-media="linkedin" href="javascript:void(0);"><span class="ico ico-fw ico-linkedin"></span>Linkedin</a></li>
+                    <li><a data-media="twitter" href="javascript:void(0);"><span class="ico ico-fw ico-twitter"></span>Twitter</a></li>
+                    <li><a data-media="weibo" href="javascript:void(0);"><span class="ico ico-fw ico-weibo"></span>Weibo</a></li>
+                    <li><a data-media="email" href="javascript:void(0);"><span class="ico ico-fw ico-envelope"></span>Mail</a></li>
+                    <li><a class="js-copy" data-clipboard-text="https://www.polyu.edu.hk/cus/about-cus/news-and-events/ous-events/2025/6/20250614_ielts/" href="javascript:void(0);"><span class="ico ico-fw ico-link"></span>Copy Link</a></li>
+                </ul>
+            </div>
+
+
+								</div>
+														
+
+
+							        <div class="fn-blk q-access-blk d-none d-lg-flex">
+            <div class="q-access">
+                    <button class="fn-blk__link tri-link q-access-blk__trigger" data-toggle="modal" data-target="#q-access-menu" id="q-access-menu-trigger">Quick Access</button>
+                <div class="modal  q-access-menu fade  color-set color-set--red" tabindex="-1" role="dialog" id="q-access-menu" aria-labelledby="q-access-menu-trigger" aria-hidden="true" style="z-index:20005 !important;">
+                    <div class="modal-dialog q-access-menu__dialog" role="document">
+                        <p class="q-access-menu__title">Quick Access</p>
+                        <div>
+                            <div class="q-access-menu__inner js-simplebar">
+                                    <ul class="q-access-menu__list--1 circle-list">
+                                                <li class="q-access-menu__item--1"><a href="https://www.polyu.edu.hk/about-polyu/" class="underline-link" target="_blank" ><span class="underline-link__line">About PolyU</span></a></li>
+                                                <li class="q-access-menu__item--1"><a href="https://www.polyu.edu.hk/campus-map/" class="underline-link" target="_blank" ><span class="underline-link__line">Campus Map</span></a></li>
+                                                <li class="q-access-menu__item--1"><a href="https://www.polyu.edu.hk/atoz/" class="underline-link" target="_blank" ><span class="underline-link__line">PolyU A to Z</span></a></li>
+                                                <li class="q-access-menu__item--1"><a href="https://www.polyu.edu.hk/research/" class="underline-link" target="_blank" ><span class="underline-link__line">Research at PolyU</span></a></li>
+                                                <li class="q-access-menu__item--1"><a href="https://www.polyu.edu.hk/prospective-students/" class="underline-link" target="_blank" ><span class="underline-link__line">Study at PolyU</span></a></li>
+                                    </ul>
+                            </div>
+                        </div>
+                        <button class="q-access-menu__close" data-dismiss="modal" aria-label="Close"><span class="ico ico-cross-narrow" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+															<div class="fact-header__poly-logo fact-logo-container theme-color-b4-bg">
+									<a href="https://www.polyu.edu.hk/en/" target="_blank">
+										<img src="/assets/img/fact-logo-1x.png" srcset="/assets/img/fact-logo-1x.png 1x, /assets/img/fact-logo-2x.png 2x, /assets/img/fact-logo-3x.png 3x" alt="PolyU" class="fact-main-logo">
+									</a>
+								</div>
+						</div>
+
+						<button class="mTrigger mobile-menu-wrap  d-block d-lg-none" data-toggle="modal" data-target="#mobile-menu" id="mobile-menu-trigger">
+							<div class="mTrigger__inner mTrigger__inner--open">
+								<span class="ico ico-sync-path-color ico-menu-burg mTrigger__icon"><span class="sr-only">Menu</span><span class="path1"></span><span class="path2"></span><span class="path3"></span></span>
+							</div><div class="mTrigger__inner mTrigger__inner--close"><span class="ico ico-cross mTrigger__icon"></span></div>
+						</button>
+					</div>
+				</div>
+				<div class="header-bottom d-none d-lg-block">
+					
+	<div class="container header-bottom__container">
+		<div class="mn mn--fact  color-set--red">
+			<nav class="mn__nav">
+				<ul class="mn__list--1">
+									<li class="mn__item--1 has-sub">
+                        <a href="/cus/student/" class="mn__link--1 theme-color-text-hover" target="_self">Student</a>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2 has-sub">
+                        <a href="/cus/student/4-year-undergraduate-student/" class="mn-sm__link--2 theme-color-text-hover" target="_self">4-Year Undergraduate Student</a>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/admission/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Admission</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/curriculum-framework/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Curriculum Framework</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/discipline-specific-requirements-major/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Discipline-Specific Requirements (DSR) / Major</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/general-university-requirements/" class="mn-sm__link--3 theme-color-text-hover" target="_self">General University Requirements (GUR)</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/second-major/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Secondary Major</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/credit-transfer/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Credit Transfer</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/academic-integrity/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Academic Integrity</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/4-year-undergraduate-student/publications/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Publications</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn-sm__item--2 has-sub">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Senior Year Intakes and Articulation Degree Programme</a>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/admission/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Admission</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/curriculum-framework/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Curriculum Framework</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/discipline-specific-requirements-major/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Discipline-Specific Requirements (DSR) / Major</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/general-university-requirements/" class="mn-sm__link--3 theme-color-text-hover" target="_self">General University Requirements (GUR)</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/credit-transfer/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Credit Transfer</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/academic-integrity/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Academic Integrity</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/student/senior-year-intakes-and-articulation-degree-programme/publications/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Publications</a>
+									</li>
+
+                        </ul>
+				</li>
+
+                        </ul>
+				</li>
+				<li class="mn__item--1 has-sub">
+                        <a href="/cus/staff/" class="mn__link--1 theme-color-text-hover" target="_self">Staff</a>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2">
+                        <a href="/cus/staff/academic-integrity/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Academic Integrity</a>
+									</li>
+				<li class="mn-sm__item--2">
+                        <a href="/cus/staff/credit-transfer/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Credit Transfer</a>
+									</li>
+				<li class="mn-sm__item--2">
+                        <a href="/cus/staff/publications/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Publications</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn__item--1 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn__link--1 theme-color-text-hover">Study</span>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2 has-sub">
+                        <a href="/cus/study/undergraduate/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Undergraduate Programmes</a>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/study/undergraduate/bachelors-degree-scheme-in-interdisciplinary-studies-bdsis/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Bachelor’s Degree Scheme in Interdisciplinary Studies (BDSIS)</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn-sm__item--2 has-sub">
+                        <a href="/cus/study/minor/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Minor Programmes</a>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/study/minor/minor-in-research-and-innovation/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Minor in Research and Innovation</a>
+									</li>
+
+                        </ul>
+				</li>
+
+                        </ul>
+				</li>
+				<li class="mn__item--1">
+                        <a href="https://www.polyu.edu.hk/ogur/GURSubjects/" class="mn__link--1 theme-color-text-hover" target="_blank">GUR Subjects Library</a>
+									</li>
+				<li class="mn__item--1 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn__link--1 theme-color-text-hover">Non-local GUR Study</span>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn-sm__link--2 theme-color-text-hover">Non-local Study Fund</span>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/non-local-gur-study/non-local-study-fund/non-local-study-fund/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Non-local Study Fund</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/internal/staff/funding-and-guidelines-for-non-local-car-and-sl/" class="mn-sm__link--3 theme-color-text-hover" target="">Funding and Guidelines for Non-local CAR and SL</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn-sm__item--2 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn-sm__link--2 theme-color-text-hover">Non-local CAR Subjects</span>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/non-local-gur-study/non-local-car-subjects/non-local-car-subjects/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Non-local CAR Subjects</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/non-local-gur-study/non-local-car-subjects/subject-on-offer/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Subjects on Offer</a>
+									</li>
+
+                        </ul>
+				</li>
+
+                        </ul>
+				</li>
+				<li class="mn__item--1">
+                        <a href="https://www.polyu.edu.hk/cus/nationaleducation/" class="mn__link--1 theme-color-text-hover" target="_blank">National Education (NE)</a>
+									</li>
+				<li class="mn__item--1 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn__link--1 theme-color-text-hover">Undergraduate Studies Support</span>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn-sm__link--2 theme-color-text-hover">Student</span>
+					                        <ul class="mn-sm__list--3 theme-color-border">
+                            				<li class="mn-sm__item--3">
+                        <a href="/cus/undergraduate-studies-support/student/student-learning-checkpoints/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Student Learning Checkpoints</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/undergraduate-studies-support/student/academic-advising/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Academic Advising</a>
+									</li>
+				<li class="mn-sm__item--3">
+                        <a href="/cus/undergraduate-studies-support/student/thank-you-note/" class="mn-sm__link--3 theme-color-text-hover" target="_self">Say “Thank You” to Your Academic Advisor</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn-sm__item--2">
+                        <a href="/cus/undergraduate-studies-support/staff/academic-advising-at-polyu/" class="mn-sm__link--2 theme-color-text-hover" target="">Staff</a>
+									</li>
+
+                        </ul>
+				</li>
+				<li class="mn__item--1">
+                        <a href="/cus/ielts/" class="mn__link--1 theme-color-text-hover" target="_self">IELTS</a>
+									</li>
+				<li class="mn__item--1 has-sub">
+                        <span tabindex="0" class="mn-sm__self-no-link mn__link--1 theme-color-text-hover">About CUS</span>
+					                        <ul class="mn-sm__list--2 theme-color-border">
+                            				<li class="mn-sm__item--2">
+                        <a href="/cus/about-cus/welcome-message/" class="mn-sm__link--2 theme-color-text-hover" target="_self">Message from the Dean</a>
+									</li>
+				<li class="mn-sm__item--2">
+                        <a href="/cus/about-cus/vision-and-mis                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
