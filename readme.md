@@ -4,6 +4,11 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-7/8 (1):
+- Package-ized data extraction and RAG pipeline parts into Python packages and runnable Python codes. 
+    - See 'APP' for the packages. Run 'main.py' in terminal for use.
+    - Moved requirement.txt into that folder.
+
 2026-3-5 (1):
 - Added requirement.txt, preparing for package-ize the RAG application.
 
