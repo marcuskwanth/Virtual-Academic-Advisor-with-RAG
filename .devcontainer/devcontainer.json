@@ -16,12 +16,14 @@
 
 	// The optional 'workspaceFolder' property is the path VS Code should open by default when
 	// connected. This is typically a file mount in .devcontainer/docker-compose.yml
-	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
-	"features": {
-		"ghcr.io/devcontainers/features/python:1": {}
-	}
+	"workspaceFolder": "/workspaces/Virtual-Academic-Advisor-with-RAG",
+
+	// Run as root so VS Code server and devcontainer features can install properly.
+	// The app itself runs as appuser at runtime via compose.yaml.
+	"remoteUser": "root"
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
+	// Python 3.12 is already installed in the base image (python:3.12.11) — no feature needed.
 	// "features": {},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.

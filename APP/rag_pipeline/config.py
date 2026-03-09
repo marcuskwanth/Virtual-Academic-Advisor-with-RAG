@@ -49,9 +49,12 @@ num_chat_his: int = 3       # number of past message pairs included in context
 date = datetime.today().strftime("%Y-%m-%d")
 proj_name = f"[{date}] VAA - Gradio GUI ({'ColBERT' if USE_COLBERT else 'RAG Fusion'} + Pipeline)"
 
-os.environ.setdefault("LANGSMITH_TRACING", os.environ.get("LANGSMITH_TRACING", "true"))
+_langsmith_api_key = os.environ.get("LANGSMITH_API_KEY", "")
+_tracing_enabled = bool(_langsmith_api_key) and os.environ.get("LANGSMITH_TRACING", "true").lower() == "true"
+
+os.environ["LANGSMITH_TRACING"] = "true" if _tracing_enabled else "false"
 os.environ.setdefault("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
-os.environ.setdefault("LANGSMITH_API_KEY", os.environ.get("LANGSMITH_API_KEY"), "")
+os.environ["LANGSMITH_API_KEY"] = _langsmith_api_key
 os.environ.setdefault("LANGSMITH_PROJECT", proj_name)
 
 # LLMs

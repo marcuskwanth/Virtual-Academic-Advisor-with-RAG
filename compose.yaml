@@ -5,7 +5,7 @@ services:
     container_name: vaa_postgres
     environment:
       POSTGRES_USER: markn
-      POSTGRES_PASSWORD: 0605
+      POSTGRES_PASSWORD: "0605"
       POSTGRES_DB: vaa_chat_mem_db
     ports:
       - "5432:5432"
@@ -37,6 +37,7 @@ services:
     environment:
       - DB_URI=postgresql://markn:0605@db:5432/vaa_chat_mem_db
       - OLLAMA_BASE_URL=http://ollama:11434
+      - LANGSMITH_API_KEY=${LANGSMITH_API_KEY:-}
     ports:
       - "7860:7860"
     volumes:
@@ -44,6 +45,13 @@ services:
     depends_on:
       - db
       - ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
 
 volumes:
   postgres_data:
