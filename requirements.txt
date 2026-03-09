@@ -11,6 +11,7 @@ langchain-core==0.3.75
 langchain-community==0.3.29
 langchain-ollama==0.3.6
 langgraph==0.6.6
+langgraph-checkpoint-postgres==3.0.4
 langsmith==0.4.13
 ragatouille==0.0.9.post2
 
@@ -28,7 +29,8 @@ matplotlib==3.10.3
 seaborn==0.13.2
 
 # Misc
-ipython==9.4.0
+pathlib
+ipython
 typing-extensions==4.14.1
 requests==2.32.5
 

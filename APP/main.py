@@ -22,10 +22,7 @@ from rag_pipeline.memory import create_new_thread, get_chat_history, clear_threa
 
 # PostgreSQL connection pool
 
-DB_URI = os.environ.get(
-    "DB_URI",
-    "postgresql://markn:0605@localhost:5432/vaa_chat_mem_db",
-)
+DB_URI = os.environ.get("DB_URI", "")
 
 connection_kwargs = {"autocommit": True, "prepare_threshold": 0}
 pool = ConnectionPool(conninfo=DB_URI, min_size=1, max_size=10, kwargs=connection_kwargs)
@@ -167,4 +164,4 @@ if __name__ == "__main__":
                     clear_thread_ui, inputs=thread_dropdown, outputs=history_display
                 )
 
-    demo.launch(debug=True)
+    demo.launch(server_name="0.0.0.0", server_port=7860, debug=True)

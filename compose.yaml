@@ -1,0 +1,50 @@
+services:
+  # 1. PostgreSQL Database
+  db:
+    image: postgres:15
+    container_name: vaa_postgres
+    environment:
+      POSTGRES_USER: markn
+      POSTGRES_PASSWORD: 0605
+      POSTGRES_DB: vaa_chat_mem_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  # 2. Ollama with GPU support
+  ollama:
+    image: ollama/ollama:latest
+    container_name: vaa_ollama
+    volumes:
+      - ollama_models:/root/.ollama
+    ports:
+      - "11434:11434"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+
+  # 3. Python Application
+  app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    container_name: vaa_app
+    environment:
+      - DB_URI=postgresql://markn:0605@db:5432/vaa_chat_mem_db
+      - OLLAMA_BASE_URL=http://ollama:11434
+    ports:
+      - "7860:7860"
+    volumes:
+      - ./APP/chroma_db:/app/APP/chroma_db
+    depends_on:
+      - db
+      - ollama
+
+volumes:
+  postgres_data:
+  ollama_models:

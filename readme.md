@@ -4,6 +4,10 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-9 (1):
+- Updated environment variables in config.py to hide sensitive information.
+- Added Docker-specific config files.
+
 2026-3-8 (2):
 - Uploaded Chroma database and re-organize non-APP notebook files into separate folders
 

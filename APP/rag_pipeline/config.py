@@ -27,20 +27,15 @@ import chromadb
 # Project-root
 
 def get_root_dir() -> pathlib.Path:
-    """Return the root by searching for a .git directory."""
-    current_file_dir = pathlib.Path(pathlib.Path.cwd()).resolve().parent
-    if (current_file_dir / ".git").exists():
-        return current_file_dir
-    for parent in current_file_dir.parents:
-        if (parent / ".git").exists():
-            return parent
-    return current_file_dir  # fallback
+    """Return the root directory of APP."""
+    return pathlib.Path(__file__).parent.parent.resolve()
 
 ROOT_DIR = get_root_dir()
 
 # Variables config
 
 CHROMA_DB_PATH = os.environ.get("CHROMA_DB_PATH", str(ROOT_DIR / "chroma_db"))
+OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
 USE_COLBERT = os.environ.get("USE_COLBERT", "true").lower() == "true"
 SINGLE_COLLECTION = os.environ.get("SINGLE_COLLECTION", "true").lower() == "true"
 COLLECTION_NAME = "vaa_documents" if SINGLE_COLLECTION else "academic_documents"
@@ -54,16 +49,16 @@ num_chat_his: int = 3       # number of past message pairs included in context
 date = datetime.today().strftime("%Y-%m-%d")
 proj_name = f"[{date}] VAA - Gradio GUI ({'ColBERT' if USE_COLBERT else 'RAG Fusion'} + Pipeline)"
 
-os.environ.setdefault("LANGSMITH_TRACING", "true")
+os.environ.setdefault("LANGSMITH_TRACING", os.environ.get("LANGSMITH_TRACING", "true"))
 os.environ.setdefault("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
-os.environ.setdefault("LANGSMITH_API_KEY","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",)
+os.environ.setdefault("LANGSMITH_API_KEY", os.environ.get("LANGSMITH_API_KEY"), "")
 os.environ.setdefault("LANGSMITH_PROJECT", proj_name)
 
 # LLMs
 
-llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.5, reasoning=True)
-simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, reasoning=False)
-emb = OllamaEmbeddings(model="bge-m3:567m")
+llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.5, reasoning=True, base_url=OLLAMA_BASE_URL,)
+simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, reasoning=False, base_url=OLLAMA_BASE_URL,)
+emb = OllamaEmbeddings(model="bge-m3:567m", base_url=OLLAMA_BASE_URL,)
 
 # ChromaDB & Vector Store
 
@@ -82,11 +77,12 @@ if USE_COLBERT:
     print(f"Machine:   {platform.machine()}")
 
     try:
-        multiprocessing.set_start_method("spawn", force=True)
+        if multiprocessing.get_start_method(allow_none=True) != "spawn":
+            multiprocessing.set_start_method("spawn", force=True)
     except RuntimeError:
         pass  # already set — safe to ignore
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = ""
+    os.environ["CUDA_VISIBLE_DEVICES"] = os.environ.get("COLBERT_GPU", "") 
     os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
     from ragatouille import RAGPretrainedModel
