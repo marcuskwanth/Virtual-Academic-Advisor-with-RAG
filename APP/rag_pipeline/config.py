@@ -1,6 +1,5 @@
 """
 Shared runtime config initialization for the RAG pipeline:
-  - LangSmith tracing environment variables
   - LLM models (llm, simpler_llm) via Ollama
   - Embedding function (emb)
   - ChromaDB persistent client and LangChain VectorStore (vectorStore)
@@ -17,7 +16,6 @@ import os
 import pathlib
 import platform
 import multiprocessing
-from datetime import datetime
 
 from langchain_ollama import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
@@ -44,21 +42,11 @@ num_queries: int = 4        # number of alternative queries for RAG-Fusion
 num_docs: int = 7           # number of top documents to retain after reranking
 num_chat_his: int = 3       # number of past message pairs included in context
 
-# LangSmith tracing
-
-date = datetime.today().strftime("%Y-%m-%d")
-proj_name = f"[{date}] VAA - Gradio GUI ({'ColBERT' if USE_COLBERT else 'RAG Fusion'} + Pipeline)"
-
-_langsmith_api_key = os.environ.get("LANGSMITH_API_KEY", "")
-_tracing_enabled = bool(_langsmith_api_key) and os.environ.get("LANGSMITH_TRACING", "true").lower() == "true"
-
-os.environ["LANGSMITH_TRACING"] = "true" if _tracing_enabled else "false"
-os.environ.setdefault("LANGSMITH_ENDPOINT", "https://api.smith.langchain.com")
-os.environ["LANGSMITH_API_KEY"] = _langsmith_api_key
-os.environ.setdefault("LANGSMITH_PROJECT", proj_name)
+os.environ["LANGSMITH_TRACING"] = "false"
 
 # LLMs
 
+print(f"LLM: ChatOllama with model 'deepseek-r1:8b' at {OLLAMA_BASE_URL}")
 llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.5, reasoning=True, base_url=OLLAMA_BASE_URL,)
 simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, reasoning=False, base_url=OLLAMA_BASE_URL,)
 emb = OllamaEmbeddings(model="bge-m3:567m", base_url=OLLAMA_BASE_URL,)
@@ -90,6 +78,7 @@ if USE_COLBERT:
 
     from ragatouille import RAGPretrainedModel
 
+    print("Loading ColBERT model...")
     colbert = RAGPretrainedModel.from_pretrained("colbert-ir/colbertv2.0")
     print("ColBERT model loaded")
 else:

@@ -4,6 +4,9 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-9 (3):
+- Disabled LangSmith tracing for APP.
+
 2026-3-9 (2):
 - Fixed conflict (Python feature, added by VS Code) and appuser in devcontainer.json.
 - Fixed requirements.txt (missing imports required by ragatouille).
