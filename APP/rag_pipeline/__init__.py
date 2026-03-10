@@ -14,7 +14,6 @@ from .pipeline import (
 from .memory import (
     create_new_thread,
     get_chat_history,
-    display_chat_history,
     clear_thread_memory,
     get_chat_history_text,
 )

@@ -4,13 +4,20 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-10 (1):
+- Changed the number of previous conversations to "remember" for the prompt from 3 to 5.
+- Based on current "History" tab in Gradio, revised the select chat history separately, using Gradio customization, threads, list-comprehension & PostgreSQL query techniques.
+    - Ability to select and create chat sessions, as well as name and rename current session.
+    - Retain the (most recent) chat conversation blocks after reloading.
+    - Need more testing.
+- Gradio Docker App now queues if multiple user is querying.
+
 2026-3-9 (3):
 - Disabled LangSmith tracing for APP.
 
 2026-3-9 (2):
 - Fixed conflict (Python feature, added by VS Code) and appuser in devcontainer.json.
 - Fixed requirements.txt (missing imports required by ragatouille).
-- Fixed compose YAML (Postgres password formatting).
 - Fixed codes in DockerFile (Plain Python -> CUDA)
     - nvidia/cuda:12.1.1-runtime-ubuntu22.04, need deadsnakes for installing Python3.12 and apt-get git.
 

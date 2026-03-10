@@ -12,7 +12,7 @@ You are a helpful assistant of The Hong Kong Polytechnic University (PolyU).
 Please classify the student's query into one of the two categories:
 
 1. 'DOMAIN': The question is about university-related information, including academics, subjects, student life, university services, facilities, career, or internship guidance.
-3. 'OFFTOPIC': The question completely unrelated to the university, including but not limited to a greeting or a general knowledge.
+3. 'OFFTOPIC': The question completely unrelated to the university, including a hello greeting or a general knowledge.
 
 *Do NOT answer the question*, just return the category name: 'DOMAIN' or 'OFFTOPIC'.
 
@@ -62,7 +62,7 @@ Given a chat history log and the latest user question which might reference cont
 Now, formulate a standalone question based on the content from the above chat history, or at least can be understood without the chat history.
 *Do NOT answer the question*, just reformulate it if needed and otherwise return it as is.
 
-Reformulated standalone question:
+Response:
 """
 
 query_tra_prompt = PromptTemplate.from_template(TRANSFORM_QUERY_PROMPT)

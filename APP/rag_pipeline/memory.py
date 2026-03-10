@@ -24,24 +24,6 @@ def get_chat_history(graph, thread_id: str) -> list:
         print(f"Error retrieving chat history: {e}")
         return []
 
-def display_chat_history(graph, thread_id: str) -> None:
-    """
-    Print a formatted chat history.
-    """
-    history = get_chat_history(graph, thread_id)
-    if not history:
-        print(f"No chat history found for thread: {thread_id}")
-        return
-
-    print(f"\n{'=' * 60}")
-    print(f"Chat History for Thread: {thread_id}")
-    print(f"{'=' * 60}\n")
-    for idx, msg in enumerate(history, 1):
-        role = msg["role"].upper()
-        content = msg["content"]
-        display = f"   {content[:200]}..." if len(content) > 200 else f"   {content}"
-        print(f"{idx}. [{role}]\n{display}\n")
-
 def clear_thread_memory(graph, thread_id: str) -> bool:
     """
     Reset the stored chat history for a given thread to an empty list.
