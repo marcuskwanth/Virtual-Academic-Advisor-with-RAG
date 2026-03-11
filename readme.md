@@ -4,6 +4,11 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-11 (1):
+- Added delete chat function to Gradio App.
+- QOL improvements to Gradio App UI (Instruction texts, buttons styles, and their arrangement).
+- Slightly updated the LLM prompt to better guide the LLM regarding context (retrieved docs) and prev. conversations.
+
 2026-3-10 (1):
 - Changed the number of previous conversations to "remember" for the prompt from 3 to 5.
 - Based on current "History" tab in Gradio, revised the select chat history separately, using Gradio customization, threads, list-comprehension & PostgreSQL query techniques.

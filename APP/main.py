@@ -23,7 +23,6 @@ from rag_pipeline.memory import create_new_thread, get_chat_history
 # PostgreSQL connection pool
 
 DB_URI = os.environ.get("DB_URI", "")
-
 connection_kwargs = {"autocommit": True, "prepare_threshold": 0}
 pool = ConnectionPool(conninfo=DB_URI, min_size=1, max_size=10, kwargs=connection_kwargs)
 
@@ -40,6 +39,8 @@ store = PostgresStore(pool)
 pg_memory.setup()
 store.setup()
 graph = build_graph(checkpointer=pg_memory, store=store)
+
+# Gradio Callbacks
 
 def list_chat_threads() -> list:
     """
@@ -66,8 +67,6 @@ def list_chat_threads() -> list:
     except Exception as e:
         print(f"Error listing threads: {e}")
         return []
-
-# Gradio interface
 
 def _chatbot_rows(history: list) -> list:
     """
@@ -112,12 +111,10 @@ def _parse_thread_id(selection: str) -> str:
         pass
     return selection.strip()
 
-
 def _display_for_thread(tid: str) -> str:
     """Return the dropdown display value for a thread id (name if present, else id)."""
     name = get_chat_name(tid)
     return name or tid
-
 
 def get_most_recent_thread_id() -> str:
     """
@@ -156,7 +153,6 @@ def set_chat_name(thread_id: str, name: str):
     except Exception as e:
         print(f"Error setting thread name: {e}")
 
-
 def get_chat_name(thread_id: str) -> str:
     try:
         with pool.connection() as conn:
@@ -169,10 +165,6 @@ def get_chat_name(thread_id: str) -> str:
         return ""
 
 def load_chat(thread_id: str):
-    """
-    Load a thread from Postgres into the Chatbot display.
-    """
-    # thread_id may be a display string like 'name — id'
     tid = _parse_thread_id(thread_id)
     if not tid:
         return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads())
@@ -202,8 +194,28 @@ def rename_chat(dropdown_selection: str, name_input: str):
         return gr.update(choices=list_chat_threads())
     set_chat_name(tid, name_input)
     display = name_input
-    # return updated dropdown selection and no-op for chatbot/state
+    # return updated dropdown selection and refresh chat history display with new name
     return [], {"thread_id": tid, "rows": get_chat_history(graph, tid) and _chatbot_rows(get_chat_history(graph, tid)) or []}, gr.update(choices=list_chat_threads(), value=display)
+
+def delete_chat(dropdown_selection: str):
+    tid = _parse_thread_id(dropdown_selection)
+    if not tid:
+        return gr.update(choices=list_chat_threads())
+    try:
+        with pool.connection() as conn:
+            with conn.cursor() as cur:
+                # remove checkpoints for thread
+                cur.execute("DELETE FROM checkpoints WHERE thread_id = %s;", (tid,))
+                # remove thread metadata
+                cur.execute("DELETE FROM threads WHERE thread_id = %s;", (tid,))
+    except Exception as e:
+        print(f"Error deleting thread {tid}: {e}")
+        return gr.update(choices=list_chat_threads())
+
+    choices = list_chat_threads()
+    value = choices[0] if choices else ""
+    # After deletion, load the most recent chat (thread) if exists, else return empty chat
+    return [], {"thread_id": "", "rows": []}, gr.update(choices=choices, value=value)
 
 def stream_response(message: str, thread_state_obj: dict):
     """
@@ -267,9 +279,15 @@ def stream_response(message: str, thread_state_obj: dict):
     display = _display_for_thread(thread_id)
     yield rows, {"thread_id": thread_id, "rows": rows}, gr.update(choices=list_chat_threads(), value=display), gr.update(value="")
 
-# Gradio UI
+# Gradio UI Building
+
 with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
-    gr.Markdown("## Welcome to the PolyU EEE Virtual Academic Advisor!")
+    gr.Markdown("## Welcome to the PolyU EEE Virtual Academic Advising Platform!")
+    gr.Text("""
+    To create a new chat, enter a title and click Create. \n
+    To rename an existing chat, select it from the dropdown, enter a new title, and click Rename. \n
+    To delete a chat, select it from the dropdown and click Delete.
+    """, label="Instructions", container=False)
     thread_state = gr.State(value={"thread_id": "", "rows": []})
     
     def init():
@@ -280,25 +298,30 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
         if choices:
             return load_chat(choices[0])
         return [], {"thread_id": "", "rows": []}, gr.update(choices=choices)
-    
     with gr.Row():
-        thread_dropdown = gr.Dropdown(choices=list_chat_threads(), label="List of Chats", allow_custom_value=True)
-        thread_name_txt = gr.Textbox(placeholder="Chat name (optional)", label="Name", container=True)
-        new_btn = gr.Button("New Chat")
-        rename_btn = gr.Button("Rename Chat")
+        chat_dropdown = gr.Dropdown(choices=list_chat_threads(), label="List of Chats", allow_custom_value=True)
+        with gr.Column():
+            chat_name_txt = gr.Textbox(placeholder="Chat Title (optional)", label="Set / Rename Chat", container=True)
+        with gr.Column():
+            new_btn = gr.Button("Create", variant="primary")
+            with gr.Row():
+                rename_btn = gr.Button("Rename", variant="secondary")
+                delete_btn = gr.Button("Delete", variant="stop")
+            gr.Markdown("Note: Created chats will be saved only if you begin a conversation.")
         
-    chatbot = gr.Chatbot()
+    chatbot = gr.Chatbot(label="Advisor Chatbot")
     with gr.Row():
-        txt = gr.Textbox(placeholder="Ask a question...", show_label=False, container=False)
-        send_btn = gr.Button("Send")
+        txt = gr.Textbox(placeholder="Ask a question...", show_label=False, container=False, scale=3)
+        send_btn = gr.Button("Send", scale=1, variant="huggingface")
 
-    demo.load(init, outputs=[chatbot, thread_state, thread_dropdown])
+    demo.load(init, outputs=[chatbot, thread_state, chat_dropdown])
     
-    # Load on dropdown change, new thread with optional name, rename existing
-    thread_dropdown.change(load_chat, inputs=[thread_dropdown], outputs=[chatbot, thread_state, thread_dropdown])
-    new_btn.click(new_chat, inputs=[thread_name_txt], outputs=[chatbot, thread_state, thread_dropdown])
-    rename_btn.click(rename_chat, inputs=[thread_dropdown, thread_name_txt], outputs=[chatbot, thread_state, thread_dropdown])
-    send_btn.click(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, thread_dropdown, txt])
-    txt.submit(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, thread_dropdown, txt])
+    # Load on dropdown change, new chat with optional name, rename existing
+    chat_dropdown.change(load_chat, inputs=[chat_dropdown], outputs=[chatbot, thread_state, chat_dropdown])
+    new_btn.click(new_chat, inputs=[chat_name_txt], outputs=[chatbot, thread_state, chat_dropdown])
+    rename_btn.click(rename_chat, inputs=[chat_dropdown, chat_name_txt], outputs=[chatbot, thread_state, chat_dropdown])
+    delete_btn.click(delete_chat, inputs=[chat_dropdown], outputs=[chatbot, thread_state, chat_dropdown])
+    txt.submit(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, chat_dropdown, txt])
+    send_btn.click(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, chat_dropdown, txt])
 
 demo.launch(server_name="0.0.0.0", server_port=7860, debug=True, share=True)
