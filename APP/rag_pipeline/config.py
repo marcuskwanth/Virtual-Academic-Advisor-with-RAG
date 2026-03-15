@@ -73,7 +73,12 @@ if USE_COLBERT:
     except RuntimeError:
         pass  # already set — safe to ignore
 
-    os.environ["CUDA_VISIBLE_DEVICES"] = os.environ.get("COLBERT_GPU", "") 
+    colbert_gpu = os.environ.get("COLBERT_GPU")
+    if colbert_gpu:
+        print(f"Using ColBERT on GPU: {colbert_gpu}...")
+        os.environ["CUDA_VISIBLE_DEVICES"] = colbert_gpu
+    else:
+        print("Using ColBERT on CPU...")
     os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
     from ragatouille import RAGPretrainedModel

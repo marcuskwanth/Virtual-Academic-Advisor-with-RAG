@@ -3,6 +3,7 @@ RAG LangGraph pipeline: State definition, graph node functions, and build_graph(
 The same pipeline is shared by both app.py versions (in-memory + PostgreSQL).
 """
 
+import math
 from langchain_core.documents import Document
 from typing_extensions import List, TypedDict
 from langgraph.graph import START, StateGraph
@@ -84,7 +85,6 @@ def generate_queries(state: State) -> dict:
     print(f"[RRF] Generated {len(queries)} queries")
     return {"queries": queries}
 
-
 def retrieve_ragfusion(state: State) -> dict:
     """
     Retrieve candidate documents for every generated query.
@@ -101,7 +101,6 @@ def retrieve_ragfusion(state: State) -> dict:
             print(f"    Avg:    {sum(scores) / len(scores):.4f}")
         all_docs.append(retrieved_docs)
     return {"context": all_docs}
-
 
 def rrf_ragfusion(state: State, k: int = 60) -> dict:
     """
@@ -123,7 +122,6 @@ def rrf_ragfusion(state: State, k: int = 60) -> dict:
     print(f"[RRF] Selected top {len(reranked_docs)} documents after fusion")
     return {"context": reranked_docs}
 
-
 # ColBERT retrieval & reranking
 
 def retrieve_colbert(state: State) -> dict:
@@ -143,13 +141,28 @@ def retrieve_colbert(state: State) -> dict:
               f"avg={sum(scores)/len(scores):.4f}")
 
     reranked_results = colbert.rerank(query=question, documents=doc_texts, k=num_docs)
-
-    retrieved_docs = []
+    
+    # Check for NaN scores in reranked results, which can occur with ColBERT and cause issues
+    checked_results = []
     for result in reranked_results:
+        # Check if score is NaN
+        if "score" in result and math.isnan(result["score"]):
+            print(f"[ColBERT] Warning: Skipping result with NaN score: {result.get('content', '')[:50]}...")
+            continue
+        checked_results.append(result)
+
+    # Match reranked results back to a docs list
+    retrieved_docs = []
+    for result in checked_results:
         for doc in docs:
             if doc.page_content == result["content"]:
                 retrieved_docs.append(doc)
                 break
+
+    # If no valid docs after checking, fall back to initial vector search results
+    if not retrieved_docs:
+        print(f"[ColBERT] Warning: No valid reranked results, using top initial candidates")
+        retrieved_docs = docs[:num_docs]
 
     print(f"[ColBERT] Reranked to top {len(retrieved_docs)} documents")
     return {"context": retrieved_docs}

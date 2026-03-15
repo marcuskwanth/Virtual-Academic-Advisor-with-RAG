@@ -4,9 +4,19 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-13/14 (1):
+- Gradio APP code cleanup and moved callbacks into a separate Python file.
+- Finally enabled CUDA on ColBERT operation (fixed in env variable). Now, query processing is much faster (almost instant).
+- Fixed APP crashing when ColBERT retrieves docs with NaN score.
+- QOL improvements to Gradio APP UI:
+    - More markdowns under the send button, to warn the user about AI-generated answer.
+- Experimented port-forwarding technique for accessing the Gradio APP outside the LAN.
+
 2026-3-11 (1):
 - Added delete chat function to Gradio App.
-- QOL improvements to Gradio App UI (Instruction texts, buttons styles, and their arrangement).
+- QOL improvements to Gradio App UI
+    - Instruction texts on the top.
+    - Buttons styles, and their arrangement.
 - Slightly updated the LLM prompt to better guide the LLM regarding context (retrieved docs) and prev. conversations.
 
 2026-3-10 (1):
@@ -14,7 +24,6 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 - Based on current "History" tab in Gradio, revised the select chat history separately, using Gradio customization, threads, list-comprehension & PostgreSQL query techniques.
     - Ability to select and create chat sessions, as well as name and rename current session.
     - Retain the (most recent) chat conversation blocks after reloading.
-    - Need more testing.
 - Gradio Docker App now queues if multiple user is querying.
 
 2026-3-9 (3):
@@ -31,7 +40,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 - Added Docker-specific config files.
 
 2026-3-8 (2):
-- Uploaded Chroma database and re-organize non-APP notebook files into separate folders
+- Uploaded Chroma database and re-organize non-APP notebook files into separate folders.
 
 2026-3-7 (1):
 - Package-ized data extraction and RAG pipeline parts into Python packages and runnable Python codes. 
