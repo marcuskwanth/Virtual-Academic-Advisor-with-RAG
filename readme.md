@@ -4,6 +4,11 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-15 (1):
+- Historying chat should save original question instead of "contextualized" question.
+- Number of docs to be the candidates: 7 -> 8.
+- **TO-DO**: There are suddenly issues when querying subject-related questions, need to fix it asap!!
+
 2026-3-13/14 (1):
 - Gradio APP code cleanup and moved callbacks into a separate Python file.
 - Finally enabled CUDA on ColBERT operation (fixed in env variable). Now, query processing is much faster (almost instant).

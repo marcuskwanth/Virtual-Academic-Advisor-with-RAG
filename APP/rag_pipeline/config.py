@@ -39,7 +39,7 @@ SINGLE_COLLECTION = os.environ.get("SINGLE_COLLECTION", "true").lower() == "true
 COLLECTION_NAME = "vaa_documents" if SINGLE_COLLECTION else "academic_documents"
 
 num_queries: int = 4        # number of alternative queries for RAG-Fusion
-num_docs: int = 7           # number of top documents to retain after reranking
+num_docs: int = 8           # number of top documents to retain after reranking
 num_chat_his: int = 5       # number of past message pairs included in context
 
 os.environ["LANGSMITH_TRACING"] = "false"

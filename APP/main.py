@@ -95,7 +95,7 @@ def stream_response(message: str, thread_state_obj: dict):
         current_state = graph.get_state(config)
         current_history = current_state.values.get("chat_history", [])
         new_history = current_history.copy()
-        new_history.append({"role": "user", "content": status.get("prepared_question", message)})
+        new_history.append({"role": "user", "content": message}) # Add user message to history.
         new_history.append({"role": "assistant", "content": partial})
         graph.update_state(
             config,
