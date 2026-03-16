@@ -2,6 +2,5 @@ RAG
 old
 .env
 .vscode/
-old_notebook_files/
 compose.yaml
 compose.debug.yaml

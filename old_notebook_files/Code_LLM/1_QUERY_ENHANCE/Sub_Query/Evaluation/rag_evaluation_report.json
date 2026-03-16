@@ -1,0 +1,95 @@
+{
+  "evaluation_date": "2025-12-24 15:05:23",
+  "dataset_info": {
+    "total_queries": 5,
+    "categories": [
+      "career",
+      "facility",
+      "curriculum",
+      "academic",
+      "internship"
+    ]
+  },
+  "overall_metrics": {
+    "keyword_coverage": {
+      "mean": 0.45,
+      "std": 0.27386127875258304,
+      "min": 0.0,
+      "max": 0.75
+    },
+    "retrieval_avg_similarity": {
+      "mean": 0.5981744858367094,
+      "std": 0.06725616704838959,
+      "min": 0.5044809739590841,
+      "max": 0.692195011284575
+    },
+    "retrieval_max_similarity": {
+      "mean": 0.6273213932484982,
+      "std": 0.06491227119086684,
+      "min": 0.5299476510933212,
+      "max": 0.7081161309603301
+    },
+    "retrieval_min_similarity": {
+      "mean": 0.5555270381147958,
+      "std": 0.08190672451261176,
+      "min": 0.4624877802644218,
+      "max": 0.666061577200731
+    },
+    "retrieval_diversity": {
+      "mean": 0.16028369605269782,
+      "std": 0.0767125113683962,
+      "min": 0.0761391146523752,
+      "max": 0.2337845843181515
+    },
+    "context_utilization": {
+      "mean": 0.08197277954243895,
+      "std": 0.028256484395738257,
+      "min": 0.037593984962406,
+      "max": 0.1118421052631579
+    },
+    "length_word_count": {
+      "mean": 233.8,
+      "std": 234.96957249822793,
+      "min": 76.0,
+      "max": 624.0
+    },
+    "hallucination_uncertainty_count": {
+      "mean": 0.0,
+      "std": 0.0,
+      "min": 0.0,
+      "max": 0.0
+    }
+  },
+  "category_performance": {
+    "career": {
+      "keyword_coverage": 0.75,
+      "retrieval_avg_similarity": 0.6154406604789541,
+      "retrieval_diversity": 0.0840776415489195,
+      "context_utilization": 0.1118421052631579
+    },
+    "facility": {
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.692195011284575,
+      "retrieval_diversity": 0.176526366397525,
+      "context_utilization": 0.0808823529411764
+    },
+    "curriculum": {
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.5927210734628617,
+      "retrieval_diversity": 0.0761391146523752,
+      "context_utilization": 0.037593984962406
+    },
+    "academic": {
+      "keyword_coverage": 0.0,
+      "retrieval_avg_similarity": 0.5044809739590841,
+      "retrieval_diversity": 0.2308907733465179,
+      "context_utilization": 0.1
+    },
+    "internship": {
+      "keyword_coverage": 0.5,
+      "retrieval_avg_similarity": 0.5860347099980721,
+      "retrieval_diversity": 0.2337845843181515,
+      "context_utilization": 0.0795454545454545
+    }
+  }
+}
