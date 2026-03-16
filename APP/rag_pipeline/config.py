@@ -7,7 +7,7 @@ Shared runtime config initialization for the RAG pipeline:
 
 All values can be overridden via environment variables:
     - CHROMA_DB_PATH: Filesystem path for ChromaDB persistence (default: ./chroma_db)
-    - USE_COLBERT:    Whether to load the ColBERT reranker (default: true)
+    - USE_COLBERT:    Whether to load the ColBERT reranker (default: 1)
     - SINGLE_COLLECTION: Whether to use a single ChromaDB collection for all documents (default: true)
     - COLLECTION_NAME: Name of the ChromaDB collection to use (default: "vaa_documents")
 """
@@ -29,29 +29,30 @@ def get_root_dir() -> pathlib.Path:
     return pathlib.Path(__file__).parent.parent.resolve()
 
 ROOT_DIR = get_root_dir()
+print(f"\nRoot dir: {ROOT_DIR}\n")
 
 # Variables config
 
-CHROMA_DB_PATH = os.environ.get("CHROMA_DB_PATH", str(ROOT_DIR / "chroma_db"))
-OLLAMA_BASE_URL = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
-USE_COLBERT = os.environ.get("USE_COLBERT", "true").lower() == "true"
-SINGLE_COLLECTION = os.environ.get("SINGLE_COLLECTION", "true").lower() == "true"
-COLLECTION_NAME = "vaa_documents" if SINGLE_COLLECTION else "academic_documents"
+CHROMA_DB_PATH      = os.environ.get("CHROMA_DB_PATH", str(ROOT_DIR / "chroma_db"))
+OLLAMA_BASE_URL     = os.environ.get("OLLAMA_BASE_URL", "http://localhost:11434")
+USE_COLBERT         = int(os.environ.get("USE_COLBERT", 1)) == 1
+SINGLE_COLLECTION   = os.environ.get("SINGLE_COLLECTION", "true").lower() == "true"
 
-num_queries: int = 4        # number of alternative queries for RAG-Fusion
-num_docs: int = 8           # number of top documents to retain after reranking
-num_chat_his: int = 5       # number of past message pairs included in context
+COLLECTION_NAME     = "vaa_documents" if SINGLE_COLLECTION else "academic_documents"
 
-os.environ["LANGSMITH_TRACING"] = "false"
+num_queries: int    = 4       # number of alternative queries for RAG-Fusion
+num_docs: int       = 8       # number of top documents to retain after reranking
+num_chat_his: int   = 5       # number of past message pairs included in context
 
 # LLMs
 
-print(f"LLM: ChatOllama with model 'deepseek-r1:8b' at {OLLAMA_BASE_URL}")
+print(f"\nLLM: ChatOllama with model 'deepseek-r1:8b' at {OLLAMA_BASE_URL}\n")
 llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.5, reasoning=True, base_url=OLLAMA_BASE_URL,)
 simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, reasoning=False, base_url=OLLAMA_BASE_URL,)
 emb = OllamaEmbeddings(model="bge-m3:567m", base_url=OLLAMA_BASE_URL,)
 
 # ChromaDB & Vector Store
+print(f"\nChromaDB path at: {CHROMA_DB_PATH}\n")
 
 _chroma_client = chromadb.PersistentClient(path=CHROMA_DB_PATH)
 vectorStore = Chroma(
@@ -60,9 +61,13 @@ vectorStore = Chroma(
     embedding_function=emb,
 )
 
+print(f"\nChromaDB: number of documents in collection '{COLLECTION_NAME}': {_chroma_client.get_collection(COLLECTION_NAME).count()}\n")
+
 # ColBERT
 
 colbert = None
+print(f"\nColBERT enabled: {USE_COLBERT}\n")
+
 if USE_COLBERT:
     print(f"Processor: {platform.processor()}")
     print(f"Machine:   {platform.machine()}")

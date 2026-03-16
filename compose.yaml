@@ -41,9 +41,12 @@ services:
       dockerfile: ./Dockerfile
     container_name: vaa_app
     environment:
-      - DB_URI=${DB_URI}
       - OLLAMA_BASE_URL=${OLLAMA_BASE_URL}
+      - DB_URI=${DB_URI}
+      - CHROMA_DB_PATH=${CHROMA_DB_PATH}
+      - SINGLE_COLLECTION=${SINGLE_COLLECTION}
       - COLBERT_GPU=${COLBERT_GPU}
+      - USE_COLBERT=${USE_COLBERT}
     ports:
       - "7860:7860"
     volumes:

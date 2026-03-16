@@ -93,7 +93,7 @@ def retrieve_ragfusion(state: State) -> dict:
     print(f"[RRF] Retrieving for {len(state['queries'])} queries...")
     for idx, query in enumerate(state["queries"], 1):
         print(f"  Query {idx}: {query[:80]}...")
-        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=5)
+        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=10)
         retrieved_docs = [doc for doc, _ in retrieved_with_scores]
         scores = [score for _, score in retrieved_with_scores]
         if scores:

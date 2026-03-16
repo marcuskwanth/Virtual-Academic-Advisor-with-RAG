@@ -6,6 +6,10 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 ## PROGRESS HISTORY
 2026-3-16 (2):
 - Attempt to improve PDF extraction (In additiont to sumamry, add additional prev/after context and title for PDF tables).
+- **CRITICAL FIX**: 
+    - Fix missing environment variables in compose YAML (incorrectly inferring USE_COLBERT).
+    - Now correctly points to the Chroma database in .env.
+    - In Docker, need to add .sqlite3 (and Chroma_db path) into .dockerignore, otherwise, LONG TIME to rebuild Docker Containers!!!
 
 2026-3-16 (1):
 - Historying chat should save original question instead of "contextualized" question.

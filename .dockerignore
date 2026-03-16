@@ -25,3 +25,12 @@
 **/values.dev.yaml
 LICENSE
 README.md
+
+**/*.sqlite3
+**/chroma_db
+old_notebook_files/
+Code_Extraction/
+Code_Evaluation/
+Code_LLM/
+
+.DS_Store
