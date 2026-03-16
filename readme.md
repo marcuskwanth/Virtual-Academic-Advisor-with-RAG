@@ -4,7 +4,10 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
-2026-3-15 (1):
+2026-3-16 (2):
+- Attempt to improve PDF extraction (In additiont to sumamry, add additional prev/after context and title for PDF tables).
+
+2026-3-16 (1):
 - Historying chat should save original question instead of "contextualized" question.
 - Number of docs to be the candidates: 7 -> 8.
 - **TO-DO**: There are suddenly issues when querying subject-related questions, need to fix it asap!!
