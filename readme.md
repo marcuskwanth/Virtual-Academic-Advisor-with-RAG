@@ -4,8 +4,12 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-17 (1):
+- Rebuilt Chroma database as stated in `2026-3-16 (2)` logs.
+- Updated requirement.txt with respect to the PDF extraction process.
+
 2026-3-16 (2):
-- Attempt to improve PDF extraction (In additiont to sumamry, add additional prev/after context and title for PDF tables).
+- Attempt to improve PDF extraction (Add prev/after context before table summarization. In the tables summarization, add a title for that).
 - **CRITICAL FIX**: 
     - Fix missing environment variables in compose YAML (incorrectly inferring USE_COLBERT).
     - Now correctly points to the Chroma database in .env.

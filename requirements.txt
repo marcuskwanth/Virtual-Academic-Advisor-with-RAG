@@ -1,6 +1,13 @@
 # PDF and Webpage Loading
 pymupdf==1.26.3
 beautifulsoup4==4.13.4
+unstructured==0.18.13
+pdfminer.six==20250506
+pi_heif==1.1.0
+unstructured_inference==1.0.5
+pdf2image==1.17.0
+unstructured_pytesseract==0.3.15
+unstructured[all-docs]
 
 # RAG Vector Store
 chromadb==1.0.20

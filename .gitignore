@@ -2,5 +2,6 @@ RAG
 old
 .env
 .vscode/
+old_notebook_files/chroma_db/
 compose.yaml
 compose.debug.yaml
