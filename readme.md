@@ -4,6 +4,10 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-18 (1):
+- Rebuilt Chroma database: Now using Docling and multi-retrieval (tables) for PDF documents.
+- Updated requirement.txt with respect to the PDF extraction process.
+
 2026-3-17 (1):
 - Rebuilt Chroma database as stated in `2026-3-16 (2)` logs.
 - Updated requirement.txt with respect to the PDF extraction process.
