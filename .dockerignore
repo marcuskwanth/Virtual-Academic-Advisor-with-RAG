@@ -26,8 +26,8 @@
 LICENSE
 README.md
 
-**/*.sqlite3
 **/chroma_db
+**/*.sqlite3
 old_notebook_files/
 Code_Extraction/
 Code_Evaluation/

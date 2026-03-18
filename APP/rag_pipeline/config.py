@@ -20,6 +20,8 @@ import multiprocessing
 from langchain_ollama import ChatOllama
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain.vectorstores import Chroma
+from langchain_core.documents import Document
+from langchain_community.retrievers import BM25Retriever
 import chromadb
 
 # Project-root
@@ -62,6 +64,21 @@ vectorStore = Chroma(
 )
 
 print(f"\nChromaDB: number of documents in collection '{COLLECTION_NAME}': {_chroma_client.get_collection(COLLECTION_NAME).count()}\n")
+
+# BM25 retriever
+_collection = _chroma_client.get_collection(COLLECTION_NAME)
+docs = _collection.get(
+    include=["documents", "metadatas"],
+    limit=_collection.count()
+)
+
+docs_for_bm25 = [
+    Document(page_content=doc_text, metadata=md)
+    for doc_text, md in zip(docs["documents"], docs["metadatas"])
+]
+
+bm25_retriever = BM25Retriever.from_documents(docs_for_bm25)
+print(f"BM25 retriever: initialized over {len(docs_for_bm25)} documents")
 
 # ColBERT
 

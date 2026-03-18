@@ -11,6 +11,7 @@ from langgraph.graph import START, StateGraph
 from .config import (
     simpler_llm,
     vectorStore,
+    bm25_retriever,
     colbert,
     USE_COLBERT,
     num_queries,
@@ -74,6 +75,21 @@ def contextualize_question(state: State) -> dict:
 
 # RAG-Fusion retrieval & reranking
 
+def swap_table_if_exists(doc: Document) -> Document:
+    """
+    If the document chunk has an 'original_table' in metadata, swap the page_content to that.
+    """
+    
+    if "original_table" in doc.metadata:
+        print("[Table found] Swapping in original table content for document chunk")
+        new_result = doc.metadata["original_table"]
+    else:
+        new_result = doc.page_content
+    return Document(
+        page_content=new_result,
+        metadata=doc.metadata,
+    )
+
 def generate_queries(state: State) -> dict:
     """
     Generate multiple alternative queries for RAG-Fusion.
@@ -84,22 +100,27 @@ def generate_queries(state: State) -> dict:
     queries = [q for q in response.content.strip().split("\n") if q.strip()]
     print(f"[RRF] Generated {len(queries)} queries")
     return {"queries": queries}
-
+    
 def retrieve_ragfusion(state: State) -> dict:
     """
     Retrieve candidate documents for every generated query.
     """
     all_docs = []
-    print(f"[RRF] Retrieving for {len(state['queries'])} queries...")
+    print(f"[RRF] Retrieving for {len(state['queries'])} queries...\n")
     for idx, query in enumerate(state["queries"], 1):
-        print(f"  Query {idx}: {query[:80]}...")
-        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=10)
+        print(f"[RRF] Query {idx}: {query[:80]}...")
+        
+        # BM25 retrieval
+        bm25_docs = bm25_retriever.get_relevant_documents(query)[:5]
+        print(f"[RRF] BM25 retrieved {len(bm25_docs)} docs")
+        all_docs.append(bm25_docs)          # first ranked list for RRF
+        
+        # Cos-sim retrieval
+        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=5)
         retrieved_docs = [doc for doc, _ in retrieved_with_scores]
-        scores = [score for _, score in retrieved_with_scores]
-        if scores:
-            print(f"Scores: {[f'{s:.4f}' for s in scores]}")
-            print(f"Avg:    {sum(scores) / len(scores):.4f}")
-        all_docs.append(retrieved_docs)
+        print(f"[RRF] Vector search retrieved {len(retrieved_docs)} docs")
+        all_docs.append(retrieved_docs)     # second ranked list for RRF
+        
     return {"context": all_docs}
 
 def rrf_ragfusion(state: State, k: int = 60) -> dict:
@@ -119,6 +140,9 @@ def rrf_ragfusion(state: State, k: int = 60) -> dict:
         for doc in docs
     }
     reranked_docs = [doc_map[key] for key, _ in reranked[:num_docs]]
+    
+    reranked_docs = [swap_table_if_exists(doc) for doc in reranked_docs]
+    
     print(f"[RRF] Selected top {len(reranked_docs)} documents after fusion")
     return {"context": reranked_docs}
 
@@ -129,17 +153,24 @@ def retrieve_colbert(state: State) -> dict:
     Retrieve documents using initial vector search then ColBERT reranking.
     """
     question = state.get("contextualized_question", state["question"])
-    initial_with_scores = vectorStore.similarity_search_with_score(question, k=20)
+    
+    # BM25 retrieval
+    bm25_docs = bm25_retriever.get_relevant_documents(question)[:20]
+    
+    # Cos-sim retrieval
+    retrieval_with_scores = vectorStore.similarity_search_with_score(question, k=20)
+    retrieved_docs = [doc for doc, _ in retrieval_with_scores]
+    
+    # Merge & de-duplicate
+    doc_map = {}
+    for doc in bm25_docs + retrieved_docs:
+        doc_map.setdefault(doc.page_content, doc)
 
-    docs = [doc for doc, _ in initial_with_scores]
-    scores = [score for _, score in initial_with_scores]
+    docs = list(doc_map.values())
     doc_texts = [doc.page_content for doc in docs]
-
-    if scores:
-        print(f"[ColBERT] {len(docs)} initial candidates | "
-              f"min={min(scores):.4f}, max={max(scores):.4f}, "
-              f"avg={sum(scores)/len(scores):.4f}")
-
+    print(f"[ColBERT] {len(docs)} initial documents to rerank with ColBERT")
+    
+    doc_texts = [doc.page_content for doc in retrieved_docs]
     reranked_results = colbert.rerank(query=question, documents=doc_texts, k=num_docs)
     
     # Check for NaN scores in reranked results, which can occur with ColBERT and cause issues
@@ -152,20 +183,22 @@ def retrieve_colbert(state: State) -> dict:
         checked_results.append(result)
 
     # Match reranked results back to a docs list
-    retrieved_docs = []
+    finalized_docs = []
     for result in checked_results:
-        for doc in docs:
+        for doc in retrieved_docs:
             if doc.page_content == result["content"]:
-                retrieved_docs.append(doc)
+                finalized_docs.append(doc)
                 break
 
     # If no valid docs after checking, fall back to initial vector search results
-    if not retrieved_docs:
+    if not finalized_docs:
         print(f"[ColBERT] Warning: No valid reranked results, using top initial candidates")
-        retrieved_docs = docs[:num_docs]
+        finalized_docs = retrieved_docs[:num_docs]
+        
+    finalized_docs = [swap_table_if_exists(doc) for doc in finalized_docs]
 
-    print(f"[ColBERT] Reranked to top {len(retrieved_docs)} documents")
-    return {"context": retrieved_docs}
+    print(f"[ColBERT] Reranked to top {len(finalized_docs)} documents")
+    return {"context": finalized_docs}
 
 # Prompt preparation
 

@@ -1,12 +1,19 @@
 # PolyU Virtual Academic Advisor Chatbot
 Author: Marcus Kwan <br>
 Type: 2526-AIIE-FYP, private repository <br>
-Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
+Technical Stacks: DeepSeek-R1 (LLM), ~~bge-m3~~ Nomic-embed-text-v2-moe (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-18 (2):
+- Experiment lexical retrieval using BM25 (similar to TF-IDF) for better retrieval in both RAG-Fusion and ColBERT.
+- **URGENT MODIFICATION**: There is now weird error for "slightly longer" query when BGE-m3 is used (HTTP 500 error caused by unsupported value: NaN), research it a bit, and it is either model-specific or Ollama-specific error.
+    - Switching to `nomic-embed-text-v2-moe` as the embedding model (which works fine) for now.
+    - Need to rebuild Chroma database with new embedding model.
+
 2026-3-18 (1):
-- Rebuilt Chroma database: Now using Docling and multi-retrieval (tables) for PDF documents.
-- Updated requirement.txt with respect to the PDF extraction process.
+- Rebuilt Chroma database: Now using `Docling` and multi-retrieval (tables) for PDF documents.
+    - Result: Still hit-or-miss for very specific queries (subject code), but the data DO EXISTS in the vector database!
+- Updated requirement.txt with respect to the PDF extraction process, and fixed dependency conflicts in composing.
 
 2026-3-17 (1):
 - Rebuilt Chroma database as stated in `2026-3-16 (2)` logs.
@@ -89,7 +96,7 @@ Technical Stacks: DeepSeek-R1 (LLM), BGE-m3 (EM), ChromaDB (RAG), LangChain (Pip
 - Updated the prompt for question reformulating slightly.
 
 2026-2-26/27 (1):
-- Changed programme booklet PDF embedding approach for tables: RecursiveCharacterSplit -> Unstructured
+- Changed programme booklet PDF embedding approach for tables: RecursiveCharacterSplit -> `Unstructured`
     - Extract text and table parts, and process them separately. 
         - Table: Summarize them into natural language w/ LLM, embed it. Store the original table (in markup format) into the corresponding metadata. 
         - Text: Standard RCS approach for now.
