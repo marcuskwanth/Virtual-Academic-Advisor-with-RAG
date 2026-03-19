@@ -37,10 +37,12 @@ Given a chat history log and the latest user question which might reference cont
 {question}
 ======
 
-Now, formulate a standalone question based on the content from the above chat history, or at least can be understood without the chat history.
-*Do NOT answer the question*, just reformulate it if needed and otherwise return it as is.
+Now, if needed, reformulate the user's question based on the content from the above chat history.
+If the question is unrelated to the chat history and does not require reformulation, just return the original question.
 
-Response:
+*Do NOT answer the question*. 
+
+Reformulated or Original Question:
 """
 
 query_tra_prompt = PromptTemplate.from_template(TRANSFORM_QUERY_PROMPT)

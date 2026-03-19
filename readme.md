@@ -7,6 +7,7 @@ Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pip
 2026-3-19 (2):
 - Updated Chroma database with the changes in `2026-3-19 (1)`.
 - Fixed metadata errors in ChromaDB (None / List values generated from hybrid-chunking).
+- Slightly revised the query transformation prompt (as sometimes the query formulated though it is indeed a standalone query).
 
 2026-3-19 (1):
 - **CRICIAL FIX**: Fixed conflict with ollama:11434 vs localhost:11434, which is the direct cause of the HTTP 500 error -> NaN.
