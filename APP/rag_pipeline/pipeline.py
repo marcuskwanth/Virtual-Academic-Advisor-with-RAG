@@ -16,6 +16,8 @@ from .config import (
     USE_COLBERT,
     num_queries,
     num_docs,
+    num_immediate_docs_rrf,
+    num_immediate_docs_colbert,
     num_chat_his,
 )
 from .prompts import (
@@ -108,15 +110,15 @@ def retrieve_ragfusion(state: State) -> dict:
     all_docs = []
     print(f"[RRF] Retrieving for {len(state['queries'])} queries...\n")
     for idx, query in enumerate(state["queries"], 1):
-        print(f"[RRF] Query {idx}: {query[:80]}...")
+        print(f"[RRF] Query {idx}: {query}")
         
         # BM25 retrieval
-        bm25_docs = bm25_retriever.get_relevant_documents(query)[:5]
+        bm25_docs = bm25_retriever.get_relevant_documents(query)[:num_immediate_docs_rrf]
         print(f"[RRF] BM25 retrieved {len(bm25_docs)} docs")
         all_docs.append(bm25_docs)          # first ranked list for RRF
         
         # Cos-sim retrieval
-        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=5)
+        retrieved_with_scores = vectorStore.similarity_search_with_score(query, k=num_immediate_docs_rrf)
         retrieved_docs = [doc for doc, _ in retrieved_with_scores]
         print(f"[RRF] Vector search retrieved {len(retrieved_docs)} docs")
         all_docs.append(retrieved_docs)     # second ranked list for RRF
@@ -130,12 +132,15 @@ def rrf_ragfusion(state: State, k: int = 60) -> dict:
     fused_scores: dict = {}
     for docs in state["context"]:
         for rank, doc in enumerate(docs):
-            key = doc.page_content
+            # Use a more unique key: (content, source)
+            key = (doc.page_content, doc.metadata.get("source", ""), doc.metadata.get("chunk_id", ""))
             fused_scores[key] = fused_scores.get(key, 0) + 1 / (rank + k)
 
     reranked = sorted(fused_scores.items(), key=lambda x: x[1], reverse=True)
+    
+    # Reconstruct document mapping using the same key
     doc_map = {
-        doc.page_content: doc
+        (doc.page_content, doc.metadata.get("source", ""), doc.metadata.get("chunk_id", "")): doc
         for docs in state["context"]
         for doc in docs
     }
@@ -155,22 +160,22 @@ def retrieve_colbert(state: State) -> dict:
     question = state.get("contextualized_question", state["question"])
     
     # BM25 retrieval
-    bm25_docs = bm25_retriever.get_relevant_documents(question)[:20]
+    bm25_docs = bm25_retriever.get_relevant_documents(question)[:num_immediate_docs_colbert]
     
     # Cos-sim retrieval
-    retrieval_with_scores = vectorStore.similarity_search_with_score(question, k=20)
+    retrieval_with_scores = vectorStore.similarity_search_with_score(question, k=num_immediate_docs_colbert)
     retrieved_docs = [doc for doc, _ in retrieval_with_scores]
     
     # Merge & de-duplicate
     doc_map = {}
     for doc in bm25_docs + retrieved_docs:
-        doc_map.setdefault(doc.page_content, doc)
+        key = (doc.page_content, doc.metadata.get("source", ""), doc.metadata.get("chunk_id", ""))
+        doc_map.setdefault(key, doc)
 
     docs = list(doc_map.values())
     doc_texts = [doc.page_content for doc in docs]
     print(f"[ColBERT] {len(docs)} initial documents to rerank with ColBERT")
     
-    doc_texts = [doc.page_content for doc in retrieved_docs]
     reranked_results = colbert.rerank(query=question, documents=doc_texts, k=num_docs)
     
     # Check for NaN scores in reranked results, which can occur with ColBERT and cause issues
@@ -185,17 +190,17 @@ def retrieve_colbert(state: State) -> dict:
     # Match reranked results back to a docs list
     finalized_docs = []
     for result in checked_results:
-        for doc in retrieved_docs:
+        for doc in docs:
             if doc.page_content == result["content"]:
                 finalized_docs.append(doc)
                 break
 
-    # If no valid docs after checking, fall back to initial vector search results
+    # If no valid docs after checking, fall back to initial results
     if not finalized_docs:
         print(f"[ColBERT] Warning: No valid reranked results, using top initial candidates")
-        finalized_docs = retrieved_docs[:num_docs]
+        finalized_docs = docs[:num_docs]
         
-    finalized_docs = [swap_table_if_exists(doc) for doc in finalized_docs]
+    #finalized_docs = [swap_table_if_exists(doc) for doc in finalized_docs]
 
     print(f"[ColBERT] Reranked to top {len(finalized_docs)} documents")
     return {"context": finalized_docs}
@@ -206,7 +211,23 @@ def prompt_prepare(state: State) -> dict:
     """
     Format the final prompt from retrieved context and chat history.
     """
-    docs_content = "\n\n".join(doc.page_content for doc in state["context"])
+    # Prepend source information to context chunks to help LLM recognize structure and source
+    formatted_context = []
+    for doc in state["context"]:
+        content_to_append = \
+        """
+        ------------ Next Document ------------\n
+        --- Retrieved from: {source} ---\n
+        {content}\n
+        ------------ End of Document ------------\n
+        """.format(
+            source=doc.metadata.get("source", "N/A"),
+            content=doc.page_content
+        )
+        
+        formatted_context.append(content_to_append)
+
+    docs_content = "\n".join(formatted_context)
 
     if state.get("chat_history"):
         chat_history_str = "".join(

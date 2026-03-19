@@ -1,18 +1,30 @@
 # PolyU Virtual Academic Advisor Chatbot
 Author: Marcus Kwan <br>
 Type: 2526-AIIE-FYP, private repository <br>
-Technical Stacks: DeepSeek-R1 (LLM), ~~bge-m3~~ Nomic-embed-text-v2-moe (EM), ChromaDB (RAG), LangChain (Pipeline)
+Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-19 (1):
+- **CRICIAL FIX**: Fixed conflict with ollama:11434 vs localhost:11434, which is the direct cause of the HTTP 500 error -> NaN.
+    - Now Docker resolves the host's IP for the localhost Ollama in .env, instead of using Docker's internal Ollama server. GPU works fine.
+    - Now switching back to `bge-m3` as the embedding model. But since it is now using Ollama server (localhost), cannot run Ollama locally and in docker simultaneously.
+- Re-enabled LangSmith, something interesting was found...
+    1. The "context is included, but fails to answer" issue. For that, revised LLM prompt to explicitly tell LLM to examine keywords carefully.
+    2. Disabled multi-retrieval function for PDF tables as it seems have better accuracy.
+- Discard title adding in the PDF table summarization.
+- Enhanced processing to text in PDF using Docling's hybrid-chunker, which attempts to group similarly-placed paragraphs/list based on header(s).
+- Moved "source information prepending" from Embedding stage to the RAG pipeline.
+
 2026-3-18 (2):
-- Experiment lexical retrieval using BM25 (similar to TF-IDF) for better retrieval in both RAG-Fusion and ColBERT.
-- **URGENT MODIFICATION**: There is now weird error for "slightly longer" query when BGE-m3 is used (HTTP 500 error caused by unsupported value: NaN), research it a bit, and it is either model-specific or Ollama-specific error.
-    - Switching to `nomic-embed-text-v2-moe` as the embedding model (which works fine) for now.
-    - Need to rebuild Chroma database with new embedding model.
+- Experiment lexical retrieval using BM25 (similar to TF-IDF, available in LangChain) for better retrieval in both RAG-Fusion and ColBERT. Retrieves in a 50-50 ratio, but often times BM25 retrieves only a few docs (3-4).
+- **URGENT MATTER**: There is now weird error for "slightly longer" query when BGE-m3 is used (HTTP 500 error caused by unsupported value: NaN), research it a bit, and it is either model-specific or Ollama-specific error.
+    - Switching to `nomic-embed-text-v2-moe` as the embedding model (but it has lower token limit in embedding: 512).
+    - Switching to `qwen-3-embedding` as the embedding model (higher token limit, but performs poorly, much like TF-IDF??).
 
 2026-3-18 (1):
-- Rebuilt Chroma database: Now using `Docling` and multi-retrieval (tables) for PDF documents.
+- Rebuilt Chroma database: Now using `Docling` and multi-retrieval (vector search summary -> return its table) for PDF documents.
     - Result: Still hit-or-miss for very specific queries (subject code), but the data DO EXISTS in the vector database!
+    - Till now, every retrieval operation is via cos-sim, i.e., semantic difference. Is it possible to do keyword-matching?
 - Updated requirement.txt with respect to the PDF extraction process, and fixed dependency conflicts in composing.
 
 2026-3-17 (1):
@@ -20,7 +32,7 @@ Technical Stacks: DeepSeek-R1 (LLM), ~~bge-m3~~ Nomic-embed-text-v2-moe (EM), Ch
 - Updated requirement.txt with respect to the PDF extraction process.
 
 2026-3-16 (2):
-- Attempt to improve PDF extraction (Add prev/after context before table summarization. In the tables summarization, add a title for that).
+- Attempt to improve PDF extraction. By adding prev/after context before table summarization. In the tables summarization, add a title for that.
 - **CRITICAL FIX**: 
     - Fix missing environment variables in compose YAML (incorrectly inferring USE_COLBERT).
     - Now correctly points to the Chroma database in .env.
@@ -29,7 +41,7 @@ Technical Stacks: DeepSeek-R1 (LLM), ~~bge-m3~~ Nomic-embed-text-v2-moe (EM), Ch
 2026-3-16 (1):
 - Historying chat should save original question instead of "contextualized" question.
 - Number of docs to be the candidates: 7 -> 8.
-- **TO-DO**: There are suddenly issues when querying subject-related questions, need to fix it asap!!
+- **URGENT MATTER**: There are suddenly issues when querying subject-related questions, need to fix it asap!!
 
 2026-3-13/14 (1):
 - Gradio APP code cleanup and moved callbacks into a separate Python file.
@@ -91,7 +103,7 @@ Technical Stacks: DeepSeek-R1 (LLM), ~~bge-m3~~ Nomic-embed-text-v2-moe (EM), Ch
     - Advised LLM to include a programme title short form, instead of just the programme title in the chunks (To improves retrieval accuarcy for programme-specific questions).
     - Added infer_table_structure and hi-res strategy for Unstructured.io function (Uses extra dependencies for DNN OCR extraction, should have better table detection).
     - Removed excess metadata for PDF chunks (languages, coordinates), to prevent ChromaDB error.
-    - **Critical**: Store the table documents locally (using Pickle), and use deepcopy() to load them into loop function to avoid mutation!!
+    - **CRITICAL FIX**: Store the table documents locally (using Pickle), and use deepcopy() to load them into loop function to avoid mutation!!
 - Changed RecursiveCharacterSplit parameters for raw datas: Chunk size -> 1200, overlapping size -> 300.
 - Updated the prompt for question reformulating slightly.
 

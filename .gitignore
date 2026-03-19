@@ -1,5 +1,6 @@
 RAG
 old
+temp
 .env
 .vscode/
 old_notebook_files/chroma_db/

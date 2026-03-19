@@ -89,6 +89,7 @@ def stream_response(message: str, thread_state_obj: dict):
         rows[-1] = (message, partial)
         display = cb._display_chat_thread(thread_id)
         yield rows, {"thread_id": thread_id, "rows": rows}, gr.update(choices=cb.list_chat_threads(), value=display), gr.update(value="")
+    print(f"[GRAPH] Completed streaming response.")
 
     # 6. Persist updated history into the graph (which the Postgres Saver persists)
     try:
@@ -104,6 +105,7 @@ def stream_response(message: str, thread_state_obj: dict):
         )
     except Exception as e:
         print(f"Error persisting chat history: {e}")
+    print(f"[GRAPH] Completed persisting chat history.")
 
     display = cb._display_chat_thread(thread_id)
     yield rows, {"thread_id": thread_id, "rows": rows}, gr.update(choices=cb.list_chat_threads(), value=display), gr.update(value="")
