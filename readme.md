@@ -23,8 +23,11 @@ Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pip
 2026-3-18 (2):
 - Experiment lexical retrieval using BM25 (similar to TF-IDF, available in LangChain) for better retrieval in both RAG-Fusion and ColBERT. Retrieves in a 50-50 ratio, but often times BM25 retrieves only a few docs (3-4).
 - **URGENT MATTER**: There is now weird error for "slightly longer" query when BGE-m3 is used (HTTP 500 error caused by unsupported value: NaN), research it a bit, and it is either model-specific or Ollama-specific error.
-    - Switching to `nomic-embed-text-v2-moe` as the embedding model (but it has lower token limit in embedding: 512).
-    - Switching to `qwen-3-embedding` as the embedding model (higher token limit, but performs poorly, much like TF-IDF??).
+    - Switching to `nomic-embed-text-v2-moe` as the embedding model 
+        - But it has lower token limit in embedding: 512.
+    - Switching to `qwen-3-embedding` as the embedding model
+        - Higher token limit than nomic, but performs poorly, even in webpage retrieval!
+        - To compensate this, attempted to improve web-extraction by removing undetected navigation items + unwanted spaces and newlines.
 
 2026-3-18 (1):
 - Rebuilt Chroma database: Now using `Docling` and multi-retrieval (vector search summary -> return its table) for PDF documents.
