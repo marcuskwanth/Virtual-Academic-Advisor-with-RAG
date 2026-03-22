@@ -167,6 +167,11 @@ def new_chat(name_input: str):
     """
     Create a new chat with an optional name: returns chatbot rows, thread state, and gr dropdown update.
     """
+    # Check if name already exists in dropdown choices
+    if name_input and (name_input in list_chat_threads() or name_input in [tid for tid in list_chat_threads()]):
+        gr.Warning(f"Chat: '{name_input}' already exists. Please choose a different title.")
+        return gr.skip(), gr.skip(), gr.skip()
+
     thread_id = create_new_thread()
     
     # If user provided a name, save it in the threads table and use it for display; otherwise use the thread_id as display.
@@ -182,15 +187,26 @@ def rename_chat(dropdown_selection: str, name_input: str):
     """
     Rename an existing chat: returns chatbot rows, thread state, and gr dropdown update.
     """
+    if not name_input:
+        gr.Warning("Please enter a new chat title.")
+        return gr.skip(), gr.skip(), gr.skip()
+
+    # Check if the new name already exists in the list
+    if name_input in list_chat_threads() or name_input in [tid for tid in list_chat_threads()]:
+        gr.Warning(f"Chat: '{name_input}' already exists. Please choose a different title.")
+        return gr.skip(), gr.skip(), gr.skip()
+
     thread_id = _parse_thread_id(dropdown_selection)
     if not thread_id:
-        return gr.update(choices=list_chat_threads()) # No valid selection to rename, refresh dropdown choices
+        return gr.update(choices=list_chat_threads(), value="") # No valid selection to rename, refresh dropdown choices
     
     set_chat_name(thread_id, name_input)
     display = name_input
     
     # After renaming, reload the chat to update the display and ensure the dropdown reflects the new name.
-    return [], {"thread_id": thread_id, "rows": get_chat_history(graph, thread_id) and _chatbot_rows(get_chat_history(graph, thread_id)) or []}, gr.update(choices=list_chat_threads(), value=display)
+    history = get_chat_history(graph, thread_id)
+    rows = _chatbot_rows(history) if history else []
+    return rows, {"thread_id": thread_id, "rows": rows}, gr.update(choices=list_chat_threads(), value=display)
 
 def delete_chat(dropdown_selection: str):
     """

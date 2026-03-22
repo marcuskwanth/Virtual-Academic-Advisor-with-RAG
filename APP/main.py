@@ -112,15 +112,23 @@ def stream_response(message: str, thread_state_obj: dict):
 
 # Gradio UI Building
 
-with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
+css_chat = """
+.icon-button-wrapper.top-panel {
+    display: none !important;
+}
+"""
+
+with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat) as demo:
     gr.Markdown("## Welcome to the PolyU EEE Virtual Academic Advising Platform!")
-    gr.Text(\
+    gr.Markdown(\
     """
-    To create a new chat, enter a chat title and click Create. \n
-    To rename an existing chat, select it from the chat list, enter a new title, and click Rename. \n
-    To delete a chat, select it from the chat list and click Delete.
+    ### Instructions
+    To create a new chat, enter a chat title and click **Create**. \n
+    To rename an existing chat, select it from the chat list, enter a new title, and click **Rename**. \n
+    To delete a chat, select it from the chat list and click **Delete**.\n
+    Please chat with the advisor in **English** to get the best experience.
     """, 
-    label="Instructions", container=False)
+    container=True)
     
     thread_state = gr.State(value={"thread_id": "", "rows": []})
     
@@ -146,7 +154,7 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
             with gr.Row():
                 rename_btn = gr.Button("Rename", variant="secondary")
                 delete_btn = gr.Button("Delete", variant="stop")
-            gr.Markdown("Note: Created chats will be saved only if you begin a conversation.")
+            gr.Markdown("Note: Created chats will be saved **only if you begin a conversation**.")
     
     # Chatbot display and input
     chatbot = gr.Chatbot(label="Advisor Chatbot")
@@ -155,7 +163,7 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
         send_btn = gr.Button("Send", scale=1, variant="huggingface")
         
     with gr.Row():
-        gr.Markdown("AI-generated answer may be inaccurate. For reference only.\nDo not share personal or sensitive information in the chat.")
+        gr.Markdown("AI-generated answer may be inaccurate. **For reference only**.\nDo not share personal or sensitive information in the chat.")
 
     demo.load(init, outputs=[chatbot, thread_state, chat_dropdown])
     
@@ -167,4 +175,5 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot") as demo:
     txt.submit(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, chat_dropdown, txt])
     send_btn.click(stream_response, inputs=[txt, thread_state], outputs=[chatbot, thread_state, chat_dropdown, txt])
 
-demo.launch(server_name="0.0.0.0", server_port=7860, debug=True, share=True)
+demo.queue(default_concurrency_limit=2)
+demo.launch(server_name="0.0.0.0", server_port=7860, debug=True, show_api=False)

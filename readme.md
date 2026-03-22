@@ -4,6 +4,11 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-22 (1):
+- Updated Gradio APP Instruction: Advise the students to ask in English (As tested in Chinese query, it will have weird behavior).
+- Experimented with higher concurrency limit for the Gradio APP (from 1 -> 2).
+    - The ColBERT will run in parallel, but the LLM can only run once at the same time (i.e., LLM answer A first, then answer B).
+
 2026-3-19 (2):
 - Updated Chroma database with the changes in `2026-3-19 (1)`.
 - Fixed metadata errors in ChromaDB (None / List values generated from hybrid-chunking).
