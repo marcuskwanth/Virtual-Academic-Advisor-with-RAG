@@ -32,7 +32,7 @@ os.environ["LANGSMITH_ENDPOINT"] = "https://api.smith.langchain.com"
 os.environ["LANGSMITH_API_KEY"] = str(os.environ.get("LANGSMITH_API_KEY", ""))
 
 date_str = datetime.today().strftime('%Y-%m-%d')
-os.environ["LANGSMITH_PROJECT"] = f"[{date_str}] VAA - App Runtime"
+os.environ["LANGSMITH_PROJECT"] = f"[{date_str}] VAA - Gradio App Runtime"
 
 # Project-root
 
@@ -53,7 +53,7 @@ SINGLE_COLLECTION   = os.environ.get("SINGLE_COLLECTION", "true").lower() == "tr
 COLLECTION_NAME     = "vaa_documents" if SINGLE_COLLECTION else "academic_documents"
 
 num_queries: int            = 4       # number of alternative queries for RAG-Fusion
-num_immediate_docs_rrf      = 6       # number of top documents to immediately include in prompt without reranking
+num_immediate_docs_rrf      = 4       # number of top documents to immediately include in prompt without reranking
 num_immediate_docs_colbert  = 20      # number of top documents to immediately include in prompt without reranking when ColBERT enabled
 num_docs: int               = 8       # number of top documents to retain after reranking
 num_chat_his: int           = 5       # number of past message pairs included in context
