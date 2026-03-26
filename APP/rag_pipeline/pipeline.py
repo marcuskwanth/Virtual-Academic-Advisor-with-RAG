@@ -259,7 +259,7 @@ def handle_offtopic(state: State) -> dict:
     history_str = (
         "".join(
             f"{msg['role'].capitalize()}: {msg['content']}\n\n"
-            for msg in chat_history[-num_chat_his:]
+            for msg in chat_history[-3:]
         )
         if chat_history
         else "No previous conversation."

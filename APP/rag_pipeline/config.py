@@ -56,7 +56,7 @@ num_queries: int            = 4       # number of alternative queries for RAG-Fu
 num_immediate_docs_rrf      = 4       # number of top documents to immediately include in prompt without reranking
 num_immediate_docs_colbert  = 20      # number of top documents to immediately include in prompt without reranking when ColBERT enabled
 num_docs: int               = 8       # number of top documents to retain after reranking
-num_chat_his: int           = 5       # number of past message pairs included in context
+num_chat_his: int           = 4       # number of past message pairs included in question reformulation prompt
 
 # LLMs
 
