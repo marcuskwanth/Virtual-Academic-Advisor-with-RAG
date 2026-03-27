@@ -232,7 +232,7 @@ def prompt_prepare(state: State) -> dict:
     if state.get("chat_history"):
         chat_history_str = "".join(
             f"{msg['role'].capitalize()}: {msg['content']}\n\n"
-            for msg in state["chat_history"][-3:]
+            for msg in state["chat_history"][-(3*2):]   # last 3 message pairs (user+assistant) for context
         )
     else:
         chat_history_str = "No previous conversation."
