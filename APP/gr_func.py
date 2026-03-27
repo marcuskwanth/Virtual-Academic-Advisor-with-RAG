@@ -36,22 +36,18 @@ def list_chat_threads() -> list:
                     else:
                         label = id
                     choices.append(label)
-                return choices
+                return sorted(choices, key=lambda x: x.lower())
     except Exception as e:
         print(f"Error listing threads: {e}")
         return []
 
 def get_most_recent_thread_id() -> str:
     """
-    Return the thread_id of the most recently updated checkpoint.
+    Return the thread_id of the most recently checkpoint.
     """
     attempts = [
-        "SELECT thread_id FROM checkpoints ORDER BY updated_at DESC LIMIT 1;",
-        "SELECT thread_id FROM checkpoints ORDER BY created_at DESC LIMIT 1;",
         "SELECT thread_id FROM checkpoints ORDER BY id DESC LIMIT 1;",
     ]
-    
-    # Tries several common timestamp column names, then falls back to highest id. Returns empty string if none found.
     try:
         with pool.connection() as conn:
             with conn.cursor() as cur:

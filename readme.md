@@ -4,6 +4,13 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-27 (1):
+- Retrieving most recent chat seems not working for some reason: Disabling it.
+- Sort the dropdown menu in alphabetical order in the Gradio APP.
+
+2026-3-25 (1):
+- Fixed bugs in the number of chat history number (should be num*2).
+
 2026-3-22 (1):
 - Updated Gradio APP Instruction: Advise the students to ask in English (As tested in Chinese query, it will have weird behavior).
 - Experimented with higher concurrency limit for the Gradio APP (from 1 -> 2).
