@@ -2,7 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 
-csv_file = '/Users/MarcussPC/Desktop/Temp/CAPSTONE/Additional_Evaluation/rag_evaluation_20251224.csv'
+csv_file = '/Users/MarcussPC/Desktop/Temp/CAPSTONE/old_notebook_files/Code_Evaluation/rag_evaluation_20251224.csv'
 
 rows = []
 system_order = []
