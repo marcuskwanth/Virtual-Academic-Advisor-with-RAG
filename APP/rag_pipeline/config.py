@@ -61,8 +61,8 @@ num_chat_his: int           = 4       # number of past message pairs included in
 # LLMs
 
 print(f"\nLLM: ChatOllama with model 'deepseek-r1:8b' at {OLLAMA_BASE_URL}\n")
-llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.5, reasoning=True, base_url=OLLAMA_BASE_URL,)
-simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, reasoning=False, base_url=OLLAMA_BASE_URL,)
+llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.6, reasoning=True, base_url=OLLAMA_BASE_URL,)
+simpler_llm = ChatOllama(model="deepseek-r1:8b", validate_model_on_init=True, temperature=0.3, reasoning=False, base_url=OLLAMA_BASE_URL,)
 emb = OllamaEmbeddings(model="bge-m3:567m", base_url=OLLAMA_BASE_URL,)
 
 # ChromaDB & Vector Store
