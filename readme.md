@@ -4,6 +4,11 @@ Type: 2526-AIIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
 
 ## PROGRESS HISTORY
+2026-3-30 (1): GRAND FINAL
+- Amended eval.py for some charts (bar -> box plots).
+- Added evaluations between ColBERT and RAGFusion using new dataset.
+- Bug fixes in the pipeline.
+
 2026-3-27 (1):
 - Retrieving most recent chat seems not working for some reason: Disabling it.
 - Sort the dropdown menu in alphabetical order in the Gradio APP.

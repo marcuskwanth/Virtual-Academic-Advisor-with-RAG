@@ -96,13 +96,18 @@ plt.show()
 
 # Plot average query time per system
 plt.figure(figsize=(10,6))
-bars2 = plt.bar(grouped['System'], grouped['Query time (s)'], color="#A7F579", edgecolor='black')
-for bar in bars2:
-    height = bar.get_height()
-    plt.text(bar.get_x() + bar.get_width()/2., height, f'{height:.2f}', ha='center', va='bottom', fontsize=12, rotation=0)
-plt.ylabel('Average Query Time (seconds)')
+data_to_plot = [df[df['System'] == s]['Query time (s)'].dropna() for s in system_order]
+bp = plt.boxplot(data_to_plot, tick_labels=system_order, patch_artist=True, boxprops=dict(facecolor="#A7F579"), 
+            medianprops=dict(color='red'), widths=0.5, showmeans=True, meanline=True, meanprops=dict(color='blue', linewidth=1))
+
+# Add mean labels
+means = [d.mean() for d in data_to_plot]
+for i, mean in enumerate(means):
+    plt.text(i + 1.28, mean, f'{mean:.1f}', ha='left', va='center', color='black', fontsize=11)
+
+plt.ylabel('Query Time (seconds)')
 plt.xlabel('Implemented Methods')
-plt.title('Average Query Time')
+plt.title('Query Time Distribution')
 plt.xticks(rotation=30)
 plt.ylim(0,60)
 plt.grid(axis='y', alpha=0.3)
@@ -112,13 +117,18 @@ plt.show()
 
 # Plot average word count per system
 plt.figure(figsize=(10,6))
-bars3 = plt.bar(grouped['System'], grouped['length_word_count'], color="#7AD9FF", edgecolor='black')
-for bar in bars3:
-    height = bar.get_height()
-    plt.text(bar.get_x() + bar.get_width()/2., height, f'{height:.2f}', ha='center', va='bottom', fontsize=12, rotation=0)
-plt.ylabel('Average Number of Words')
+data_to_plot = [df[df['System'] == s]['length_word_count'].dropna() for s in system_order]
+bp = plt.boxplot(data_to_plot, tick_labels=system_order, patch_artist=True, boxprops=dict(facecolor="#7AD9FF"), 
+            medianprops=dict(color='red'), widths=0.5, showmeans=True, meanline=True, meanprops=dict(color='blue', linewidth=1))
+
+# Add mean labels
+means = [d.mean() for d in data_to_plot]
+for i, mean in enumerate(means):
+    plt.text(i + 1.28, mean, f'{mean:.1f}', ha='left', va='center', color='black', fontsize=11)
+
+plt.ylabel('Number of Words')
 plt.xlabel('Implemented Methods')
-plt.title('Average Word Count')
+plt.title('Word Count Distribution')
 plt.xticks(rotation=30)
 plt.ylim(0, 500)
 plt.grid(axis='y', alpha=0.3)
@@ -126,17 +136,22 @@ plt.tight_layout()
 plt.savefig('avg_word_count.png', dpi=300, bbox_inches='tight')
 plt.show()
 
-# Plot average hallucination uncertainty  count per system
+# Plot average hallucination uncertainty count per system
 plt.figure(figsize=(10,6))
-bars4 = plt.bar(grouped['System'], grouped['hallucination_uncertainty_count'], color='#FFA07A', edgecolor='black')
-for bar in bars4:
-    height = bar.get_height()
-    plt.text(bar.get_x() + bar.get_width()/2., height, f'{height:.2f}', ha='center', va='bottom', fontsize=12, rotation=0)
-plt.ylabel('Average Number of Uncertainty Words')
+data_to_plot = [df[df['System'] == s]['hallucination_uncertainty_count'].dropna() for s in system_order]
+bp = plt.boxplot(data_to_plot, tick_labels=system_order, patch_artist=True, boxprops=dict(facecolor='#FFA07A'), 
+            medianprops=dict(color='red'), widths=0.5, showmeans=True, meanline=True, meanprops=dict(color='blue', linewidth=1))
+
+# Add mean labels
+means = [d.mean() for d in data_to_plot]
+for i, mean in enumerate(means):
+    plt.text(i + 1.28, mean, f'{mean:.1f}', ha='left', va='center', color='black', fontsize=11)
+
+plt.ylabel('Number of Uncertainty Words')
 plt.xlabel('Implemented Methods')
-plt.title('Average Hallucination Count (Uncertainty Words)')
+plt.title('Hallucination Count Distribution (Uncertainty Words)')
 plt.xticks(rotation=30)
-plt.ylim(0,3)
+plt.ylim(0, 3)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('avg_hallucination_count.png', dpi=300, bbox_inches='tight')
