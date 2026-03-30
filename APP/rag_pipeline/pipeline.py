@@ -146,7 +146,7 @@ def rrf_ragfusion(state: State, k: int = 60) -> dict:
     }
     reranked_docs = [doc_map[key] for key, _ in reranked[:num_docs]]
     
-    reranked_docs = [swap_table_if_exists(doc) for doc in reranked_docs]
+    # reranked_docs = [swap_table_if_exists(doc) for doc in reranked_docs]
     
     print(f"[RRF] Selected top {len(reranked_docs)} documents after fusion")
     return {"context": reranked_docs}
