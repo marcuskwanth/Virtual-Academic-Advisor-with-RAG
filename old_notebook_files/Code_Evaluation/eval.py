@@ -1,8 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
+import csv
 
-csv_file = '/Users/MarcussPC/Desktop/Temp/CAPSTONE/old_notebook_files/Code_Evaluation/rag_evaluation_20251224.csv'
+#csv_file = r'C:\Users\Marcus\Desktop\Python Projs\VAA\Virtual-Academic-Advisor-with-RAG\old_notebook_files\Code_Evaluation\rag_evaluation_20251224.csv'
+csv_file = r'C:\Users\Marcus\Desktop\Python Projs\VAA\Virtual-Academic-Advisor-with-RAG\old_notebook_files\Code_Evaluation\rag_evaluation_colbert_ragfusion_20260330.csv'
 
 rows = []
 system_order = []
@@ -10,28 +12,29 @@ current_system = None
 header = None
 
 with open(csv_file, 'r', encoding='utf-8') as f:
-    for line in f:
-        line = line.strip()
-        if not line:
+    reader = csv.reader(f)
+    for row in reader:
+        if not row or all(not cell.strip() for cell in row):
             continue
-        # Detect system name (first column, rest empty)
-        if ',' not in line or (line.count(',') > 5 and line.split(',')[0] and not line.split(',')[1]):
-            current_system = line.split(',')[0]
+        row = [cell.strip() for cell in row]
+        # Detect implementation name
+        if row[0] and all(not cell for cell in row[1:]):
+            current_system = row[0]
             if current_system not in system_order:
                 system_order.append(current_system)
             continue
         # Detect header row
-        if line.startswith(',question'):
-            header = ['System'] + [h.strip() for h in line.split(',')[1:]]
+        if len(row) > 1 and row[0] == '' and row[1] == 'question':
+            header = ['System'] + row[1:]
             continue
         # Data row (starts with comma)
-        if line.startswith(','):
-            values = [current_system] + [v.strip() for v in line.split(',')[1:]]
+        if len(row) > 1 and row[0] == '':
+            values = [current_system] + row[1:]
             rows.append(values)
 
 # Create DataFrame
 df = pd.DataFrame(rows, columns=header)
-print(df.describe)
+print(df.describe())
 
 # Convert relevant columns to numeric
 df['length_word_count'] = pd.to_numeric(df['length_word_count'], errors='coerce')
@@ -101,7 +104,7 @@ plt.ylabel('Average Query Time (seconds)')
 plt.xlabel('Implemented Methods')
 plt.title('Average Query Time')
 plt.xticks(rotation=30)
-plt.ylim(0,300)
+plt.ylim(0,60)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('avg_query_time.png', dpi=300, bbox_inches='tight')
@@ -117,7 +120,7 @@ plt.ylabel('Average Number of Words')
 plt.xlabel('Implemented Methods')
 plt.title('Average Word Count')
 plt.xticks(rotation=30)
-plt.ylim(0,1000)
+plt.ylim(0, 500)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('avg_word_count.png', dpi=300, bbox_inches='tight')
@@ -133,7 +136,7 @@ plt.ylabel('Average Number of Uncertainty Words')
 plt.xlabel('Implemented Methods')
 plt.title('Average Hallucination Count (Uncertainty Words)')
 plt.xticks(rotation=30)
-plt.ylim(0,10)
+plt.ylim(0,3)
 plt.grid(axis='y', alpha=0.3)
 plt.tight_layout()
 plt.savefig('avg_hallucination_count.png', dpi=300, bbox_inches='tight')
