@@ -14,12 +14,16 @@ import gradio as gr
 from langgraph.checkpoint.postgres import PostgresSaver
 from langgraph.store.postgres import PostgresStore
 from psycopg_pool import ConnectionPool
+from pathlib import Path
 
 from rag_pipeline.config import llm
 from rag_pipeline.pipeline import build_graph
 from rag_pipeline.memory import create_new_thread, get_chat_history, clear_thread_memory
 
 import gr_func as cb
+
+base_path = Path(__file__).parent
+print(f"Base path: {base_path}")
 
 # PostgreSQL connection pool
 
@@ -116,14 +120,20 @@ css_chat = """
 .icon-button-wrapper.top-panel {
     display: none !important;
 }
+.image-container {
+    padding: 20px !important;
+}
+.centered-markdown {
+    text-align: center !important;
+}
 """
 
 with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat) as demo:
-    gr.Markdown("## Welcome to the PolyU EEE Virtual Academic Advising Platform!")
+    gr.Markdown("# Welcome to the PolyU EEE Virtual Academic Advising Platform!", elem_classes="centered-markdown")
+    
     gr.Markdown(\
     """
-    ### Instructions
-    To create a new chat, enter a chat title and click **Create**. \n
+    **To start a new chat session, enter a chat title and click Create**. \n
     To rename an existing chat, select it from the chat list, enter a new title, and click **Rename**. \n
     To delete a chat, select it from the chat list and click **Delete**.\n
     Please chat with the advisor in **English** to get the best experience.
@@ -138,23 +148,24 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat)
         """
         thread_id = cb.get_most_recent_thread_id()
         if thread_id:
-            return cb.load_chat(cb._display_chat_thread(thread_id))
+            display = cb._display_chat_thread(thread_id)
+            return cb.load_chat(display)
         choices = cb.list_chat_threads()
         if choices:
             return cb.load_chat(choices[0])
-        return [], {"thread_id": "", "rows": []}, gr.update(choices=choices)
+        return [], {"thread_id": "", "rows": []}, gr.update(choices=choices, value="")
     
     # Top row UI
     with gr.Row():
         chat_dropdown = gr.Dropdown(choices=cb.list_chat_threads(), label="List of Chats", allow_custom_value=True)
         with gr.Column():
-            chat_name_txt = gr.Textbox(placeholder="Chat Title (optional)", label="Set / Rename Chat Title", container=True)
+            chat_name_txt = gr.Textbox(placeholder="Chat Title", label="Set / Rename Chat", container=True)
         with gr.Column():
             new_btn = gr.Button("Create", variant="primary")
             with gr.Row():
                 rename_btn = gr.Button("Rename", variant="secondary")
                 delete_btn = gr.Button("Delete", variant="stop")
-            gr.Markdown("Note: Created chats will be saved **only if you begin a conversation**.")
+            # gr.Markdown("Note: Created chats will be saved **only if you begin a conversation**.")
     
     # Chatbot display and input
     chatbot = gr.Chatbot(label="Advisor Chatbot")
@@ -164,6 +175,44 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat)
         
     with gr.Row():
         gr.Markdown("AI-generated answer may be inaccurate. **For reference only**.\nDo not share personal or sensitive information in the chat.")
+
+    gr.HTML("""<div style="text-align: center;"><hr></div>""")
+    img_height = 150
+    img_width = 200
+    gr.Markdown("## Technical Stacks", elem_classes="centered-markdown")
+    with gr.Row(equal_height=True):
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/deepseek.png", label="DeepSeek-R1", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>Large Language Model: </b>DeepSeek-R1</p>")
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/chroma.png", label="ChromaDB", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>RAG Vector Database: </b>ChromaDB</p>")
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/bge.png", label="BGE-m3", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>Text Embedding Model: </b>BGE-m3</p>")
+    with gr.Row(equal_height=True):
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/langchain.png", label="LangChain", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>Framework and Pipeline: </b>LangChain</p>")
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/postgresql.png", label="PostgreSQL", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>Session Database: </b>PostgreSQL</p>")
+        with gr.Column(elem_classes="image-container"):
+            gr.Image(f"{base_path}/assets/gradio.png", label="Gradio", show_label=False, height=img_height, min_width=img_width, scale=0)
+            gr.Markdown("<p style='text-align: center;'><b>GUI Framework: </b>Gradio 5</p>")
+
+    gr.HTML("""<div style="text-align: center;"><hr></div>""")
+    gr.Markdown("## Project Information", elem_classes="centered-markdown")
+    gr.HTML(
+        """
+        <div style="text-align: center;">
+            <b>Final Year Project</b>: Large Language Models with Retrieval-Augmented Generation for Virtual Academic Advising<br><br>
+            <b>Student</b>: KWAN Tsz Hei Marcus (22012026D)<br>
+            <b>Supervisor</b>: Prof. Man Wai MAK<br><br>
+            © 2026 KWAN Tsz Hei Marcus - The Hong Kong Polytechnic University
+        </div>
+        """
+    )
 
     demo.load(init, outputs=[chatbot, thread_state, chat_dropdown])
     

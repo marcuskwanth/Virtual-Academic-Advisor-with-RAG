@@ -22,8 +22,13 @@ def list_chat_threads() -> list:
             with conn.cursor() as cur:
                 # Ensure threads table exists if needed
                 cur.execute("CREATE TABLE IF NOT EXISTS threads (thread_id TEXT PRIMARY KEY, name TEXT);")
-                # Return formatted choices: 'name — thread_id' when name exists, else short id
-                cur.execute("SELECT DISTINCT thread_id FROM checkpoints;")
+                
+                # Get all unique thread IDs from BOTH checkpoints (actual history) and threads (named but maybe no history yet)
+                cur.execute("""
+                    SELECT DISTINCT thread_id FROM checkpoints
+                    UNION
+                    SELECT DISTINCT thread_id FROM threads
+                """)
                 thread_ids = [row[0] for row in cur.fetchall()]
                 
                 # For each thread_id, try to get its name from the threads table; if not present, use the id itself
@@ -36,7 +41,7 @@ def list_chat_threads() -> list:
                     else:
                         label = id
                     choices.append(label)
-                return sorted(choices, key=lambda x: x.lower())
+                return sorted(list(set(choices)), key=lambda x: x.lower())
     except Exception as e:
         print(f"Error listing threads: {e}")
         return []
@@ -143,16 +148,19 @@ def load_chat(selection: str):
     """
     Load chat history for a given chat name or thread_id: returns chatbot rows, thread state, and gr dropdown update.
     """
+    if not selection:
+        return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads(), value="")
+
     thread_id = _parse_thread_id(selection)
     if not thread_id:
-        return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads())
+        return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads(), value="")
     
     history = None
     try:
         history = get_chat_history(graph, thread_id)
     except Exception as e:
-        print(f"Error loading thread: {e}")
-        return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads())
+        print(f"Error loading thread {thread_id}: {e}")
+        return [], {"thread_id": "", "rows": []}, gr.update(choices=list_chat_threads(), value="")
 
     rows = _chatbot_rows(history)
     display = _display_chat_thread(thread_id)
@@ -163,29 +171,40 @@ def new_chat(name_input: str):
     """
     Create a new chat with an optional name: returns chatbot rows, thread state, and gr dropdown update.
     """
+    if not name_input:
+        gr.Warning("Please enter a chat title to create a new chat.")
+        return gr.skip(), gr.skip(), gr.skip()
+    
     # Check if name already exists in dropdown choices
     if name_input and (name_input in list_chat_threads() or name_input in [tid for tid in list_chat_threads()]):
         gr.Warning(f"Chat: '{name_input}' already exists. Please choose a different title.")
         return gr.skip(), gr.skip(), gr.skip()
 
     thread_id = create_new_thread()
+    set_chat_name(thread_id, name_input)
     
-    # If user provided a name, save it in the threads table and use it for display; otherwise use the thread_id as display.
-    if name_input:
-        set_chat_name(thread_id, name_input)
-        display = name_input
-    else:
-        display = thread_id
+    choices = list_chat_threads()
+    
+    # If the current choices is empty, make sure the new name is included in the choices returned to the dropdown
+    if name_input not in choices:
+        choices.append(name_input)
         
-    return [], {"thread_id": thread_id, "rows": []}, gr.update(choices=list_chat_threads(), value=display)
+    return [], {"thread_id": thread_id, "rows": []}, gr.update(choices=choices, value=name_input)
 
 def rename_chat(dropdown_selection: str, name_input: str):
     """
     Rename an existing chat: returns chatbot rows, thread state, and gr dropdown update.
     """
+    if not dropdown_selection:
+        gr.Warning("Please select a chat to rename.")
+        return gr.skip(), gr.skip(), gr.skip()
+
     if not name_input:
         gr.Warning("Please enter a new chat title.")
         return gr.skip(), gr.skip(), gr.skip()
+    
+    if name_input not in list_chat_threads():
+        pass
 
     # Check if the new name already exists in the list
     if name_input in list_chat_threads() or name_input in [tid for tid in list_chat_threads()]:
@@ -208,9 +227,16 @@ def delete_chat(dropdown_selection: str):
     """
     Delete an existing chat and its history: returns (empty) chatbot rows, thread state, and gr dropdown update.
     """
+    if not dropdown_selection:
+        gr.Warning("Please select a chat to delete.")
+        return gr.skip(), gr.skip(), gr.skip()
+    
+    if dropdown_selection not in list_chat_threads():
+        pass
+
     thread_id = _parse_thread_id(dropdown_selection)
     if not thread_id:
-        return gr.update(choices=list_chat_threads()) # No valid selection to delete, refresh dropdown choices
+        return gr.update(choices=list_chat_threads(), value="") # No valid selection to delete, refresh dropdown choices
     
     try:
         clear_thread_memory(graph, thread_id)  # Clear from graph (PostgreSQL)

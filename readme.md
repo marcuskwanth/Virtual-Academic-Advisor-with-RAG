@@ -1,9 +1,15 @@
 # PolyU Virtual Academic Advisor Chatbot
 Author: Marcus Kwan <br>
-Type: 2526-AIIE-FYP, private repository <br>
-Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain (Pipeline)
+Type: 2526-AIE-FYP, private repository <br>
+Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + LangGraph (Pipeline), PostgreSQL (Session Persistence Database)
 
 ## PROGRESS HISTORY
+2026-5-10 (1): PROJECT DEMO
+- Updated Chroma database with the latest PolyU SAO and CUS resources.
+- Added footer text for identification purpose.
+- Fixed error when creating/deleting/renaming chat when the chat dropdown list is empty.
+- Quality-of-life improvement in the Gradio APP.
+
 2026-3-30 (1): GRAND FINAL
 - Amended eval.py for some charts (bar -> box plots).
 - Added evaluations between ColBERT and RAGFusion using new dataset.
