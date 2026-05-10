@@ -177,6 +177,56 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat)
         gr.Markdown("AI-generated answer may be inaccurate. **For reference only**.\nDo not share personal or sensitive information in the chat.")
 
     gr.HTML("""<div style="text-align: center;"><hr></div>""")
+    gr.Markdown("## Introduction", elem_classes="centered-markdown")
+    gr.Markdown(\
+    """
+    A virtual academic advisor is a chatbot implemented using an Retrieval-Augmented Generation (RAG) framework to 
+    embed external documents into a database and retrieve documents based on the similarity between the input query and 
+    all embedded data. An language model then uses the retrieved information to reason and generate the answer for the inquiry. 
+    """, container=False, elem_classes="centered-markdown")
+    
+    gr.HTML("""<div style="text-align: center;"><hr></div>""")
+    gr.Markdown("## Why Virtual Academic Advising?", elem_classes="centered-markdown")
+    with gr.Row(variant="panel", equal_height=True):
+        with gr.Column(elem_classes="image-container"):
+            gr.Markdown("### Enhanced Experience", elem_classes="centered-markdown")
+            gr.Markdown(
+            """
+            <p style='text-align: center;'>
+            The chatbot provides flexible, real-time support for students in academic advising. <br>
+            Traditional academic advisors’ scheme usually has limited office hours for face-to-face consultation, 
+            which may not always suit students’ needs. <br>
+            In a virtual academic advising chatbot that runs 24/7, students can freely choose when to consult the advisor. 
+            Students can quickly receive feedback from the chatbot to resolve any concerns. 
+            </p>
+            """, container=True
+            )
+        with gr.Column(elem_classes="image-container"):
+            gr.Markdown("### Enhanced Efficiency", elem_classes="centered-markdown")
+            gr.Markdown(
+            """
+            <p style='text-align: center;'>
+            The chatbot reduces the need for professors to perform basic academic advising tasks. <br>
+            Traditionally, the university assigns each advisor to many students across various programmes, 
+            which leads to a heavier workload and slower response times when students simultaneously seek guidance. <br>
+            A computer-based virtual academic advisor can handle multiple queries at once, significantly enhancing the advising process. 
+            </p>
+            """, container=True
+            )
+        with gr.Column(elem_classes="image-container"):
+            gr.Markdown("### Stay Up-to-Date", elem_classes="centered-markdown")
+            gr.Markdown(
+            """
+            <p style='text-align: center;'>
+            The chatbot can be continuously and instantly updated with new information, such as programme structures, 
+            course selections, and the university’s policies, which are frequently updated. <br>
+            In a virtual academic advisor, new information is easily integrated into the RAG system for embedding, 
+            requiring little human intervention, significantly reducing the cost of “learning” updated information. 
+            </p>
+            """, container=True
+            )
+
+    gr.HTML("""<div style="text-align: center;"><hr></div>""")
     img_height = 150
     img_width = 200
     gr.Markdown("## Technical Stacks", elem_classes="centered-markdown")
@@ -186,7 +236,7 @@ with gr.Blocks(title="PolyU EEE Virtual Academic Advisor Chatbot", css=css_chat)
             gr.Markdown("<p style='text-align: center;'><b>Large Language Model: </b>DeepSeek-R1</p>")
         with gr.Column(elem_classes="image-container"):
             gr.Image(f"{base_path}/assets/chroma.png", label="ChromaDB", show_label=False, height=img_height, min_width=img_width, scale=0)
-            gr.Markdown("<p style='text-align: center;'><b>RAG Vector Database: </b>ChromaDB</p>")
+            gr.Markdown("<p style='text-align: center;'><b>RAG Vector Database: </b>Chroma</p>")
         with gr.Column(elem_classes="image-container"):
             gr.Image(f"{base_path}/assets/bge.png", label="BGE-m3", show_label=False, height=img_height, min_width=img_width, scale=0)
             gr.Markdown("<p style='text-align: center;'><b>Text Embedding Model: </b>BGE-m3</p>")
