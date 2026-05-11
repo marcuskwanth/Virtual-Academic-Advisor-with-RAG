@@ -317,9 +317,9 @@ def build_graph(checkpointer, store=None):
 
     graph = graph_builder.compile(**compile_kwargs)
 
-    print("Graph compiled. Pipeline flow:")
-    print("  1. classify_query")
-    print("  2a. [DOMAIN]   → contextualize_question → retrieve → prompt_prepare")
-    print("  2b. [OFFTOPIC] → handle_offtopic (terminal)")
+    print("------------------------------------\nGraph compiled. Pipeline flow:")
+    print(" 1. classify_query")
+    print("2a. [DOMAIN]   → contextualize_question → retrieve → prompt_prepare")
+    print("2b. [OFFTOPIC] → handle_offtopic (terminal)\n------------------------------------")
 
     return graph
