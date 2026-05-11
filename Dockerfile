@@ -2,11 +2,7 @@
 FROM nvidia/cuda:12.8.0-runtime-ubuntu22.04
 ENV PYTHON_VERSION=3.12
 ENV DEBIAN_FRONTEND=noninteractive
-
-# Keeps Python from generating .pyc files in the container
 ENV PYTHONDONTWRITEBYTECODE=1
-
-# Turns off buffering for easier container logging
 ENV PYTHONUNBUFFERED=1
 
 # Install system dependencies, Python 3.12, and pip

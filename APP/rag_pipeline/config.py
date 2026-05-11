@@ -1,15 +1,15 @@
 """
 Shared runtime config initialization for the RAG pipeline:
-  - LLM models (llm, simpler_llm) via Ollama
-  - Embedding function (emb)
-  - ChromaDB persistent client and LangChain VectorStore (vectorStore)
-  - ColBERT reranker (colbert) — optional, controlled by USE_COLBERT
+    - LLM models (llm, simpler_llm) via Ollama
+    - Embedding model (emb) via Ollama
+    - ChromaDB persistent client and LangChain VectorStore (vectorStore)
+    - ColBERT reranker (colbert) — optional, controlled by USE_COLBERT
 
-All values can be overridden via environment variables:
-    - CHROMA_DB_PATH: Filesystem path for ChromaDB persistence (default: ./chroma_db)
-    - USE_COLBERT:    Whether to load the ColBERT reranker (default: 1)
-    - SINGLE_COLLECTION: Whether to use a single ChromaDB collection for all documents (default: true)
-    - COLLECTION_NAME: Name of the ChromaDB collection to use (default: "vaa_documents")
+All values can be overridden via env variables:
+    - CHROMA_DB_PATH:       Filesystem path for ChromaDB persistence (default: ./chroma_db)
+    - USE_COLBERT:          Whether to load the ColBERT reranker (default: 1), otherwise, RAG-Fusion will be used for reranking.
+    - SINGLE_COLLECTION:    Whether to use a single ChromaDB collection for all documents (default: true)
+    - COLLECTION_NAME:      Name of the ChromaDB collection to use (default: "vaa_documents")
 """
 
 import os

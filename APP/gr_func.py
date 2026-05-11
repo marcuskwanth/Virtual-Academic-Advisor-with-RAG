@@ -1,5 +1,5 @@
 """
-Gradio callback helpers. Call "setup(graph, pool)" after the graph and pool are created.
+Gradio callback helper package. Call "setup(graph, pool)" after the graph and pool are created.
 """
 import gradio as gr
 from rag_pipeline.memory import create_new_thread, get_chat_history, clear_thread_memory

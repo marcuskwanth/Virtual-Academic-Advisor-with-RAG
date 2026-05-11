@@ -1,6 +1,6 @@
 """
 Chat thread and history management (in LangGraph-level).
-All functions that interact with the graph accept it as an explicit argument so that main.py versions (PostgreSQL) can use the same helpers.
+All functions that interact with the graph accept it as an explicit argument so that main.py can use the same helpers.
 """
 import uuid
 

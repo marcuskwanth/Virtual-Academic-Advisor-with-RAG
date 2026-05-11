@@ -6,7 +6,7 @@ Prerequisites:
   2. Ensure PostgreSQL server is running and accessible (2 tables: "checkpoints" and "threads").
 
 Environment variables:
-  DB_URI: PostgreSQL connection string
+  DB_URI: PostgreSQL connection string (Define it in .env file. e.g.: "postgresql://user:password@localhost:5432/database_name")
 """
 
 import os

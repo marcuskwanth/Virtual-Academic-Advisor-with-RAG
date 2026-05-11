@@ -1,4 +1,4 @@
-# PDF and Webpage Loading
+# PDF and Webpage Extraction
 pymupdf==1.26.3
 beautifulsoup4==4.13.4
 unstructured==0.18.13

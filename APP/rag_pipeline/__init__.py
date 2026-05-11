@@ -2,10 +2,10 @@
 Pipeline subpackage.
 
 Provides:
-  - config: shared LLM, embeddings, ChromaDB, and ColBERT initialisation.
-  - prompts: all LangChain PromptTemplates used by the pipeline.
-  - pipeline: LangGraph State, node functions, and build_graph().
-  - memory: chat thread and history management helpers.
+  - config:     Shared LLMs, embedding, ChromaDB, and ColBERT initialization.
+  - prompts:    All LangChain PromptTemplates used by the pipeline.
+  - pipeline:   LangGraph State, node functions, and build_graph().
+  - memory:     Chat thread and history management helpers.
 """
 from .pipeline import (
     build_graph, 

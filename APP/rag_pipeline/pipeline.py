@@ -1,6 +1,5 @@
 """
 RAG LangGraph pipeline: State definition, graph node functions, and build_graph().
-The same pipeline is shared by both app.py versions (in-memory + PostgreSQL).
 """
 
 import math

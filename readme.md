@@ -1,16 +1,26 @@
 # PolyU Virtual Academic Advisor Chatbot
 Author: Marcus Kwan <br>
 Type: 2526-AIE-FYP, private repository <br>
-Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + LangGraph (Pipeline), PostgreSQL (Session Persistence Database)
+Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + LangGraph (Pipeline), PostgreSQL (Session Persistence Database), Gradio 5 (GUI)
 
-## PROGRESS HISTORY
-2026-5-10 (1): PROJECT DEMO
+## Usage
+1. Clone the repository.
+2. Please use Docker to compose new containers using `compose.yaml` using a local machine. `APP\main.py` will be run upon starting (compose start) the containers.
+
+### Note
+- `APP` folder contains the main chatbot pipeline. A `chroma_db` folder is located in the same folder as the vector database.
+- `old_notebook_files` folder contains methods for text extractions, processing, and embedding.
+
+**Please also install the LLM models (DeepSeek-R1 8B, bge-m3, and Lllama 3.1 8B) separately from Ollama in the local machine.**
+
+## Progress History
+2026-5-10 (1): 
 - Updated Chroma database with the latest PolyU SAO and CUS resources.
 - Added footer text for identification purpose.
 - Fixed error when creating/deleting/renaming chat when the chat dropdown list is empty.
 - Quality-of-life improvement in the Gradio APP.
 
-2026-3-30 (1): GRAND FINAL
+2026-3-30 (1): 
 - Amended eval.py for some charts (bar -> box plots).
 - Added evaluations between ColBERT and RAGFusion using new dataset.
 - Bug fixes in the pipeline.
@@ -35,9 +45,9 @@ Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + La
 2026-3-19 (1):
 - **CRICIAL FIX**: Fixed conflict with ollama:11434 vs localhost:11434, which is the direct cause of the HTTP 500 error -> NaN.
     - Now Docker resolves the host's IP for the localhost Ollama in .env, instead of using Docker's internal Ollama server. GPU works fine.
-    - Now switching back to `bge-m3` as the embedding model. But since it is now using Ollama server (localhost), cannot run Ollama locally and in docker simultaneously.
+    - Now switching back to `bge-m3` as the embedding model. But since it is now using Ollama server (localhost), local Ollama commands and Ollama running in Docker cannot be run simultaneously.
 - Re-enabled LangSmith, something interesting was found...
-    1. The "context is included, but fails to answer" issue. For that, revised LLM prompt to explicitly tell LLM to examine keywords carefully.
+    1. The "context is included, but fails to answer" issue. For that, tried to revised LLM prompt to explicitly tell LLM to examine keywords carefully.
     2. Disabled multi-retrieval function for PDF tables as it seems have better accuracy.
 - Discard title adding in the PDF table summarization.
 - Enhanced processing to text in PDF using Docling's hybrid-chunker, which attempts to group similarly-placed paragraphs/list based on header(s).
@@ -201,7 +211,7 @@ Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + La
 
 2026-1-16 (1):
 - Re-build the Chroma vector databases with webpages that have a max-depth of 5 instead of 2.
-    - Initially has issue due to error in parasing HTML when higher depth is used. Fixed by using different parser for the HTML syntax (html.parser instead of lxml).
+    - Initially has issue due to error in parasing HTML when higher depth is used. Fixed by using different BeautifulSoup parser for the HTML syntax (html.parser instead of lxml).
 - Changed RAG-Fusion to now use top 5 documents in the list (a conclusion from interim).
 - Changed RAG-Fusion and Step-back prompting to use non-reasoning LLM for queries generation (a conclusion from interim).
 - Prompt enhancement: Advise the LLM not to fabricate URLs (discovered in RAG-Fusion testing).
