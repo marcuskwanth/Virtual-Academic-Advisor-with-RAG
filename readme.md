@@ -1,6 +1,5 @@
-# PolyU Virtual Academic Advisor Chatbot
+# Virtual Academic Advisor Chatbot with RAG
 Author: Marcus Kwan <br>
-Type: 2526-AIE-FYP, private repository <br>
 Technical Stacks: DeepSeek-R1 (LLM), bge-m3 (EM), ChromaDB (RAG), LangChain + LangGraph (Pipeline), PostgreSQL (Session Persistence Database), Gradio 5 (GUI)
 
 ## Usage
